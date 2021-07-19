@@ -1,15 +1,14 @@
 import re
-
+from cssutils import CssUtils
+from cssparser import CssParser
 
 if __name__ == "__main__":
-    filepath = './css_style.txt'
+    filepath = './simple.css'
 
-    cssfile = open(filepath, 'r')
-    csstext = cssfile.read()
+    cssutils = CssUtils()
 
-    matches = re.findall("^\.icon.*\n+.*\n+}",  csstext, re.MULTILINE)
+    file_contents = cssutils.file_get_contents(filepath)
 
-    for match in matches:
-        print (match)
-
-
+    parser = CssParser()
+    
+    parser.parse_css(file_contents)
