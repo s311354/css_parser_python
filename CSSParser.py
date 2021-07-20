@@ -15,8 +15,14 @@ class CssParser:
         self.line = 1
         self.start_line= 0
         self.start_pos = 0
+        self.selector_nest_level = 0
+        self.cur_selector = ""
+        self.cur_at = ""
+        self.cur_property = ""
+        self.csstoken = dict()
         self.cur_sub_value_arr = dict()
         self.cur_function_arr = dict()
+        self.sel_separate = dict()
 
     def parse_css(self, css_input):
 
@@ -42,7 +48,11 @@ class CssParser:
             old_status = astatus
 
             if astatus == "PIS":
-                self.parse_in_selector(css_input, pos, astatus, afrom, invalid_at, str_char, str_size)
+               (astatus, pos, afrom, invalid_at) = self.parse_in_selector(css_input, pos, astatus, afrom, invalid_at, str_char, str_size)
+            elif astatus == "PIP":
+                (astatus, pos, afrom, invalid_at) = self.parse_in_property(css_input, pos, astatus, afrom, invalid_at)
+
+            print("Pre Status: {}, Current Status: {}".format(old_status, astatus))
 
 
 
@@ -72,13 +82,78 @@ class CssParser:
         if record or force:
             start_pos = re.search(r"^[( |\n|\t|\r|\0xb)]", css_input[pos:]).start()
             self.start_line = self.line
-            print("Start Positopn: {}, Start Line: {}".format(start_pos, self.start_line))
+            print("Start Posistion: {}, Start Line: {}".format(start_pos, self.start_line))
 
     def parse_in_selector(self, css_input, pos, astatus, afrom, invalid_at, str_char, str_size):
         if(self.is_token(css_input, pos)):
+#             print("Is Token")
+
+            if css_input[pos] == '/' and CssUtils().s_at(css_input, pos + 1) == '*':
+                afrom = "PIS"
+                astatus = "PIC"
+                ++ pos
+            elif css_input[pos] == '{':
+                print("PIP")
+                astatus = "PIP"
+                self.add_token("SEL_START", self.cur_selector)
+
+            elif css_input[pos] == '}':
+                self.add_token("AT_END", self.cur_at)
+                self.cur_at = ""
+                self.cur_selector = ""
+                self.sel_separate = dict()
+        else:
+            lastpos = len(self.cur_selector) - 1
+            if lastpos == -1 or not CssUtils().ctype_space(self.cur_selector[lastpos]) or (self.is_token(self.cur_selector, lastpos) and self.cur_selector[lastpos] == ',' and CssUtils().ctype_space(css_input[i])):
+                self.cur_selector += css_input[pos]
+        return astatus, pos, afrom, invalid_at
+
+    def parse_in_property(self, css_input, pos, astatus, afrom, invalid_at):
+        print("Posistion: {}".format(pos))
+        if self.is_token(css_input, pos):
             print("Is Token")
+            if css_input[pos] == ':' or css_input[pos] == '=':
+                astatus = "PIV"
+                self.add_token("PROPERTY", self.cur_selector)
+
+            elif css_input[pos] == '/' and CssUtils().s_at(css_input, pos+1) == '*' and self.cur_property == "":
+                astatus = "PIC"
+                ++ pos
+                afrom = "PIP"
+
+            elif css_input[pos] == '}':
+                self.explode_selectors()
+                astatus = "PIS"
+                invalid_at = False
+                self.add_token("SEL_END", cur_selector)
+                self.cur_selector = ""
+                self.cur_property = ""
+
+            else:
+                print("Unexpected character '{}'in property name".format(css_input[pos]))
+
+        elif not CssUtils().ctype_space(css_input[pos]):
+            self.cur_property += css_input[pos]
+
+        return astatus, pos, afrom, invalid_at
+
+
 
     def is_token(self, istring, pos):
         return CssUtils().is_str_array(self.tokens, istring[pos]) and not (CssUtils().escaped(istring, pos))
 
+    def add_token(self, tokentype, data, force = False):
+        temp = dict()
+        tempdata = data if tokentype == "COMMENT" else CssUtils().trim(data)
+        temp = {'Type': tokentype, 'Posistion': self.start_pos, 'Line': self.start_line, 'Data': tempdata}
 
+        self.csstoken[self.start_line] = temp 
+
+        if tokentype == "SEL_START":
+            self.selector_nest_level += 1
+        if tokentype == "SEL_END":
+            self.selector_nest_level -= 1
+
+
+    def explode_selectors():
+        self.sel_separate = dict()
