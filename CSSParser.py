@@ -51,6 +51,12 @@ class CssParser:
                (astatus, pos, afrom, invalid_at) = self.parse_in_selector(css_input, pos, astatus, afrom, invalid_at, str_char, str_size)
             elif astatus == "PIP":
                 (astatus, pos, afrom, invalid_at) = self.parse_in_property(css_input, pos, astatus, afrom, invalid_at)
+            elif astatus == "PIV":
+              (astatus, pos, afrom, invalid_at, pn) = self.parse_in_value(css_input, pos, astatus, afrom, invalid_at, str_char, str_size)
+
+
+
+
 
             print("Pre Status: {}, Current Status: {}".format(old_status, astatus))
 
@@ -111,7 +117,7 @@ class CssParser:
     def parse_in_property(self, css_input, pos, astatus, afrom, invalid_at):
         print("Posistion: {}".format(pos))
         if self.is_token(css_input, pos):
-            print("Is Token")
+            print("{} Is Token".format(css_input[pos]))
             if css_input[pos] == ':' or css_input[pos] == '=':
                 astatus = "PIV"
                 self.add_token("PROPERTY", self.cur_selector)
@@ -137,7 +143,23 @@ class CssParser:
 
         return astatus, pos, afrom, invalid_at
 
+    def parse_in_value(self, css_input, pos, astatus, afrom, invalid_at, str_char, str_size):
+        pn = (((css_input[pos] == '\n' or css_input[pos] == '\r') and self.property_is_next(css_input, pos + 1)) or pos == str_size - 1)
+        if pn:
+            print("Added semicolon to the end of declaration")
+        if self.is_token(css_input, pos) or pn:
+            print("{} Is Token".format(css_input[pos]))
 
+        return astatus, pos, afrom, invalid_at, pn
+
+    def property_is_next(self, istring, pos):
+        istring = istring[pos:len(istring)-pos]
+        pos = re.search(':', istring).start() if re.search(':', istring) else pos
+        if pos == -1:
+            return False
+        istring = CssUtils().trim(istring[0:pos]).lower()
+        print("Porperty: {}, Posistion: {}".format(istring, pos))
+        return True
 
     def is_token(self, istring, pos):
         return CssUtils().is_str_array(self.tokens, istring[pos]) and not (CssUtils().escaped(istring, pos))
