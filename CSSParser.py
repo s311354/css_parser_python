@@ -19,6 +19,9 @@ class CssParser:
         self.cur_selector = ""
         self.cur_at = ""
         self.cur_property = ""
+        self.cur_string = ""
+        self.cur_value = ""
+        self.cur_sub_value = ""
         self.csstoken = dict()
         self.cur_sub_value_arr = dict()
         self.cur_function_arr = dict()
@@ -35,7 +38,6 @@ class CssParser:
         self.record_position("PIS", "PIS", css_input, 0, True)
 
         str_size = len(css_input)
-        print("String Size: {}".format(str_size))
         for pos, string in enumerate(css_input):
             if string == '\n' or string == '\r':
                 self.line += 1
@@ -52,11 +54,7 @@ class CssParser:
             elif astatus == "PIP":
                 (astatus, pos, afrom, invalid_at) = self.parse_in_property(css_input, pos, astatus, afrom, invalid_at)
             elif astatus == "PIV":
-              (astatus, pos, afrom, invalid_at, pn) = self.parse_in_value(css_input, pos, astatus, afrom, invalid_at, str_char, str_size)
-
-
-
-
+                (astatus, pos, afrom, invalid_at, pn) = self.parse_in_value(css_input, pos, astatus, afrom, invalid_at, str_char, str_size)
 
             print("Pre Status: {}, Current Status: {}".format(old_status, astatus))
 
@@ -86,9 +84,9 @@ class CssParser:
             record = True
 
         if record or force:
-            start_pos = re.search(r"^[( |\n|\t|\r|\0xb)]", css_input[pos:]).start()
+            self.start_pos = re.search("(?! |\n|\t|\r|\0xb)", css_input[pos:]).start() + pos
             self.start_line = self.line
-            print("Start Posistion: {}, Start Line: {}".format(start_pos, self.start_line))
+            print("Start Posistion: {}, Start Line: {}".format(self.start_pos, self.start_line))
 
     def parse_in_selector(self, css_input, pos, astatus, afrom, invalid_at, str_char, str_size):
         if(self.is_token(css_input, pos)):
@@ -99,7 +97,6 @@ class CssParser:
                 astatus = "PIC"
                 ++ pos
             elif css_input[pos] == '{':
-                print("PIP")
                 astatus = "PIP"
                 self.add_token("SEL_START", self.cur_selector)
 
@@ -115,7 +112,7 @@ class CssParser:
         return astatus, pos, afrom, invalid_at
 
     def parse_in_property(self, css_input, pos, astatus, afrom, invalid_at):
-        print("Posistion: {}".format(pos))
+        print("PIP Posistion: {}".format(pos))
         if self.is_token(css_input, pos):
             print("{} Is Token".format(css_input[pos]))
             if css_input[pos] == ':' or css_input[pos] == '=':
@@ -149,6 +146,36 @@ class CssParser:
             print("Added semicolon to the end of declaration")
         if self.is_token(css_input, pos) or pn:
             print("{} Is Token".format(css_input[pos]))
+            if css_input[pos] == '{':
+                print("Unexpected character '{}' in {}".format(css_input[pos], self.cur_selector))
+
+            if css_input[pos] == '/' and CssUtils().s_at(css_input, pos+1) == '*':
+                astatus = "PIC"
+                ++pos
+                afrom = "PIV"
+            elif css_input[pos] == '"' or css_input[pos] == '\'':
+                self.cur_string = css_input[pos]
+                astatus = "PINSTR"
+                afrom = "PIV"
+            elif css_input[pos] == ';' or pn:
+                astatus == "PIP"
+            elif not css_input[pos] == '}':
+                self.cur_sub_value += css_input[pos]
+
+            if css_input[pos] == '}' or css_input[pos] == ';' or pn and not self.cur_selector :
+                if self.cur_at == "":
+                    self.cur_at = "standard"
+
+                # kill all whitespace
+                self.cur_at = CssUtils().trim(self.cur_at)
+                self.cur_selector = CssUtils().trim(self.cur_selector)
+                self.cur_value = CssUtils().trim(self.cur_value)
+                self.cur_property = CssUtils().trim(self.cur_property).lower()
+                self.cur_sub_value = CssUtils().trim(self.cur_sub_value)
+
+
+
+
 
         return astatus, pos, afrom, invalid_at, pn
 
@@ -158,7 +185,7 @@ class CssParser:
         if pos == -1:
             return False
         istring = CssUtils().trim(istring[0:pos]).lower()
-        print("Porperty: {}, Posistion: {}".format(istring, pos))
+#         print("Porperty: {}, Posistion: {}".format(istring, pos))
         return True
 
     def is_token(self, istring, pos):
@@ -175,7 +202,6 @@ class CssParser:
             self.selector_nest_level += 1
         if tokentype == "SEL_END":
             self.selector_nest_level -= 1
-
 
     def explode_selectors():
         self.sel_separate = dict()

@@ -8,8 +8,8 @@ class CssUtils:
         return file_contents
 
     def is_str_array(self, haystack, needle):
+        print("Needle: {}".format(needle))
         if re.search(needle, haystack):
-#             print("Needle: {} is token".format(needle))
             return True
         else:
             return False
@@ -24,8 +24,8 @@ class CssUtils:
             return istring[pos]
 
     def trim(self, istring):
-        if re.search(r"^[( |\n|\t|\r|\0xb)]", istring):
-            first = re.search(r"^[( |\n|\t|\r|\0xb)]", istring).start()
+        if re.search("(?! |\n|\t|\r|\0xb)", istring):
+            first = re.search("(?! |\n|\t|\r|\0xb)", istring).start()
         else:
             first = 0
 
