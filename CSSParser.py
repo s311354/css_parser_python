@@ -35,9 +35,9 @@ class CssParser:
         str_char = []
         str_in_str = False
         invalid_at = False
-        self.record_position("PIS", "PIS", css_input, 0, True)
-
         str_size = len(css_input)
+        self.record_position("PIS", "PIS", css_input, 0, str_size, True)
+
         for pos, string in enumerate(css_input):
             if string == '\n' or string == '\r':
                 self.line += 1
@@ -46,7 +46,7 @@ class CssParser:
             # record current position for selected state transitions
             print("Current Posistion: {}".format(pos))
             if old_status != astatus:
-                self.record_position(old_status, astatus, css_input, pos)
+                self.record_position(old_status, astatus, css_input, pos, str_size)
 
             old_status = astatus
 
@@ -61,7 +61,7 @@ class CssParser:
 
 
 
-    def record_position(self, old_status, new_status, css_input, pos, force = False):
+    def record_position(self, old_status, new_status, css_input, pos, str_size, force = False):
         record = False
 
         # any state into a comment
@@ -86,8 +86,9 @@ class CssParser:
 
         if record or force:
 
-            print("String: {}".format(css_input[pos:]))
             self.start_pos = re.search("(?! |\n|\t|\r|\0xb)", css_input[pos:]).start() + pos
+            if self.start_pos >= str_size:
+                self.start_pos = -1
 
             self.start_line = self.line
             print("Start Posistion: {}, Start Line: {}".format(self.start_pos, self.start_line))

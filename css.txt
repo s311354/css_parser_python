@@ -1,22 +1,3 @@
-String: body {
-  background-color: powderblue;
-}
-h1 {
-  color: blue;
-}
-p {
-  color: red;
-}
-div {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 0, Start Line: 1
 Current Posistion: 0
 Needle: b
@@ -37,25 +18,6 @@ Current Posistion: 5
 Needle: {
 Pre Status: PIS, Current Status: PIP
 Current Posistion: 6
-String: 
-  background-color: powderblue;
-}
-h1 {
-  color: blue;
-}
-p {
-  color: red;
-}
-div {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 9, Start Line: 2
 Needle: 
 
@@ -119,24 +81,6 @@ Needle: :
 PIP : Is Token
 Pre Status: PIP, Current Status: PIV
 Current Posistion: 26
-String:  powderblue;
-}
-h1 {
-  color: blue;
-}
-p {
-  color: red;
-}
-div {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 27, Start Line: 2
 Posistion:   Pin: False
 Needle:  
@@ -187,24 +131,6 @@ Needle: ;
 PIV ; Is Token
 Pre Status: PIV, Current Status: PIP
 Current Posistion: 38
-String: 
-}
-h1 {
-  color: blue;
-}
-p {
-  color: red;
-}
-div {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 39, Start Line: 3
 Needle: 
 
@@ -214,23 +140,6 @@ Needle: }
 PIP } Is Token
 Pre Status: PIP, Current Status: PIS
 Current Posistion: 40
-String: 
-h1 {
-  color: blue;
-}
-p {
-  color: red;
-}
-div {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 41, Start Line: 4
 Needle: 
 
@@ -254,22 +163,6 @@ Current Posistion: 44
 Needle: {
 Pre Status: PIS, Current Status: PIP
 Current Posistion: 45
-String: 
-  color: blue;
-}
-p {
-  color: red;
-}
-div {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 48, Start Line: 5
 Needle: 
 
@@ -300,21 +193,6 @@ Needle: :
 PIP : Is Token
 Pre Status: PIP, Current Status: PIV
 Current Posistion: 54
-String:  blue;
-}
-p {
-  color: red;
-}
-div {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 55, Start Line: 5
 Posistion:   Pin: False
 Needle:  
@@ -341,21 +219,6 @@ Needle: ;
 PIV ; Is Token
 Pre Status: PIV, Current Status: PIP
 Current Posistion: 60
-String: 
-}
-p {
-  color: red;
-}
-div {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 61, Start Line: 6
 Needle: 
 
@@ -365,20 +228,6 @@ Needle: }
 PIP } Is Token
 Pre Status: PIP, Current Status: PIS
 Current Posistion: 62
-String: 
-p {
-  color: red;
-}
-div {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 63, Start Line: 7
 Needle: 
 
@@ -397,19 +246,6 @@ Current Posistion: 65
 Needle: {
 Pre Status: PIS, Current Status: PIP
 Current Posistion: 66
-String: 
-  color: red;
-}
-div {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 69, Start Line: 8
 Needle: 
 
@@ -440,18 +276,6 @@ Needle: :
 PIP : Is Token
 Pre Status: PIP, Current Status: PIV
 Current Posistion: 75
-String:  red;
-}
-div {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 76, Start Line: 8
 Posistion:   Pin: False
 Needle:  
@@ -474,18 +298,6 @@ Needle: ;
 PIV ; Is Token
 Pre Status: PIV, Current Status: PIP
 Current Posistion: 80
-String: 
-}
-div {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 81, Start Line: 9
 Needle: 
 
@@ -495,17 +307,6 @@ Needle: }
 PIP } Is Token
 Pre Status: PIP, Current Status: PIS
 Current Posistion: 82
-String: 
-div {
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 83, Start Line: 10
 Needle: 
 
@@ -534,16 +335,6 @@ Current Posistion: 87
 Needle: {
 Pre Status: PIS, Current Status: PIP
 Current Posistion: 88
-String: 
-  width: 100px;
-  height: 100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 91, Start Line: 11
 Needle: 
 
@@ -574,15 +365,6 @@ Needle: :
 PIP : Is Token
 Pre Status: PIP, Current Status: PIV
 Current Posistion: 97
-String:  100px;
-  height: 100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 98, Start Line: 11
 Posistion:   Pin: False
 Needle:  
@@ -613,15 +395,6 @@ Needle: ;
 PIV ; Is Token
 Pre Status: PIV, Current Status: PIP
 Current Posistion: 104
-String: 
-  height: 100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 107, Start Line: 12
 Needle: 
 
@@ -655,14 +428,6 @@ Needle: :
 PIP : Is Token
 Pre Status: PIP, Current Status: PIV
 Current Posistion: 114
-String:  100px;
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 115, Start Line: 12
 Posistion:   Pin: False
 Needle:  
@@ -693,14 +458,6 @@ Needle: ;
 PIV ; Is Token
 Pre Status: PIV, Current Status: PIP
 Current Posistion: 121
-String: 
-  background-color: lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 124, Start Line: 13
 Needle: 
 
@@ -764,13 +521,6 @@ Needle: :
 PIP : Is Token
 Pre Status: PIP, Current Status: PIV
 Current Posistion: 141
-String:  lightblue;
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 142, Start Line: 13
 Posistion:   Pin: False
 Needle:  
@@ -817,13 +567,6 @@ Needle: ;
 PIV ; Is Token
 Pre Status: PIV, Current Status: PIP
 Current Posistion: 152
-String: 
-  border: 1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 155, Start Line: 14
 Needle: 
 
@@ -857,12 +600,6 @@ Needle: :
 PIP : Is Token
 Pre Status: PIP, Current Status: PIV
 Current Posistion: 162
-String:  1px solid black;
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 163, Start Line: 14
 Posistion:   Pin: False
 Needle:  
@@ -933,12 +670,6 @@ Needle: ;
 PIV ; Is Token
 Pre Status: PIV, Current Status: PIP
 Current Posistion: 179
-String: 
-}
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 180, Start Line: 15
 Needle: 
 
@@ -948,11 +679,6 @@ Needle: }
 PIP } Is Token
 Pre Status: PIP, Current Status: PIS
 Current Posistion: 181
-String: 
-div:hover {
-  width: 300px;
-}
-
 Start Posistion: 182, Start Line: 16
 Needle: 
 
@@ -1009,10 +735,6 @@ Current Posistion: 192
 Needle: {
 Pre Status: PIS, Current Status: PIP
 Current Posistion: 193
-String: 
-  width: 300px;
-}
-
 Start Posistion: 196, Start Line: 17
 Needle: 
 
@@ -1043,9 +765,6 @@ Needle: :
 PIP : Is Token
 Pre Status: PIP, Current Status: PIV
 Current Posistion: 202
-String:  300px;
-}
-
 Start Posistion: 203, Start Line: 17
 Posistion:   Pin: False
 Needle:  
@@ -1076,9 +795,6 @@ Needle: ;
 PIV ; Is Token
 Pre Status: PIV, Current Status: PIP
 Current Posistion: 209
-String: 
-}
-
 Start Posistion: 210, Start Line: 18
 Needle: 
 
@@ -1088,9 +804,7 @@ Needle: }
 PIP } Is Token
 Pre Status: PIP, Current Status: PIS
 Current Posistion: 211
-String: 
-
-Start Posistion: 212, Start Line: 19
+Start Posistion: -1, Start Line: 19
 Needle: 
 
 Pre Status: PIS, Current Status: PIS
