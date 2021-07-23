@@ -1,542 +1,1096 @@
+String: body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
 Start Posistion: 0, Start Line: 1
+Current Posistion: 0
 Needle: b
 Pre Status: PIS, Current Status: PIS
+Current Posistion: 1
 Needle: o
 Pre Status: PIS, Current Status: PIS
+Current Posistion: 2
 Needle: d
 Pre Status: PIS, Current Status: PIS
+Current Posistion: 3
 Needle: y
 Pre Status: PIS, Current Status: PIS
+Current Posistion: 4
 Needle:  
 Pre Status: PIS, Current Status: PIS
+Current Posistion: 5
 Needle: {
 Pre Status: PIS, Current Status: PIP
+Current Posistion: 6
+String: 
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
 Start Posistion: 9, Start Line: 2
-PIP Posistion: 6
 Needle: 
 
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 7
+Current Posistion: 7
 Needle:  
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 8
+Current Posistion: 8
 Needle:  
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 9
+Current Posistion: 9
 Needle: b
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 10
+Current Posistion: 10
 Needle: a
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 11
+Current Posistion: 11
 Needle: c
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 12
+Current Posistion: 12
 Needle: k
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 13
+Current Posistion: 13
 Needle: g
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 14
+Current Posistion: 14
 Needle: r
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 15
+Current Posistion: 15
 Needle: o
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 16
+Current Posistion: 16
 Needle: u
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 17
+Current Posistion: 17
 Needle: n
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 18
+Current Posistion: 18
 Needle: d
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 19
+Current Posistion: 19
 Needle: -
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 20
+Current Posistion: 20
 Needle: c
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 21
+Current Posistion: 21
 Needle: o
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 22
+Current Posistion: 22
 Needle: l
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 23
+Current Posistion: 23
 Needle: o
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 24
+Current Posistion: 24
 Needle: r
 Pre Status: PIP, Current Status: PIP
-PIP Posistion: 25
+Current Posistion: 25
 Needle: :
-: Is Token
+PIP : Is Token
 Pre Status: PIP, Current Status: PIV
+Current Posistion: 26
+String:  powderblue;
+}
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
 Start Posistion: 27, Start Line: 2
+Posistion:   Pin: False
 Needle:  
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 27
+Posistion: p Pin: False
 Needle: p
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 28
+Posistion: o Pin: False
 Needle: o
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 29
+Posistion: w Pin: False
 Needle: w
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 30
+Posistion: d Pin: False
 Needle: d
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 31
+Posistion: e Pin: False
 Needle: e
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 32
+Posistion: r Pin: False
 Needle: r
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 33
+Posistion: b Pin: False
 Needle: b
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 34
+Posistion: l Pin: False
 Needle: l
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 35
+Posistion: u Pin: False
 Needle: u
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 36
+Posistion: e Pin: False
 Needle: e
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 37
+Posistion: ; Pin: False
 Needle: ;
-; Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
+PIV ; Is Token
+Pre Status: PIV, Current Status: PIP
+Current Posistion: 38
+String: 
+}
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 39, Start Line: 3
 Needle: 
 
-
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 39
 Needle: }
-} Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
+PIP } Is Token
+Pre Status: PIP, Current Status: PIS
+Current Posistion: 40
+String: 
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 41, Start Line: 4
 Needle: 
 
-
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 41
 Needle: h
-Pre Status: PIV, Current Status: PIV
-Needle: 1
-Pre Status: PIV, Current Status: PIV
-Needle:  
-Pre Status: PIV, Current Status: PIV
-Needle: {
-{ Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
 Needle: 
 
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 42
+Needle: 1
+Needle: 
 
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 43
 Needle:  
-Pre Status: PIV, Current Status: PIV
+Needle: 
+
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 44
+Needle: {
+Pre Status: PIS, Current Status: PIP
+Current Posistion: 45
+String: 
+  color: blue;
+}
+p {
+  color: red;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 48, Start Line: 5
+Needle: 
+
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 46
 Needle:  
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 47
+Needle:  
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 48
 Needle: c
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 49
 Needle: o
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 50
 Needle: l
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 51
 Needle: o
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 52
 Needle: r
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 53
 Needle: :
-: Is Token
-Pre Status: PIV, Current Status: PIV
+PIP : Is Token
+Pre Status: PIP, Current Status: PIV
+Current Posistion: 54
+String:  blue;
+}
+p {
+  color: red;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 55, Start Line: 5
+Posistion:   Pin: False
 Needle:  
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 55
+Posistion: b Pin: False
 Needle: b
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 56
+Posistion: l Pin: False
 Needle: l
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 57
+Posistion: u Pin: False
 Needle: u
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 58
+Posistion: e Pin: False
 Needle: e
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 59
+Posistion: ; Pin: False
 Needle: ;
-; Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
+PIV ; Is Token
+Pre Status: PIV, Current Status: PIP
+Current Posistion: 60
+String: 
+}
+p {
+  color: red;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 61, Start Line: 6
 Needle: 
 
-
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 61
 Needle: }
-} Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
+PIP } Is Token
+Pre Status: PIP, Current Status: PIS
+Current Posistion: 62
+String: 
+p {
+  color: red;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 63, Start Line: 7
 Needle: 
 
-
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 63
 Needle: p
-Pre Status: PIV, Current Status: PIV
-Needle:  
-Pre Status: PIV, Current Status: PIV
-Needle: {
-{ Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
 Needle: 
 
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 64
+Needle:  
+Needle: 
 
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 65
+Needle: {
+Pre Status: PIS, Current Status: PIP
+Current Posistion: 66
+String: 
+  color: red;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 69, Start Line: 8
+Needle: 
+
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 67
 Needle:  
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 68
 Needle:  
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 69
 Needle: c
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 70
 Needle: o
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 71
 Needle: l
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 72
 Needle: o
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 73
 Needle: r
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 74
 Needle: :
-: Is Token
-Pre Status: PIV, Current Status: PIV
+PIP : Is Token
+Pre Status: PIP, Current Status: PIV
+Current Posistion: 75
+String:  red;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 76, Start Line: 8
+Posistion:   Pin: False
 Needle:  
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 76
+Posistion: r Pin: False
 Needle: r
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 77
+Posistion: e Pin: False
 Needle: e
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 78
+Posistion: d Pin: False
 Needle: d
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 79
+Posistion: ; Pin: False
 Needle: ;
-; Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
+PIV ; Is Token
+Pre Status: PIV, Current Status: PIP
+Current Posistion: 80
+String: 
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 81, Start Line: 9
 Needle: 
 
-
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 81
 Needle: }
-} Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
+PIP } Is Token
+Pre Status: PIP, Current Status: PIS
+Current Posistion: 82
+String: 
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 83, Start Line: 10
 Needle: 
 
-
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 83
 Needle: d
-Pre Status: PIV, Current Status: PIV
+Needle: 
+
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 84
 Needle: i
-Pre Status: PIV, Current Status: PIV
+Needle: 
+
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 85
 Needle: v
-Pre Status: PIV, Current Status: PIV
+Needle: 
+
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 86
 Needle:  
-Pre Status: PIV, Current Status: PIV
+Needle: 
+
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 87
 Needle: {
-{ Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
+Pre Status: PIS, Current Status: PIP
+Current Posistion: 88
+String: 
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 91, Start Line: 11
 Needle: 
 
-
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 89
 Needle:  
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 90
 Needle:  
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 91
 Needle: w
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 92
 Needle: i
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 93
 Needle: d
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 94
 Needle: t
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 95
 Needle: h
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 96
 Needle: :
-: Is Token
-Pre Status: PIV, Current Status: PIV
+PIP : Is Token
+Pre Status: PIP, Current Status: PIV
+Current Posistion: 97
+String:  100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 98, Start Line: 11
+Posistion:   Pin: False
 Needle:  
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 98
+Posistion: 1 Pin: False
 Needle: 1
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 99
+Posistion: 0 Pin: False
 Needle: 0
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 100
+Posistion: 0 Pin: False
 Needle: 0
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 101
+Posistion: p Pin: False
 Needle: p
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 102
+Posistion: x Pin: False
 Needle: x
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 103
+Posistion: ; Pin: False
 Needle: ;
-; Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
+PIV ; Is Token
+Pre Status: PIV, Current Status: PIP
+Current Posistion: 104
+String: 
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 107, Start Line: 12
 Needle: 
 
-
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 105
 Needle:  
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 106
 Needle:  
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 107
 Needle: h
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 108
 Needle: e
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 109
 Needle: i
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 110
 Needle: g
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 111
 Needle: h
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 112
 Needle: t
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 113
 Needle: :
-: Is Token
-Pre Status: PIV, Current Status: PIV
+PIP : Is Token
+Pre Status: PIP, Current Status: PIV
+Current Posistion: 114
+String:  100px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 115, Start Line: 12
+Posistion:   Pin: False
 Needle:  
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 115
+Posistion: 1 Pin: False
 Needle: 1
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 116
+Posistion: 0 Pin: False
 Needle: 0
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 117
+Posistion: 0 Pin: False
 Needle: 0
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 118
+Posistion: p Pin: False
 Needle: p
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 119
+Posistion: x Pin: False
 Needle: x
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 120
+Posistion: ; Pin: False
 Needle: ;
-; Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
+PIV ; Is Token
+Pre Status: PIV, Current Status: PIP
+Current Posistion: 121
+String: 
+  background-color: lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 124, Start Line: 13
 Needle: 
 
-
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 122
 Needle:  
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 123
 Needle:  
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 124
 Needle: b
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 125
 Needle: a
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 126
 Needle: c
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 127
 Needle: k
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 128
 Needle: g
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 129
 Needle: r
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 130
 Needle: o
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 131
 Needle: u
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 132
 Needle: n
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 133
 Needle: d
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 134
 Needle: -
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 135
 Needle: c
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 136
 Needle: o
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 137
 Needle: l
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 138
 Needle: o
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 139
 Needle: r
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 140
 Needle: :
-: Is Token
-Pre Status: PIV, Current Status: PIV
+PIP : Is Token
+Pre Status: PIP, Current Status: PIV
+Current Posistion: 141
+String:  lightblue;
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 142, Start Line: 13
+Posistion:   Pin: False
 Needle:  
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 142
+Posistion: l Pin: False
 Needle: l
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 143
+Posistion: i Pin: False
 Needle: i
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 144
+Posistion: g Pin: False
 Needle: g
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 145
+Posistion: h Pin: False
 Needle: h
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 146
+Posistion: t Pin: False
 Needle: t
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 147
+Posistion: b Pin: False
 Needle: b
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 148
+Posistion: l Pin: False
 Needle: l
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 149
+Posistion: u Pin: False
 Needle: u
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 150
+Posistion: e Pin: False
 Needle: e
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 151
+Posistion: ; Pin: False
 Needle: ;
-; Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
+PIV ; Is Token
+Pre Status: PIV, Current Status: PIP
+Current Posistion: 152
+String: 
+  border: 1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 155, Start Line: 14
 Needle: 
 
-
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 153
 Needle:  
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 154
 Needle:  
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 155
 Needle: b
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 156
 Needle: o
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 157
 Needle: r
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 158
 Needle: d
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 159
 Needle: e
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 160
 Needle: r
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 161
 Needle: :
-: Is Token
-Pre Status: PIV, Current Status: PIV
+PIP : Is Token
+Pre Status: PIP, Current Status: PIV
+Current Posistion: 162
+String:  1px solid black;
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 163, Start Line: 14
+Posistion:   Pin: False
 Needle:  
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 163
+Posistion: 1 Pin: False
 Needle: 1
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 164
+Posistion: p Pin: False
 Needle: p
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 165
+Posistion: x Pin: False
 Needle: x
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 166
+Posistion:   Pin: False
 Needle:  
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 167
+Posistion: s Pin: False
 Needle: s
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 168
+Posistion: o Pin: False
 Needle: o
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 169
+Posistion: l Pin: False
 Needle: l
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 170
+Posistion: i Pin: False
 Needle: i
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 171
+Posistion: d Pin: False
 Needle: d
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 172
+Posistion:   Pin: False
 Needle:  
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 173
+Posistion: b Pin: False
 Needle: b
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 174
+Posistion: l Pin: False
 Needle: l
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 175
+Posistion: a Pin: False
 Needle: a
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 176
+Posistion: c Pin: False
 Needle: c
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 177
+Posistion: k Pin: False
 Needle: k
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 178
+Posistion: ; Pin: False
 Needle: ;
-; Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
+PIV ; Is Token
+Pre Status: PIV, Current Status: PIP
+Current Posistion: 179
+String: 
+}
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 180, Start Line: 15
 Needle: 
 
-
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 180
 Needle: }
-} Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
+PIP } Is Token
+Pre Status: PIP, Current Status: PIS
+Current Posistion: 181
+String: 
+div:hover {
+  width: 300px;
+}
+
+Start Posistion: 182, Start Line: 16
 Needle: 
 
-
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 182
 Needle: d
-Pre Status: PIV, Current Status: PIV
+Needle: 
+
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 183
 Needle: i
-Pre Status: PIV, Current Status: PIV
+Needle: 
+
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 184
 Needle: v
-Pre Status: PIV, Current Status: PIV
+Needle: 
+
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 185
 Needle: :
-: Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 186
 Needle: h
-Pre Status: PIV, Current Status: PIV
+Needle: 
+
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 187
 Needle: o
-Pre Status: PIV, Current Status: PIV
-Needle: v
-Pre Status: PIV, Current Status: PIV
-Needle: e
-Pre Status: PIV, Current Status: PIV
-Needle: r
-Pre Status: PIV, Current Status: PIV
-Needle:  
-Pre Status: PIV, Current Status: PIV
-Needle: {
-{ Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
 Needle: 
 
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 188
+Needle: v
+Needle: 
 
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 189
+Needle: e
+Needle: 
+
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 190
+Needle: r
+Needle: 
+
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 191
 Needle:  
-Pre Status: PIV, Current Status: PIV
+Needle: 
+
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 192
+Needle: {
+Pre Status: PIS, Current Status: PIP
+Current Posistion: 193
+String: 
+  width: 300px;
+}
+
+Start Posistion: 196, Start Line: 17
+Needle: 
+
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 194
 Needle:  
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 195
+Needle:  
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 196
 Needle: w
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 197
 Needle: i
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 198
 Needle: d
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 199
 Needle: t
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 200
 Needle: h
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 201
 Needle: :
-: Is Token
-Pre Status: PIV, Current Status: PIV
+PIP : Is Token
+Pre Status: PIP, Current Status: PIV
+Current Posistion: 202
+String:  300px;
+}
+
+Start Posistion: 203, Start Line: 17
+Posistion:   Pin: False
 Needle:  
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 203
+Posistion: 3 Pin: False
 Needle: 3
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 204
+Posistion: 0 Pin: False
 Needle: 0
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 205
+Posistion: 0 Pin: False
 Needle: 0
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 206
+Posistion: p Pin: False
 Needle: p
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 207
+Posistion: x Pin: False
 Needle: x
 Pre Status: PIV, Current Status: PIV
+Current Posistion: 208
+Posistion: ; Pin: False
 Needle: ;
-; Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
+PIV ; Is Token
+Pre Status: PIV, Current Status: PIP
+Current Posistion: 209
+String: 
+}
+
+Start Posistion: 210, Start Line: 18
 Needle: 
 
-
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIP, Current Status: PIP
+Current Posistion: 210
 Needle: }
-} Is Token
-Pre Status: PIV, Current Status: PIV
-Added semicolon to the end of declaration
+PIP } Is Token
+Pre Status: PIP, Current Status: PIS
+Current Posistion: 211
+String: 
+
+Start Posistion: 212, Start Line: 19
 Needle: 
 
-
- Is Token
-Pre Status: PIV, Current Status: PIV
+Pre Status: PIS, Current Status: PIS
