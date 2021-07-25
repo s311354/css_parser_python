@@ -431,6 +431,8 @@ void CSSParser::parseInSelector(std::string& css_input, int& i, parse_status& as
 {
     if(is_token(css_input,i))
     {
+        std::cout << "PIS " << css_input[i] << " Is Token"<< std::endl;
+
         // if(css_input[i] == '/' && CSSUtils::s_at(css_input,i+1) == '*' && 
         // trim(cur_selector) == "") selector as dep doesn't make any sense here, huh?
 
@@ -527,7 +529,7 @@ void CSSParser::parseInProperty(std::string& css_input, int& i, parse_status& as
     std::cout << "PIP Posistion: " << i << std::endl;
 
     if (is_token(css_input,i))
-    {
+    {                std::cout << "Current Posistion: "<< i << std::endl;
         std::cout << "PIP " << css_input[i] << " Is Token"<< std::endl;
         if (css_input[i] == ':' || (css_input[i] == '=' && cur_property != ""))
         {
@@ -799,12 +801,14 @@ void CSSParser::parseInComment(std::string& css_input, int& i, parse_status& ast
     {
         astatus = afrom;
         ++i;
+        std::cout << "COMMENT: " << cur_comment << std::endl;
         add_token(COMMENT, cur_comment);
         cur_comment = "";
     }
     else
     {
         cur_comment += css_input[i];
+        std::cout << "CSS INPUT: " << css_input[i] << " COMMENT: " << cur_comment << std::endl;
     }
 }
 
@@ -894,9 +898,8 @@ void CSSParser::parse_css(std::string css_input)
             ++line;
         }
 
-
         // record current position for selected state transitions
-        std::cout << "Current Posistion: "<< i << std::endl;
+        std::cout << "Current Posistion: "<< i << " Current INPUT: " << css_input[i] << std::endl;
         if (old_status != astatus)
         {
             record_position(old_status, astatus, css_input, i);
@@ -913,6 +916,7 @@ void CSSParser::parse_css(std::string css_input)
             /* Case in-selector */
             case PIS:
                 parseInSelector(css_input, i, astatus, afrom, invalid_at, str_char, str_size);
+                std::cout << "Current Posistion: "<< i << std::endl;
                 break;
 
             /* Case in-property */
@@ -932,6 +936,7 @@ void CSSParser::parse_css(std::string css_input)
 
             /* Case in-comment */
             case PIC:
+                std::cout << "Current Posistion: "<< i << std::endl;
                 parseInComment(css_input, i, astatus, afrom, cur_comment);
                 break;
         }

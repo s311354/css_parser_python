@@ -8,7 +8,7 @@ class CssUtils:
         return file_contents
 
     def is_str_array(self, haystack, needle):
-        print("Needle: {}".format(needle))
+#         print("Needle: {}".format(needle))
         if re.search(needle, haystack):
             return True
         else:
@@ -24,15 +24,13 @@ class CssUtils:
             return istring[pos]
 
     def trim(self, istring):
-        print("String: {}".format(istring))
-
         first = re.search("(?! |\n|\t|\r)", istring).start() if re.search("(?! |\n|\t|\r)", istring) else len(istring)
 
         last = max(istring.rfind(i) for i in " \n\t\r")
-        print("Last: {}".format(last))
+#         print("Last: {}".format(last))
         last = last - 1 if last > 0 else len(istring)
 
-        print "First position: {}, Last position: {}, Trim String: {}".format(first, last, istring[first:last + 1])
+#         print "First position: {}, Last position: {}, Trim String: {}".format(first, last, istring[first:last + 1])
         return istring[first:last + 1]
 
     def build_value(self, subvalues):
@@ -47,4 +45,3 @@ class CssUtils:
 
     def ctype_space(self, c):
         return c == ' ' or c == '\t' or c == '\n' or c == 11
-
