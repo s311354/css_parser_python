@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="CSSProperties_8h" kind="file" language="C++">
+    <compoundname>CSSProperties.h</compoundname>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">string</includes>
+    <includes local="no">map</includes>
+    <includedby refid="CSSParser_8h" local="yes">cssparser/CSSParser.h</includedby>
+    <includedby refid="CSSProperties_8cpp" local="yes">cssparser/CSSProperties.cpp</includedby>
+    <includedby refid="CSSParser_8cpp" local="yes">cssparser/CSSParser.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">cssparser/main.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="1">
+        <label>cssparser/CSSProperties.h</label>
+        <link refid="CSSProperties_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cstdlib</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>cssparser/CSSParser.cpp</label>
+        <link refid="CSSParser_8cpp"/>
+      </node>
+      <node id="2">
+        <label>cssparser/CSSParser.h</label>
+        <link refid="CSSParser_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cssparser/CSSProperties.cpp</label>
+        <link refid="CSSProperties_8cpp"/>
+      </node>
+      <node id="1">
+        <label>cssparser/CSSProperties.h</label>
+        <link refid="CSSProperties_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cssparser/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCSSProperties" prot="public">CSSProperties</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="CSSProperties_8h_1ae0d0911327705926e1ebf9f55c35ff43" prot="public" static="no">
+        <name>CSS_PROPERTIES_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSProperties.h" line="34" column="9" bodyfile="cssparser/CSSProperties.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>**<sp/><sp/>CSSParser</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>**<sp/><sp/>A<sp/>Simple<sp/>C++<sp/>CSS<sp/>Parser</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>**<sp/><sp/>Copyright<sp/>(C)<sp/>2021<sp/><sp/>Kevin<sp/>B.<sp/>Hendricks,<sp/>Stratford,<sp/>Ontario,<sp/>Canada</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>**<sp/><sp/>License:<sp/>LGPL<sp/>v2.1<sp/>or<sp/>later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>**<sp/><sp/>Extracted<sp/>and<sp/>modified<sp/>from:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>**<sp/><sp/>CSSTidy<sp/>(https://github.com/csstidy-c/csstidy)</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>**<sp/><sp/>CSSTidy<sp/>Portions<sp/>Copyright:</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Florian<sp/>Schmitz<sp/>&lt;floele@gmail.com&gt;</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Thierry<sp/>Charbonnel</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Will<sp/>Mitchell<sp/>&lt;aethon@gmail.com&gt;</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Brett<sp/>Zamir<sp/>&lt;brettz9@yahoo.com&gt;</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>sined_<sp/>&lt;sined_@users.sourceforge.net&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Dmitry<sp/>Leskov<sp/>&lt;git@dmitryleskov.com&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Kevin<sp/>Coyner<sp/>&lt;kcoyner@debian.org&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Tuukka<sp/>Pasanen<sp/>&lt;pasanen.tuukka@gmail.com&gt;</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Frank<sp/>W.<sp/>Bergmann<sp/>&lt;csstidy-c@tuxad.com&gt;</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Frank<sp/>Dana<sp/>&lt;ferdnyc@gmail.com&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>CSSTidy<sp/>itself<sp/>is<sp/>Available<sp/>under<sp/>the<sp/>LGPL<sp/>2.1</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>**<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>2.1</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>**<sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CSS_PROPERTIES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="CSSProperties_8h_1ae0d0911327705926e1ebf9f55c35ff43" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CSS_PROPERTIES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classCSSProperties" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCSSProperties" kindref="compound">CSSProperties</ref></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classCSSProperties" kindref="compound">CSSProperties</ref><sp/>*<ref refid="classCSSProperties_1a8e6e2d825551edbb5947cc48015e3836" kindref="member">instance</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCSSProperties_1a905dc3027e91931425d3eeb24008754f" kindref="member">contains</ref>(std::string<sp/>pname);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSProperties_1a28fd8f77b7163cf7ac94703cfca69aef" kindref="member">levels</ref>(std::string<sp/>pname);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classCSSProperties_1a85d2f6febc365bc43eb897f592bbfbf5" kindref="member">CSSProperties</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classCSSProperties_1acf1b19e7658da0ef1697a2f473350cca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="classCSSProperties_1acf1b19e7658da0ef1697a2f473350cca" kindref="member">m_all_properties</ref>;</highlight></codeline>
+<codeline lineno="63" refid="classCSSProperties_1a1b1d41c3ec71e10552d6d44a136cab12" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classCSSProperties" kindref="compound">CSSProperties</ref><sp/>*<ref refid="classCSSProperties_1a1b1d41c3ec71e10552d6d44a136cab12" kindref="member">m_instance</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CSS_PROPERTIES_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="cssparser/CSSProperties.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1720 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classCSSParser" kind="class" language="C++" prot="public">
+    <compoundname>CSSParser</compoundname>
+    <includes refid="CSSParser_8h" local="no">CSSParser.h</includes>
+    <innerclass refid="structCSSParser_1_1message" prot="public">CSSParser::message</innerclass>
+    <innerclass refid="structCSSParser_1_1token" prot="public">CSSParser::token</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3" prot="public" static="no" strong="no">
+        <type></type>
+        <name>message_type</name>
+        <enumvalue id="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a81dd43481fd6db4eceffee058e09079f" prot="public">
+          <name>Information</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a111cfef49fd497ec9d8a9b1324127618" prot="public">
+          <name>Warning</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a251e53f6d530e058b9da3cbb2aff4e38" prot="public">
+          <name>Error</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="63" column="5" bodyfile="cssparser/CSSParser.h" bodystart="64" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="enum" id="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>parse_status</name>
+        <enumvalue id="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea13dd277e0b73f51b4ed8d0be99aa634b" prot="public">
+          <name>PIS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0eaf6561a84d0652a58f5a36c4e88b41ffa" prot="public">
+          <name>PIP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea9793bbe683fc0bee9b9d982c64e2f85a" prot="public">
+          <name>PIV</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0eaedde0e8c16418bba3f4540d11b3d8bc9" prot="public">
+          <name>PINSTR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea5ec69f94f50f7204c276438cc5ca5ac0" prot="public">
+          <name>PIC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea298c3d2ff2bf1c574b0fc48109aa9beb" prot="public">
+          <name>PAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="58" column="5" bodyfile="cssparser/CSSParser.h" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="enum" id="classCSSParser_1a62207e4a900c67f3afa512a737431292" prot="public" static="no" strong="no">
+        <type></type>
+        <name>token_type</name>
+        <enumvalue id="classCSSParser_1a62207e4a900c67f3afa512a737431292a6e0d52d6990870c3e4650b2e0ab8b522" prot="public">
+          <name>CHARSET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1a62207e4a900c67f3afa512a737431292a95936c0445c1c495edf2df8a4cbc9686" prot="public">
+          <name>IMPORT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1a62207e4a900c67f3afa512a737431292a2be03d57b717ed4d107bc8c1eed0190b" prot="public">
+          <name>NAMESP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1a62207e4a900c67f3afa512a737431292a571ea5c7d25671f768c098c23db0388b" prot="public">
+          <name>AT_START</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1a62207e4a900c67f3afa512a737431292abf54a3156de5adfe25684bd51d8b8e69" prot="public">
+          <name>AT_END</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1a62207e4a900c67f3afa512a737431292af5c13254f1d8409a30294eea12fde9bb" prot="public">
+          <name>SEL_START</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1a62207e4a900c67f3afa512a737431292a227b5019a3ff4da41206c63f31df28cd" prot="public">
+          <name>SEL_END</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1a62207e4a900c67f3afa512a737431292ac6e1270b339aace30f588bc888df7a7d" prot="public">
+          <name>PROPERTY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1a62207e4a900c67f3afa512a737431292a2da99c7f47503ef2b3eac97fb918cd0b" prot="public">
+          <name>VALUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1a62207e4a900c67f3afa512a737431292a9f6936f485ff4b27b405988db6fa9c8e" prot="public">
+          <name>COMMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classCSSParser_1a62207e4a900c67f3afa512a737431292a498488da84aa1b5a012a1b40c5e28122" prot="public">
+          <name>CSS_END</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="68" column="5" bodyfile="cssparser/CSSParser.h" bodystart="69" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCSSParser_1ab24ab4abb79e529bd79d4ae87a11e22f" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref> &gt;</type>
+        <definition>std::map&lt;std::string, parse_status&gt; CSSParser::at_rules</definition>
+        <argsstring></argsstring>
+        <name>at_rules</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="170" column="15" bodyfile="cssparser/CSSParser.h" bodystart="170" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1af8a80a70c9641b04f45bd925fb9ffe82" compoundref="CSSParser_8cpp" startline="53" endline="101">CSSParser</referencedby>
+        <referencedby refid="classCSSParser_1aaf22cc5c0057d4da557a5aac0bcb1fb9" compoundref="CSSParser_8cpp" startline="429" endline="521">parseInSelector</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a2fb30f11f2f821867b41dc7d5755c464" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CSSParser::charset</definition>
+        <argsstring></argsstring>
+        <name>charset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="182" column="17" bodyfile="cssparser/CSSParser.h" bodystart="182" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1a16b69275eb31cfb6792e52239babef27" compoundref="CSSParser_8cpp" startline="135" endline="138">get_charset</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+        <referencedby refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" compoundref="CSSParser_8cpp" startline="114" endline="132">reset_parser</referencedby>
+        <referencedby refid="classCSSParser_1abf3218756a160dfe0cf0f0d5eddbb4f8" compoundref="CSSParser_8cpp" startline="286" endline="380">serialize_css</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a2370a4cac434d2f865dcec914ddc22bb" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CSSParser::css_level</definition>
+        <argsstring></argsstring>
+        <name>css_level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="172" column="17" bodyfile="cssparser/CSSParser.h" bodystart="172" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1af8a80a70c9641b04f45bd925fb9ffe82" compoundref="CSSParser_8cpp" startline="53" endline="101">CSSParser</referencedby>
+        <referencedby refid="classCSSParser_1a32dc6fe98280dc01d92672b80989aa18" compoundref="CSSParser_8cpp" startline="524" endline="588">parseInProperty</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+        <referencedby refid="classCSSParser_1a5c5f1403cde53dd4ca994ce655fa165b" compoundref="CSSParser_8cpp" startline="104" endline="111">set_level</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a99b4e4b16309ddcc9923eeec7a053b71" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; CSSParser::csstemplate</definition>
+        <argsstring></argsstring>
+        <name>csstemplate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="171" column="17" bodyfile="cssparser/CSSParser.h" bodystart="171" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1af8a80a70c9641b04f45bd925fb9ffe82" compoundref="CSSParser_8cpp" startline="53" endline="101">CSSParser</referencedby>
+        <referencedby refid="classCSSParser_1abf3218756a160dfe0cf0f0d5eddbb4f8" compoundref="CSSParser_8cpp" startline="286" endline="380">serialize_css</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a2c3a2d10c3727b650793ae0c9aca454b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structCSSParser_1_1token" kindref="compound">token</ref> &gt;</type>
+        <definition>std::vector&lt;token&gt; CSSParser::csstokens</definition>
+        <argsstring></argsstring>
+        <name>csstokens</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="185" column="17" bodyfile="cssparser/CSSParser.h" bodystart="185" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1a9d1cb826d59f87901fdd138b8375d4e5" compoundref="CSSParser_8cpp" startline="267" endline="283">_seeknocomment</referencedby>
+        <referencedby refid="classCSSParser_1ab89438a335ba393c40ba437294e2fe70" compoundref="CSSParser_8cpp" startline="177" endline="187">add_token</referencedby>
+        <referencedby refid="classCSSParser_1a0c16e8bf920190f71c89108a8fbbeea0" compoundref="CSSParser_8cpp" startline="151" endline="168">get_next_token</referencedby>
+        <referencedby refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" compoundref="CSSParser_8cpp" startline="114" endline="132">reset_parser</referencedby>
+        <referencedby refid="classCSSParser_1abf3218756a160dfe0cf0f0d5eddbb4f8" compoundref="CSSParser_8cpp" startline="286" endline="380">serialize_css</referencedby>
+        <referencedby refid="classCSSParser_1a6db3d71f91bdc451a160d2f29f6f2031" compoundref="CSSParser_8cpp" startline="1005" endline="1013">set_csstokens</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a730a0fa864d3a286122f1e89a1d551d0" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CSSParser::cur_at</definition>
+        <argsstring></argsstring>
+        <name>cur_at</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="187" column="17" bodyfile="cssparser/CSSParser.h" bodystart="187" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1a2e5de68469c6fd722d79366be8743123" compoundref="CSSParser_8cpp" startline="383" endline="426">parseInAtBlock</referencedby>
+        <referencedby refid="classCSSParser_1aaf22cc5c0057d4da557a5aac0bcb1fb9" compoundref="CSSParser_8cpp" startline="429" endline="521">parseInSelector</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+        <referencedby refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" compoundref="CSSParser_8cpp" startline="114" endline="132">reset_parser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a757148fa4b4deff9e7e800ee18bf97ef" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CSSParser::cur_function</definition>
+        <argsstring></argsstring>
+        <name>cur_function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="189" column="17" bodyfile="cssparser/CSSParser.h" bodystart="189" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1a6a3a8f75a3b06ab1c70cfc1c918f473e" compoundref="CSSParser_8cpp" startline="812" endline="868">parseInString</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+        <referencedby refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" compoundref="CSSParser_8cpp" startline="114" endline="132">reset_parser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a3c669cb78cbe4b8ea156229b67d792a5" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; CSSParser::cur_function_arr</definition>
+        <argsstring></argsstring>
+        <name>cur_function_arr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="195" column="17" bodyfile="cssparser/CSSParser.h" bodystart="195" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1a5c8c8beaaeb41710ba7816d81ad75f4d" compoundref="CSSParser_8cpp" startline="871" endline="951">parse_css</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a9ac97b354be1de2aa9c571bd1c474c60" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CSSParser::cur_property</definition>
+        <argsstring></argsstring>
+        <name>cur_property</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="188" column="17" bodyfile="cssparser/CSSParser.h" bodystart="188" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1a32dc6fe98280dc01d92672b80989aa18" compoundref="CSSParser_8cpp" startline="524" endline="588">parseInProperty</referencedby>
+        <referencedby refid="classCSSParser_1a6a3a8f75a3b06ab1c70cfc1c918f473e" compoundref="CSSParser_8cpp" startline="812" endline="868">parseInString</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+        <referencedby refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" compoundref="CSSParser_8cpp" startline="114" endline="132">reset_parser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1aebd13ee0856baf9fddea298f916c6f7b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CSSParser::cur_selector</definition>
+        <argsstring></argsstring>
+        <name>cur_selector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="186" column="17" bodyfile="cssparser/CSSParser.h" bodystart="186" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1a32dc6fe98280dc01d92672b80989aa18" compoundref="CSSParser_8cpp" startline="524" endline="588">parseInProperty</referencedby>
+        <referencedby refid="classCSSParser_1aaf22cc5c0057d4da557a5aac0bcb1fb9" compoundref="CSSParser_8cpp" startline="429" endline="521">parseInSelector</referencedby>
+        <referencedby refid="classCSSParser_1a6a3a8f75a3b06ab1c70cfc1c918f473e" compoundref="CSSParser_8cpp" startline="812" endline="868">parseInString</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+        <referencedby refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" compoundref="CSSParser_8cpp" startline="114" endline="132">reset_parser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1ab6fdd687efa04b04833f92bea0105df7" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CSSParser::cur_string</definition>
+        <argsstring></argsstring>
+        <name>cur_string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="192" column="17" bodyfile="cssparser/CSSParser.h" bodystart="192" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1aaf22cc5c0057d4da557a5aac0bcb1fb9" compoundref="CSSParser_8cpp" startline="429" endline="521">parseInSelector</referencedby>
+        <referencedby refid="classCSSParser_1a6a3a8f75a3b06ab1c70cfc1c918f473e" compoundref="CSSParser_8cpp" startline="812" endline="868">parseInString</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+        <referencedby refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" compoundref="CSSParser_8cpp" startline="114" endline="132">reset_parser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a2a53fafd4117e09ead401d88cf9ba47c" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CSSParser::cur_sub_value</definition>
+        <argsstring></argsstring>
+        <name>cur_sub_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="190" column="17" bodyfile="cssparser/CSSParser.h" bodystart="190" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1a6a3a8f75a3b06ab1c70cfc1c918f473e" compoundref="CSSParser_8cpp" startline="812" endline="868">parseInString</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+        <referencedby refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" compoundref="CSSParser_8cpp" startline="114" endline="132">reset_parser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1af476b51701a5488314b42195b8b171b8" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; CSSParser::cur_sub_value_arr</definition>
+        <argsstring></argsstring>
+        <name>cur_sub_value_arr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="194" column="17" bodyfile="cssparser/CSSParser.h" bodystart="194" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1a5c8c8beaaeb41710ba7816d81ad75f4d" compoundref="CSSParser_8cpp" startline="871" endline="951">parse_css</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a1aff13788b821e66c943d6ede0152652" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CSSParser::cur_value</definition>
+        <argsstring></argsstring>
+        <name>cur_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="191" column="17" bodyfile="cssparser/CSSParser.h" bodystart="191" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+        <referencedby refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" compoundref="CSSParser_8cpp" startline="114" endline="132">reset_parser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a48294fa85202ac03a2f8407b8b2ab211" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; CSSParser::import</definition>
+        <argsstring></argsstring>
+        <name>import</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="184" column="17" bodyfile="cssparser/CSSParser.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a06e30a29446979c31d31e5b766e172b4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CSSParser::line</definition>
+        <argsstring></argsstring>
+        <name>line</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="177" column="10" bodyfile="cssparser/CSSParser.h" bodystart="177" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1a8d9d19c6725d7b1f2af84e383d6758fc" compoundref="CSSParser_8cpp" startline="190" endline="210">log</referencedby>
+        <referencedby refid="classCSSParser_1a5c8c8beaaeb41710ba7816d81ad75f4d" compoundref="CSSParser_8cpp" startline="871" endline="951">parse_css</referencedby>
+        <referencedby refid="classCSSParser_1a2720c438abcb8e7a379f4cce8bfbe06c" compoundref="CSSParser_8cpp" startline="1017" endline="1048">record_position</referencedby>
+        <referencedby refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" compoundref="CSSParser_8cpp" startline="114" endline="132">reset_parser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a9cf464959d34fb7be7f2ceb466f0ade2" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, std::vector&lt; <ref refid="structCSSParser_1_1message" kindref="compound">message</ref> &gt; &gt;</type>
+        <definition>std::map&lt;int, std::vector&lt;message&gt; &gt; CSSParser::logs</definition>
+        <argsstring></argsstring>
+        <name>logs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="176" column="14" bodyfile="cssparser/CSSParser.h" bodystart="176" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1a31d8fed09686ee717f4e6eb054110849" compoundref="CSSParser_8cpp" startline="985" endline="1001">get_logs</referencedby>
+        <referencedby refid="classCSSParser_1a8d9d19c6725d7b1f2af84e383d6758fc" compoundref="CSSParser_8cpp" startline="190" endline="210">log</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a5067698ca8c4cc4382fc549c0f088023" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CSSParser::namesp</definition>
+        <argsstring></argsstring>
+        <name>namesp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="183" column="17" bodyfile="cssparser/CSSParser.h" bodystart="183" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1a0e2f279a94fc27a5e3635a30de596632" compoundref="CSSParser_8cpp" startline="140" endline="143">get_namespace</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+        <referencedby refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" compoundref="CSSParser_8cpp" startline="114" endline="132">reset_parser</referencedby>
+        <referencedby refid="classCSSParser_1abf3218756a160dfe0cf0f0d5eddbb4f8" compoundref="CSSParser_8cpp" startline="286" endline="380">serialize_css</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1aa4a9672fc52fa0611f2d7a4fb4c66b04" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; CSSParser::sel_separate</definition>
+        <argsstring></argsstring>
+        <name>sel_separate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="193" column="19" bodyfile="cssparser/CSSParser.h" bodystart="193" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1a1f21ad955ae8f583ce70ac83b32a12ae" compoundref="CSSParser_8cpp" startline="261" endline="264">explode_selectors</referencedby>
+        <referencedby refid="classCSSParser_1aaf22cc5c0057d4da557a5aac0bcb1fb9" compoundref="CSSParser_8cpp" startline="429" endline="521">parseInSelector</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+        <referencedby refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" compoundref="CSSParser_8cpp" startline="114" endline="132">reset_parser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1ae1da730d7da7f3d8c26d0d6842d1e5cd" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CSSParser::selector_nest_level</definition>
+        <argsstring></argsstring>
+        <name>selector_nest_level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="180" column="9" bodyfile="cssparser/CSSParser.h" bodystart="180" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1ab89438a335ba393c40ba437294e2fe70" compoundref="CSSParser_8cpp" startline="177" endline="187">add_token</referencedby>
+        <referencedby refid="classCSSParser_1a5c8c8beaaeb41710ba7816d81ad75f4d" compoundref="CSSParser_8cpp" startline="871" endline="951">parse_css</referencedby>
+        <referencedby refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" compoundref="CSSParser_8cpp" startline="114" endline="132">reset_parser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1abaacbf6c0ce01b135043b6425b085364" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CSSParser::sline</definition>
+        <argsstring></argsstring>
+        <name>sline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="179" column="10" bodyfile="cssparser/CSSParser.h" bodystart="179" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1ab89438a335ba393c40ba437294e2fe70" compoundref="CSSParser_8cpp" startline="177" endline="187">add_token</referencedby>
+        <referencedby refid="classCSSParser_1a2720c438abcb8e7a379f4cce8bfbe06c" compoundref="CSSParser_8cpp" startline="1017" endline="1048">record_position</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a7d1ec2f2164e8088904e1cd6b0872282" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CSSParser::spos</definition>
+        <argsstring></argsstring>
+        <name>spos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="178" column="10" bodyfile="cssparser/CSSParser.h" bodystart="178" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1ab89438a335ba393c40ba437294e2fe70" compoundref="CSSParser_8cpp" startline="177" endline="187">add_token</referencedby>
+        <referencedby refid="classCSSParser_1a2720c438abcb8e7a379f4cce8bfbe06c" compoundref="CSSParser_8cpp" startline="1017" endline="1048">record_position</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a08f8dd1a61ce0df2c207fd53c5d877ec" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CSSParser::token_ptr</definition>
+        <argsstring></argsstring>
+        <name>token_ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="174" column="9" bodyfile="cssparser/CSSParser.h" bodystart="174" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1a0c16e8bf920190f71c89108a8fbbeea0" compoundref="CSSParser_8cpp" startline="151" endline="168">get_next_token</referencedby>
+        <referencedby refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" compoundref="CSSParser_8cpp" startline="114" endline="132">reset_parser</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1a9f9820bd856e9b04da196e5c352bd031" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; CSSParser::token_type_names</definition>
+        <argsstring></argsstring>
+        <name>token_type_names</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="169" column="17" bodyfile="cssparser/CSSParser.h" bodystart="169" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1af8a80a70c9641b04f45bd925fb9ffe82" compoundref="CSSParser_8cpp" startline="53" endline="101">CSSParser</referencedby>
+        <referencedby refid="classCSSParser_1a20e0ef77c8b14c050af2cb13468d9122" compoundref="CSSParser_8cpp" startline="171" endline="174">get_type_name</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCSSParser_1adb1e1d80034533d887f6c61b78e9bbdd" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CSSParser::tokens</definition>
+        <argsstring></argsstring>
+        <name>tokens</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="173" column="17" bodyfile="cssparser/CSSParser.h" bodystart="173" bodyend="-1"/>
+        <referencedby refid="classCSSParser_1af8a80a70c9641b04f45bd925fb9ffe82" compoundref="CSSParser_8cpp" startline="53" endline="101">CSSParser</referencedby>
+        <referencedby refid="classCSSParser_1a4c35325486936778866837d890bd1889" compoundref="CSSParser_8cpp" startline="255" endline="258">is_token</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCSSParser_1af8a80a70c9641b04f45bd925fb9ffe82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CSSParser::CSSParser</definition>
+        <argsstring>()</argsstring>
+        <name>CSSParser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="87" column="5" bodyfile="cssparser/CSSParser.cpp" bodystart="53" bodyend="101"/>
+        <references refid="classCSSParser_1ab24ab4abb79e529bd79d4ae87a11e22f" compoundref="CSSParser_8h" startline="170">at_rules</references>
+        <references refid="classCSSParser_1a2370a4cac434d2f865dcec914ddc22bb" compoundref="CSSParser_8h" startline="172">css_level</references>
+        <references refid="classCSSParser_1a99b4e4b16309ddcc9923eeec7a053b71" compoundref="CSSParser_8h" startline="171">csstemplate</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea298c3d2ff2bf1c574b0fc48109aa9beb" compoundref="CSSParser_8h" startline="60">PAT</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea13dd277e0b73f51b4ed8d0be99aa634b" compoundref="CSSParser_8h" startline="60">PIS</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea9793bbe683fc0bee9b9d982c64e2f85a" compoundref="CSSParser_8h" startline="60">PIV</references>
+        <references refid="classCSSParser_1a9f9820bd856e9b04da196e5c352bd031" compoundref="CSSParser_8h" startline="169">token_type_names</references>
+        <references refid="classCSSParser_1adb1e1d80034533d887f6c61b78e9bbdd" compoundref="CSSParser_8h" startline="173">tokens</references>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a16b69275eb31cfb6792e52239babef27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string CSSParser::get_charset</definition>
+        <argsstring>()</argsstring>
+        <name>get_charset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="100" column="17" bodyfile="cssparser/CSSParser.cpp" bodystart="135" bodyend="138"/>
+        <references refid="classCSSParser_1a2fb30f11f2f821867b41dc7d5755c464" compoundref="CSSParser_8h" startline="182">charset</references>
+        <referencedby refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="51" endline="177">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a832bab641f5b6551f6727d8546aa600a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; CSSParser::get_import</definition>
+        <argsstring>()</argsstring>
+        <name>get_import</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="101" column="17" bodyfile="cssparser/CSSParser.cpp" bodystart="145" bodyend="148"/>
+        <referencedby refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="51" endline="177">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a0e2f279a94fc27a5e3635a30de596632" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string CSSParser::get_namespace</definition>
+        <argsstring>()</argsstring>
+        <name>get_namespace</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="102" column="17" bodyfile="cssparser/CSSParser.cpp" bodystart="140" bodyend="143"/>
+        <references refid="classCSSParser_1a5067698ca8c4cc4382fc549c0f088023" compoundref="CSSParser_8h" startline="183">namesp</references>
+        <referencedby refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="51" endline="177">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a0c16e8bf920190f71c89108a8fbbeea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structCSSParser_1_1token" kindref="compound">token</ref></type>
+        <definition>CSSParser::token CSSParser::get_next_token</definition>
+        <argsstring>(int start_ptr=-1)</argsstring>
+        <name>get_next_token</name>
+        <param>
+          <type>int</type>
+          <declname>start_ptr</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="108" column="11" bodyfile="cssparser/CSSParser.cpp" bodystart="151" bodyend="168"/>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a498488da84aa1b5a012a1b40c5e28122" compoundref="CSSParser_8h" startline="70">CSS_END</references>
+        <references refid="classCSSParser_1a2c3a2d10c3727b650793ae0c9aca454b" compoundref="CSSParser_8h" startline="185">csstokens</references>
+        <references refid="structCSSParser_1_1token_1afec17112de7a92a4cee71669bd8144aa" compoundref="CSSParser_8h" startline="78">CSSParser::token::data</references>
+        <references refid="classCSSParser_1a08f8dd1a61ce0df2c207fd53c5d877ec" compoundref="CSSParser_8h" startline="174">token_ptr</references>
+        <references refid="structCSSParser_1_1token_1a66b878873d0b22972a3ed67450e3c8bd" compoundref="CSSParser_8h" startline="75">CSSParser::token::type</references>
+        <referencedby refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="51" endline="177">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1ad91af1ca54c79dd13f07ecb14fdb7e8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; CSSParser::get_parse_errors</definition>
+        <argsstring>()</argsstring>
+        <name>get_parse_errors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="119" column="17" bodyfile="cssparser/CSSParser.cpp" bodystart="967" bodyend="970"/>
+        <references refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a251e53f6d530e058b9da3cbb2aff4e38" compoundref="CSSParser_8h" startline="65">Error</references>
+        <references refid="classCSSParser_1a31d8fed09686ee717f4e6eb054110849" compoundref="CSSParser_8cpp" startline="985" endline="1001">get_logs</references>
+        <referencedby refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="51" endline="177">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a8435cd5b6446fc5e55e00d58ce7f8126" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; CSSParser::get_parse_info</definition>
+        <argsstring>()</argsstring>
+        <name>get_parse_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="121" column="17" bodyfile="cssparser/CSSParser.cpp" bodystart="979" bodyend="982"/>
+        <references refid="classCSSParser_1a31d8fed09686ee717f4e6eb054110849" compoundref="CSSParser_8cpp" startline="985" endline="1001">get_logs</references>
+        <references refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a81dd43481fd6db4eceffee058e09079f" compoundref="CSSParser_8h" startline="65">Information</references>
+        <referencedby refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="51" endline="177">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1aa1927cc5ca43b7b0464d1da6f07d1421" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; CSSParser::get_parse_warnings</definition>
+        <argsstring>()</argsstring>
+        <name>get_parse_warnings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="120" column="17" bodyfile="cssparser/CSSParser.cpp" bodystart="973" bodyend="976"/>
+        <references refid="classCSSParser_1a31d8fed09686ee717f4e6eb054110849" compoundref="CSSParser_8cpp" startline="985" endline="1001">get_logs</references>
+        <references refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a111cfef49fd497ec9d8a9b1324127618" compoundref="CSSParser_8h" startline="65">Warning</references>
+        <referencedby refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="51" endline="177">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a20e0ef77c8b14c050af2cb13468d9122" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string CSSParser::get_type_name</definition>
+        <argsstring>(token_type t)</argsstring>
+        <name>get_type_name</name>
+        <param>
+          <type><ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292" kindref="member">token_type</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="111" column="17" bodyfile="cssparser/CSSParser.cpp" bodystart="171" bodyend="174"/>
+        <references refid="classCSSParser_1a9f9820bd856e9b04da196e5c352bd031" compoundref="CSSParser_8h" startline="169">token_type_names</references>
+        <referencedby refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="51" endline="177">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a5c8c8beaaeb41710ba7816d81ad75f4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSSParser::parse_css</definition>
+        <argsstring>(std::string css_input)</argsstring>
+        <name>parse_css</name>
+        <param>
+          <type>std::string</type>
+          <declname>css_input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="92" column="10" bodyfile="cssparser/CSSParser.cpp" bodystart="871" bodyend="951"/>
+        <references refid="classCSSParser_1a3c669cb78cbe4b8ea156229b67d792a5" compoundref="CSSParser_8h" startline="195">cur_function_arr</references>
+        <references refid="classCSSParser_1af476b51701a5488314b42195b8b171b8" compoundref="CSSParser_8h" startline="194">cur_sub_value_arr</references>
+        <references refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a251e53f6d530e058b9da3cbb2aff4e38" compoundref="CSSParser_8h" startline="65">Error</references>
+        <references refid="classCSSParser_1a06e30a29446979c31d31e5b766e172b4" compoundref="CSSParser_8h" startline="177">line</references>
+        <references refid="classCSSParser_1a8d9d19c6725d7b1f2af84e383d6758fc" compoundref="CSSParser_8cpp" startline="190" endline="210">log</references>
+        <references refid="classCSSParser_1a2e5de68469c6fd722d79366be8743123" compoundref="CSSParser_8cpp" startline="383" endline="426">parseInAtBlock</references>
+        <references refid="classCSSParser_1aedbe86f8b56e4c2d1cb9fd918e389de0" compoundref="CSSParser_8cpp" startline="794" endline="809">parseInComment</references>
+        <references refid="classCSSParser_1a32dc6fe98280dc01d92672b80989aa18" compoundref="CSSParser_8cpp" startline="524" endline="588">parseInProperty</references>
+        <references refid="classCSSParser_1aaf22cc5c0057d4da557a5aac0bcb1fb9" compoundref="CSSParser_8cpp" startline="429" endline="521">parseInSelector</references>
+        <references refid="classCSSParser_1a6a3a8f75a3b06ab1c70cfc1c918f473e" compoundref="CSSParser_8cpp" startline="812" endline="868">parseInString</references>
+        <references refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</references>
+        <references refid="CSSParser_8cpp_1a68f8c0161e18037dbf5837750d2d3343" compoundref="CSSParser_8cpp" startline="45">ParseStatus</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea298c3d2ff2bf1c574b0fc48109aa9beb" compoundref="CSSParser_8h" startline="60">PAT</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea5ec69f94f50f7204c276438cc5ca5ac0" compoundref="CSSParser_8h" startline="60">PIC</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0eaedde0e8c16418bba3f4540d11b3d8bc9" compoundref="CSSParser_8h" startline="60">PINSTR</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0eaf6561a84d0652a58f5a36c4e88b41ffa" compoundref="CSSParser_8h" startline="60">PIP</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea13dd277e0b73f51b4ed8d0be99aa634b" compoundref="CSSParser_8h" startline="60">PIS</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea9793bbe683fc0bee9b9d982c64e2f85a" compoundref="CSSParser_8h" startline="60">PIV</references>
+        <references refid="classCSSParser_1a2720c438abcb8e7a379f4cce8bfbe06c" compoundref="CSSParser_8cpp" startline="1017" endline="1048">record_position</references>
+        <references refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" compoundref="CSSParser_8cpp" startline="114" endline="132">reset_parser</references>
+        <references refid="classCSSParser_1ae1da730d7da7f3d8c26d0d6842d1e5cd" compoundref="CSSParser_8h" startline="180">selector_nest_level</references>
+        <references refid="classCSSUtils_1acde23a75c38d3a931cd71a51c832b0cf" compoundref="CSSUtils_8cpp" startline="290" endline="302">CSSUtils::str_replace</references>
+        <referencedby refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="51" endline="177">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSSParser::reset_parser</definition>
+        <argsstring>()</argsstring>
+        <name>reset_parser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="94" column="10" bodyfile="cssparser/CSSParser.cpp" bodystart="114" bodyend="132"/>
+        <references refid="classCSSParser_1a2fb30f11f2f821867b41dc7d5755c464" compoundref="CSSParser_8h" startline="182">charset</references>
+        <references refid="classCSSParser_1a2c3a2d10c3727b650793ae0c9aca454b" compoundref="CSSParser_8h" startline="185">csstokens</references>
+        <references refid="classCSSParser_1a730a0fa864d3a286122f1e89a1d551d0" compoundref="CSSParser_8h" startline="187">cur_at</references>
+        <references refid="classCSSParser_1a757148fa4b4deff9e7e800ee18bf97ef" compoundref="CSSParser_8h" startline="189">cur_function</references>
+        <references refid="classCSSParser_1a9ac97b354be1de2aa9c571bd1c474c60" compoundref="CSSParser_8h" startline="188">cur_property</references>
+        <references refid="classCSSParser_1aebd13ee0856baf9fddea298f916c6f7b" compoundref="CSSParser_8h" startline="186">cur_selector</references>
+        <references refid="classCSSParser_1ab6fdd687efa04b04833f92bea0105df7" compoundref="CSSParser_8h" startline="192">cur_string</references>
+        <references refid="classCSSParser_1a2a53fafd4117e09ead401d88cf9ba47c" compoundref="CSSParser_8h" startline="190">cur_sub_value</references>
+        <references refid="classCSSParser_1a1aff13788b821e66c943d6ede0152652" compoundref="CSSParser_8h" startline="191">cur_value</references>
+        <references refid="classCSSParser_1a06e30a29446979c31d31e5b766e172b4" compoundref="CSSParser_8h" startline="177">line</references>
+        <references refid="classCSSParser_1a5067698ca8c4cc4382fc549c0f088023" compoundref="CSSParser_8h" startline="183">namesp</references>
+        <references refid="classCSSParser_1aa4a9672fc52fa0611f2d7a4fb4c66b04" compoundref="CSSParser_8h" startline="193">sel_separate</references>
+        <references refid="classCSSParser_1ae1da730d7da7f3d8c26d0d6842d1e5cd" compoundref="CSSParser_8h" startline="180">selector_nest_level</references>
+        <references refid="classCSSParser_1a08f8dd1a61ce0df2c207fd53c5d877ec" compoundref="CSSParser_8h" startline="174">token_ptr</references>
+        <referencedby refid="classCSSParser_1a5c8c8beaaeb41710ba7816d81ad75f4d" compoundref="CSSParser_8cpp" startline="871" endline="951">parse_css</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1abf3218756a160dfe0cf0f0d5eddbb4f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string CSSParser::serialize_css</definition>
+        <argsstring>(std::string filename=&quot;&quot;, bool tostdout=true)</argsstring>
+        <name>serialize_css</name>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>tostdout</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="97" column="17" bodyfile="cssparser/CSSParser.cpp" bodystart="286" bodyend="380"/>
+        <references refid="classCSSParser_1a9d1cb826d59f87901fdd138b8375d4e5" compoundref="CSSParser_8cpp" startline="267" endline="283">_seeknocomment</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292abf54a3156de5adfe25684bd51d8b8e69" compoundref="CSSParser_8h" startline="70">AT_END</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a571ea5c7d25671f768c098c23db0388b" compoundref="CSSParser_8h" startline="70">AT_START</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a6e0d52d6990870c3e4650b2e0ab8b522" compoundref="CSSParser_8h" startline="70">CHARSET</references>
+        <references refid="classCSSParser_1a2fb30f11f2f821867b41dc7d5755c464" compoundref="CSSParser_8h" startline="182">charset</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a9f6936f485ff4b27b405988db6fa9c8e" compoundref="CSSParser_8h" startline="70">COMMENT</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a498488da84aa1b5a012a1b40c5e28122" compoundref="CSSParser_8h" startline="70">CSS_END</references>
+        <references refid="classCSSParser_1a99b4e4b16309ddcc9923eeec7a053b71" compoundref="CSSParser_8h" startline="171">csstemplate</references>
+        <references refid="classCSSParser_1a2c3a2d10c3727b650793ae0c9aca454b" compoundref="CSSParser_8h" startline="185">csstokens</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a95936c0445c1c495edf2df8a4cbc9686" compoundref="CSSParser_8h" startline="70">IMPORT</references>
+        <references refid="classCSSUtils_1a68920805832d2c80542fe036bb93ccd2" compoundref="CSSUtils_8cpp" startline="395" endline="402">CSSUtils::indent</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a2be03d57b717ed4d107bc8c1eed0190b" compoundref="CSSParser_8h" startline="70">NAMESP</references>
+        <references refid="classCSSParser_1a5067698ca8c4cc4382fc549c0f088023" compoundref="CSSParser_8h" startline="183">namesp</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292ac6e1270b339aace30f588bc888df7a7d" compoundref="CSSParser_8h" startline="70">PROPERTY</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a227b5019a3ff4da41206c63f31df28cd" compoundref="CSSParser_8h" startline="70">SEL_END</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292af5c13254f1d8409a30294eea12fde9bb" compoundref="CSSParser_8h" startline="70">SEL_START</references>
+        <references refid="classCSSUtils_1a94fe7f3212d281f585d2b16937f87674" compoundref="CSSUtils_8cpp" startline="355" endline="366">CSSUtils::trim</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a2da99c7f47503ef2b3eac97fb918cd0b" compoundref="CSSParser_8h" startline="70">VALUE</references>
+        <referencedby refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="51" endline="177">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a6db3d71f91bdc451a160d2f29f6f2031" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSSParser::set_csstokens</definition>
+        <argsstring>(const std::vector&lt; token &gt; &amp;ntokens)</argsstring>
+        <name>set_csstokens</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="structCSSParser_1_1token" kindref="compound">token</ref> &gt; &amp;</type>
+          <declname>ntokens</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="116" column="10" bodyfile="cssparser/CSSParser.cpp" bodystart="1005" bodyend="1013"/>
+        <references refid="classCSSParser_1a2c3a2d10c3727b650793ae0c9aca454b" compoundref="CSSParser_8h" startline="185">csstokens</references>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a5c5f1403cde53dd4ca994ce655fa165b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSSParser::set_level</definition>
+        <argsstring>(std::string level=&quot;CSS3.0&quot;)</argsstring>
+        <name>set_level</name>
+        <param>
+          <type>std::string</type>
+          <declname>level</declname>
+          <defval>&quot;CSS3.0&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="90" column="10" bodyfile="cssparser/CSSParser.cpp" bodystart="104" bodyend="111"/>
+        <references refid="classCSSParser_1a2370a4cac434d2f865dcec914ddc22bb" compoundref="CSSParser_8h" startline="172">css_level</references>
+        <referencedby refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cpp" startline="51" endline="177">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classCSSParser_1a9d1cb826d59f87901fdd138b8375d4e5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CSSParser::_seeknocomment</definition>
+        <argsstring>(const int key, const int move)</argsstring>
+        <name>_seeknocomment</name>
+        <param>
+          <type>const int</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>move</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="162" column="9" bodyfile="cssparser/CSSParser.cpp" bodystart="267" bodyend="283"/>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a9f6936f485ff4b27b405988db6fa9c8e" compoundref="CSSParser_8h" startline="70">COMMENT</references>
+        <references refid="classCSSParser_1a2c3a2d10c3727b650793ae0c9aca454b" compoundref="CSSParser_8h" startline="185">csstokens</references>
+        <referencedby refid="classCSSParser_1abf3218756a160dfe0cf0f0d5eddbb4f8" compoundref="CSSParser_8cpp" startline="286" endline="380">serialize_css</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1ab89438a335ba393c40ba437294e2fe70" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSSParser::add_token</definition>
+        <argsstring>(const token_type ttype, const std::string data, const bool force=false)</argsstring>
+        <name>add_token</name>
+        <param>
+          <type>const <ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292" kindref="member">token_type</ref></type>
+          <declname>ttype</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>force</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="153" column="10" bodyfile="cssparser/CSSParser.cpp" bodystart="177" bodyend="187"/>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a9f6936f485ff4b27b405988db6fa9c8e" compoundref="CSSParser_8h" startline="70">COMMENT</references>
+        <references refid="classCSSParser_1a2c3a2d10c3727b650793ae0c9aca454b" compoundref="CSSParser_8h" startline="185">csstokens</references>
+        <references refid="structCSSParser_1_1token_1afec17112de7a92a4cee71669bd8144aa" compoundref="CSSParser_8h" startline="78">CSSParser::token::data</references>
+        <references refid="structCSSParser_1_1token_1acd9883db288c695f5a780422ca83eafe" compoundref="CSSParser_8h" startline="77">CSSParser::token::line</references>
+        <references refid="structCSSParser_1_1token_1a932545ccf948ec92549df416ab1c6008" compoundref="CSSParser_8h" startline="76">CSSParser::token::pos</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a227b5019a3ff4da41206c63f31df28cd" compoundref="CSSParser_8h" startline="70">SEL_END</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292af5c13254f1d8409a30294eea12fde9bb" compoundref="CSSParser_8h" startline="70">SEL_START</references>
+        <references refid="classCSSParser_1ae1da730d7da7f3d8c26d0d6842d1e5cd" compoundref="CSSParser_8h" startline="180">selector_nest_level</references>
+        <references refid="classCSSParser_1abaacbf6c0ce01b135043b6425b085364" compoundref="CSSParser_8h" startline="179">sline</references>
+        <references refid="classCSSParser_1a7d1ec2f2164e8088904e1cd6b0872282" compoundref="CSSParser_8h" startline="178">spos</references>
+        <references refid="classCSSUtils_1a94fe7f3212d281f585d2b16937f87674" compoundref="CSSUtils_8cpp" startline="355" endline="366">CSSUtils::trim</references>
+        <references refid="structCSSParser_1_1token_1a66b878873d0b22972a3ed67450e3c8bd" compoundref="CSSParser_8h" startline="75">CSSParser::token::type</references>
+        <referencedby refid="classCSSParser_1a2e5de68469c6fd722d79366be8743123" compoundref="CSSParser_8cpp" startline="383" endline="426">parseInAtBlock</referencedby>
+        <referencedby refid="classCSSParser_1aedbe86f8b56e4c2d1cb9fd918e389de0" compoundref="CSSParser_8cpp" startline="794" endline="809">parseInComment</referencedby>
+        <referencedby refid="classCSSParser_1a32dc6fe98280dc01d92672b80989aa18" compoundref="CSSParser_8cpp" startline="524" endline="588">parseInProperty</referencedby>
+        <referencedby refid="classCSSParser_1aaf22cc5c0057d4da557a5aac0bcb1fb9" compoundref="CSSParser_8cpp" startline="429" endline="521">parseInSelector</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a1f21ad955ae8f583ce70ac83b32a12ae" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSSParser::explode_selectors</definition>
+        <argsstring>()</argsstring>
+        <name>explode_selectors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="164" column="10" bodyfile="cssparser/CSSParser.cpp" bodystart="261" bodyend="264"/>
+        <references refid="classCSSParser_1aa4a9672fc52fa0611f2d7a4fb4c66b04" compoundref="CSSParser_8h" startline="193">sel_separate</references>
+        <referencedby refid="classCSSParser_1a32dc6fe98280dc01d92672b80989aa18" compoundref="CSSParser_8cpp" startline="524" endline="588">parseInProperty</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a31d8fed09686ee717f4e6eb054110849" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; CSSParser::get_logs</definition>
+        <argsstring>(message_type t)</argsstring>
+        <name>get_logs</name>
+        <param>
+          <type><ref refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3" kindref="member">message_type</ref></type>
+          <declname>t</declname>
+          <defname>mt</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="145" column="17" bodyfile="cssparser/CSSParser.cpp" bodystart="985" bodyend="1001"/>
+        <references refid="classCSSParser_1a9cf464959d34fb7be7f2ceb466f0ade2" compoundref="CSSParser_8h" startline="176">logs</references>
+        <referencedby refid="classCSSParser_1ad91af1ca54c79dd13f07ecb14fdb7e8d" compoundref="CSSParser_8cpp" startline="967" endline="970">get_parse_errors</referencedby>
+        <referencedby refid="classCSSParser_1a8435cd5b6446fc5e55e00d58ce7f8126" compoundref="CSSParser_8cpp" startline="979" endline="982">get_parse_info</referencedby>
+        <referencedby refid="classCSSParser_1aa1927cc5ca43b7b0464d1da6f07d1421" compoundref="CSSParser_8cpp" startline="973" endline="976">get_parse_warnings</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a4c35325486936778866837d890bd1889" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CSSParser::is_token</definition>
+        <argsstring>(std::string &amp;istring, const int i)</argsstring>
+        <name>is_token</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>istring</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="151" column="10" bodyfile="cssparser/CSSParser.cpp" bodystart="255" bodyend="258"/>
+        <references refid="classCSSUtils_1aa1941ab849b3f26c29c24d9fe116084a" compoundref="CSSUtils_8cpp" startline="213" endline="216">CSSUtils::escaped</references>
+        <references refid="classCSSUtils_1aab27c637bbbbc3ee17c88eaaac93533e" compoundref="CSSUtils_8cpp" startline="319" endline="323">CSSUtils::in_str_array</references>
+        <references refid="classCSSParser_1adb1e1d80034533d887f6c61b78e9bbdd" compoundref="CSSParser_8h" startline="173">tokens</references>
+        <referencedby refid="classCSSParser_1a2e5de68469c6fd722d79366be8743123" compoundref="CSSParser_8cpp" startline="383" endline="426">parseInAtBlock</referencedby>
+        <referencedby refid="classCSSParser_1a32dc6fe98280dc01d92672b80989aa18" compoundref="CSSParser_8cpp" startline="524" endline="588">parseInProperty</referencedby>
+        <referencedby refid="classCSSParser_1aaf22cc5c0057d4da557a5aac0bcb1fb9" compoundref="CSSParser_8cpp" startline="429" endline="521">parseInSelector</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a8d9d19c6725d7b1f2af84e383d6758fc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSSParser::log</definition>
+        <argsstring>(const std::string msg, const message_type type, int iline=0)</argsstring>
+        <name>log</name>
+        <param>
+          <type>const std::string</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3" kindref="member">message_type</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iline</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="156" column="10" bodyfile="cssparser/CSSParser.cpp" bodystart="190" bodyend="210"/>
+        <references refid="classCSSParser_1a06e30a29446979c31d31e5b766e172b4" compoundref="CSSParser_8h" startline="177">line</references>
+        <references refid="classCSSParser_1a9cf464959d34fb7be7f2ceb466f0ade2" compoundref="CSSParser_8h" startline="176">logs</references>
+        <references refid="structCSSParser_1_1message_1a6a054bbe9e11feaed1986aba4cbab3ad" compoundref="CSSParser_8h" startline="83">CSSParser::message::m</references>
+        <references refid="structCSSParser_1_1message_1a7e4ab5fc51793310774c4c90c22b48ad" compoundref="CSSParser_8h" startline="84">CSSParser::message::t</references>
+        <referencedby refid="classCSSParser_1a5c8c8beaaeb41710ba7816d81ad75f4d" compoundref="CSSParser_8cpp" startline="871" endline="951">parse_css</referencedby>
+        <referencedby refid="classCSSParser_1a2e5de68469c6fd722d79366be8743123" compoundref="CSSParser_8cpp" startline="383" endline="426">parseInAtBlock</referencedby>
+        <referencedby refid="classCSSParser_1a32dc6fe98280dc01d92672b80989aa18" compoundref="CSSParser_8cpp" startline="524" endline="588">parseInProperty</referencedby>
+        <referencedby refid="classCSSParser_1aaf22cc5c0057d4da557a5aac0bcb1fb9" compoundref="CSSParser_8cpp" startline="429" endline="521">parseInSelector</referencedby>
+        <referencedby refid="classCSSParser_1a6a3a8f75a3b06ab1c70cfc1c918f473e" compoundref="CSSParser_8cpp" startline="812" endline="868">parseInString</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+        <referencedby refid="classCSSParser_1a3b3c43c82269a46bcbdc36fb2ba2bb68" compoundref="CSSParser_8cpp" startline="212" endline="252">unicode</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a2e5de68469c6fd722d79366be8743123" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSSParser::parseInAtBlock</definition>
+        <argsstring>(std::string &amp;css_input, int &amp;i, parse_status &amp;astatus, parse_status &amp;afrom)</argsstring>
+        <name>parseInAtBlock</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>css_input</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref> &amp;</type>
+          <declname>astatus</declname>
+        </param>
+        <param>
+          <type><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref> &amp;</type>
+          <declname>afrom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="126" column="10" bodyfile="cssparser/CSSParser.cpp" bodystart="383" bodyend="426"/>
+        <references refid="classCSSParser_1ab89438a335ba393c40ba437294e2fe70" compoundref="CSSParser_8cpp" startline="177" endline="187">add_token</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a571ea5c7d25671f768c098c23db0388b" compoundref="CSSParser_8h" startline="70">AT_START</references>
+        <references refid="classCSSUtils_1a99df2b7feffa035de4d3ebbd79d6b61d" compoundref="CSSUtils_8cpp" startline="326" endline="329">CSSUtils::ctype_space</references>
+        <references refid="classCSSParser_1a730a0fa864d3a286122f1e89a1d551d0" compoundref="CSSParser_8h" startline="187">cur_at</references>
+        <references refid="classCSSUtils_1a0d44f360a195dd93689726f7f65bba82" compoundref="CSSUtils_8cpp" startline="306" endline="316">CSSUtils::in_char_arr</references>
+        <references refid="classCSSParser_1a4c35325486936778866837d890bd1889" compoundref="CSSParser_8cpp" startline="255" endline="258">is_token</references>
+        <references refid="classCSSParser_1a8d9d19c6725d7b1f2af84e383d6758fc" compoundref="CSSParser_8cpp" startline="190" endline="210">log</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea298c3d2ff2bf1c574b0fc48109aa9beb" compoundref="CSSParser_8h" startline="60">PAT</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea5ec69f94f50f7204c276438cc5ca5ac0" compoundref="CSSParser_8h" startline="60">PIC</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea13dd277e0b73f51b4ed8d0be99aa634b" compoundref="CSSParser_8h" startline="60">PIS</references>
+        <references refid="classCSSUtils_1afe0d23972cebed07a91dcf2c7baf3173" compoundref="CSSUtils_8cpp" startline="220" endline="230">CSSUtils::s_at</references>
+        <references refid="classCSSUtils_1a94fe7f3212d281f585d2b16937f87674" compoundref="CSSUtils_8cpp" startline="355" endline="366">CSSUtils::trim</references>
+        <references refid="classCSSParser_1a3b3c43c82269a46bcbdc36fb2ba2bb68" compoundref="CSSParser_8cpp" startline="212" endline="252">unicode</references>
+        <references refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a111cfef49fd497ec9d8a9b1324127618" compoundref="CSSParser_8h" startline="65">Warning</references>
+        <referencedby refid="classCSSParser_1a5c8c8beaaeb41710ba7816d81ad75f4d" compoundref="CSSParser_8cpp" startline="871" endline="951">parse_css</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1aedbe86f8b56e4c2d1cb9fd918e389de0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSSParser::parseInComment</definition>
+        <argsstring>(std::string &amp;css_input, int &amp;i, parse_status &amp;astatus, parse_status &amp;afrom, std::string &amp;cur_comment)</argsstring>
+        <name>parseInComment</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>css_input</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref> &amp;</type>
+          <declname>astatus</declname>
+        </param>
+        <param>
+          <type><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref> &amp;</type>
+          <declname>afrom</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>cur_comment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="137" column="10" bodyfile="cssparser/CSSParser.cpp" bodystart="794" bodyend="809"/>
+        <references refid="classCSSParser_1ab89438a335ba393c40ba437294e2fe70" compoundref="CSSParser_8cpp" startline="177" endline="187">add_token</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a9f6936f485ff4b27b405988db6fa9c8e" compoundref="CSSParser_8h" startline="70">COMMENT</references>
+        <references refid="classCSSUtils_1afe0d23972cebed07a91dcf2c7baf3173" compoundref="CSSUtils_8cpp" startline="220" endline="230">CSSUtils::s_at</references>
+        <referencedby refid="classCSSParser_1a5c8c8beaaeb41710ba7816d81ad75f4d" compoundref="CSSParser_8cpp" startline="871" endline="951">parse_css</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a32dc6fe98280dc01d92672b80989aa18" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSSParser::parseInProperty</definition>
+        <argsstring>(std::string &amp;css_input, int &amp;i, parse_status &amp;astatus, parse_status &amp;afrom, bool &amp;invalid_at)</argsstring>
+        <name>parseInProperty</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>css_input</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref> &amp;</type>
+          <declname>astatus</declname>
+        </param>
+        <param>
+          <type><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref> &amp;</type>
+          <declname>afrom</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>invalid_at</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="131" column="10" bodyfile="cssparser/CSSParser.cpp" bodystart="524" bodyend="588"/>
+        <references refid="classCSSParser_1ab89438a335ba393c40ba437294e2fe70" compoundref="CSSParser_8cpp" startline="177" endline="187">add_token</references>
+        <references refid="classCSSProperties_1a905dc3027e91931425d3eeb24008754f" compoundref="CSSProperties_8cpp" startline="46" endline="49">CSSProperties::contains</references>
+        <references refid="classCSSParser_1a2370a4cac434d2f865dcec914ddc22bb" compoundref="CSSParser_8h" startline="172">css_level</references>
+        <references refid="classCSSUtils_1a99df2b7feffa035de4d3ebbd79d6b61d" compoundref="CSSUtils_8cpp" startline="326" endline="329">CSSUtils::ctype_space</references>
+        <references refid="classCSSParser_1a9ac97b354be1de2aa9c571bd1c474c60" compoundref="CSSParser_8h" startline="188">cur_property</references>
+        <references refid="classCSSParser_1aebd13ee0856baf9fddea298f916c6f7b" compoundref="CSSParser_8h" startline="186">cur_selector</references>
+        <references refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a251e53f6d530e058b9da3cbb2aff4e38" compoundref="CSSParser_8h" startline="65">Error</references>
+        <references refid="classCSSParser_1a1f21ad955ae8f583ce70ac83b32a12ae" compoundref="CSSParser_8cpp" startline="261" endline="264">explode_selectors</references>
+        <references refid="classCSSProperties_1a8e6e2d825551edbb5947cc48015e3836" compoundref="CSSProperties_8cpp" startline="37" endline="43">CSSProperties::instance</references>
+        <references refid="classCSSParser_1a4c35325486936778866837d890bd1889" compoundref="CSSParser_8cpp" startline="255" endline="258">is_token</references>
+        <references refid="classCSSProperties_1a28fd8f77b7163cf7ac94703cfca69aef" compoundref="CSSProperties_8cpp" startline="52" endline="58">CSSProperties::levels</references>
+        <references refid="classCSSParser_1a8d9d19c6725d7b1f2af84e383d6758fc" compoundref="CSSParser_8cpp" startline="190" endline="210">log</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea5ec69f94f50f7204c276438cc5ca5ac0" compoundref="CSSParser_8h" startline="60">PIC</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0eaf6561a84d0652a58f5a36c4e88b41ffa" compoundref="CSSParser_8h" startline="60">PIP</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea13dd277e0b73f51b4ed8d0be99aa634b" compoundref="CSSParser_8h" startline="60">PIS</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea9793bbe683fc0bee9b9d982c64e2f85a" compoundref="CSSParser_8h" startline="60">PIV</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292ac6e1270b339aace30f588bc888df7a7d" compoundref="CSSParser_8h" startline="70">PROPERTY</references>
+        <references refid="classCSSUtils_1afe0d23972cebed07a91dcf2c7baf3173" compoundref="CSSUtils_8cpp" startline="220" endline="230">CSSUtils::s_at</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a227b5019a3ff4da41206c63f31df28cd" compoundref="CSSParser_8h" startline="70">SEL_END</references>
+        <references refid="classCSSParser_1a3b3c43c82269a46bcbdc36fb2ba2bb68" compoundref="CSSParser_8cpp" startline="212" endline="252">unicode</references>
+        <references refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a111cfef49fd497ec9d8a9b1324127618" compoundref="CSSParser_8h" startline="65">Warning</references>
+        <referencedby refid="classCSSParser_1a5c8c8beaaeb41710ba7816d81ad75f4d" compoundref="CSSParser_8cpp" startline="871" endline="951">parse_css</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1aaf22cc5c0057d4da557a5aac0bcb1fb9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSSParser::parseInSelector</definition>
+        <argsstring>(std::string &amp;css_input, int &amp;i, parse_status &amp;astatus, parse_status &amp;afrom, bool &amp;invalid_at, char &amp;str_char, int str_size)</argsstring>
+        <name>parseInSelector</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>css_input</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref> &amp;</type>
+          <declname>astatus</declname>
+        </param>
+        <param>
+          <type><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref> &amp;</type>
+          <declname>afrom</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>invalid_at</declname>
+        </param>
+        <param>
+          <type>char &amp;</type>
+          <declname>str_char</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>str_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="128" column="10" bodyfile="cssparser/CSSParser.cpp" bodystart="429" bodyend="521"/>
+        <references refid="classCSSParser_1ab89438a335ba393c40ba437294e2fe70" compoundref="CSSParser_8cpp" startline="177" endline="187">add_token</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292abf54a3156de5adfe25684bd51d8b8e69" compoundref="CSSParser_8h" startline="70">AT_END</references>
+        <references refid="classCSSParser_1ab24ab4abb79e529bd79d4ae87a11e22f" compoundref="CSSParser_8h" startline="170">at_rules</references>
+        <references refid="classCSSUtils_1a67b7bac07006f57e18b2c042bb383b24" compoundref="CSSUtils_8cpp" startline="344" endline="352">CSSUtils::ctype_alpha</references>
+        <references refid="classCSSUtils_1a99df2b7feffa035de4d3ebbd79d6b61d" compoundref="CSSUtils_8cpp" startline="326" endline="329">CSSUtils::ctype_space</references>
+        <references refid="classCSSParser_1a730a0fa864d3a286122f1e89a1d551d0" compoundref="CSSParser_8h" startline="187">cur_at</references>
+        <references refid="classCSSParser_1aebd13ee0856baf9fddea298f916c6f7b" compoundref="CSSParser_8h" startline="186">cur_selector</references>
+        <references refid="classCSSParser_1ab6fdd687efa04b04833f92bea0105df7" compoundref="CSSParser_8h" startline="192">cur_string</references>
+        <references refid="classCSSParser_1a4c35325486936778866837d890bd1889" compoundref="CSSParser_8cpp" startline="255" endline="258">is_token</references>
+        <references refid="classCSSParser_1a8d9d19c6725d7b1f2af84e383d6758fc" compoundref="CSSParser_8cpp" startline="190" endline="210">log</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea298c3d2ff2bf1c574b0fc48109aa9beb" compoundref="CSSParser_8h" startline="60">PAT</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea5ec69f94f50f7204c276438cc5ca5ac0" compoundref="CSSParser_8h" startline="60">PIC</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0eaedde0e8c16418bba3f4540d11b3d8bc9" compoundref="CSSParser_8h" startline="60">PINSTR</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0eaf6561a84d0652a58f5a36c4e88b41ffa" compoundref="CSSParser_8h" startline="60">PIP</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea13dd277e0b73f51b4ed8d0be99aa634b" compoundref="CSSParser_8h" startline="60">PIS</references>
+        <references refid="classCSSUtils_1afe0d23972cebed07a91dcf2c7baf3173" compoundref="CSSUtils_8cpp" startline="220" endline="230">CSSUtils::s_at</references>
+        <references refid="classCSSParser_1aa4a9672fc52fa0611f2d7a4fb4c66b04" compoundref="CSSParser_8h" startline="193">sel_separate</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292af5c13254f1d8409a30294eea12fde9bb" compoundref="CSSParser_8h" startline="70">SEL_START</references>
+        <references refid="classCSSUtils_1ae29a6bee3adc1bdeda51228a45ed48a8" compoundref="CSSUtils_8cpp" startline="35" endline="43">CSSUtils::strtolower</references>
+        <references refid="classCSSUtils_1a94fe7f3212d281f585d2b16937f87674" compoundref="CSSUtils_8cpp" startline="355" endline="366">CSSUtils::trim</references>
+        <references refid="classCSSParser_1a3b3c43c82269a46bcbdc36fb2ba2bb68" compoundref="CSSParser_8cpp" startline="212" endline="252">unicode</references>
+        <references refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a111cfef49fd497ec9d8a9b1324127618" compoundref="CSSParser_8h" startline="65">Warning</references>
+        <referencedby refid="classCSSParser_1a5c8c8beaaeb41710ba7816d81ad75f4d" compoundref="CSSParser_8cpp" startline="871" endline="951">parse_css</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a6a3a8f75a3b06ab1c70cfc1c918f473e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSSParser::parseInString</definition>
+        <argsstring>(std::string &amp;css_input, int &amp;i, parse_status &amp;astatus, parse_status &amp;afrom, char &amp;str_char, bool &amp;str_in_str)</argsstring>
+        <name>parseInString</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>css_input</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref> &amp;</type>
+          <declname>astatus</declname>
+        </param>
+        <param>
+          <type><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref> &amp;</type>
+          <declname>afrom</declname>
+        </param>
+        <param>
+          <type>char &amp;</type>
+          <declname>str_char</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>str_in_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="140" column="10" bodyfile="cssparser/CSSParser.cpp" bodystart="812" bodyend="868"/>
+        <references refid="classCSSUtils_1a66e43aff6407e43a130b959912be4f66" compoundref="CSSUtils_8cpp" startline="159" endline="164">CSSUtils::char2str</references>
+        <references refid="classCSSParser_1a757148fa4b4deff9e7e800ee18bf97ef" compoundref="CSSParser_8h" startline="189">cur_function</references>
+        <references refid="classCSSParser_1a9ac97b354be1de2aa9c571bd1c474c60" compoundref="CSSParser_8h" startline="188">cur_property</references>
+        <references refid="classCSSParser_1aebd13ee0856baf9fddea298f916c6f7b" compoundref="CSSParser_8h" startline="186">cur_selector</references>
+        <references refid="classCSSParser_1ab6fdd687efa04b04833f92bea0105df7" compoundref="CSSParser_8h" startline="192">cur_string</references>
+        <references refid="classCSSParser_1a2a53fafd4117e09ead401d88cf9ba47c" compoundref="CSSParser_8h" startline="190">cur_sub_value</references>
+        <references refid="classCSSUtils_1aa1941ab849b3f26c29c24d9fe116084a" compoundref="CSSUtils_8cpp" startline="213" endline="216">CSSUtils::escaped</references>
+        <references refid="classCSSParser_1a8d9d19c6725d7b1f2af84e383d6758fc" compoundref="CSSParser_8cpp" startline="190" endline="210">log</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea13dd277e0b73f51b4ed8d0be99aa634b" compoundref="CSSParser_8h" startline="60">PIS</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea9793bbe683fc0bee9b9d982c64e2f85a" compoundref="CSSParser_8h" startline="60">PIV</references>
+        <references refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a111cfef49fd497ec9d8a9b1324127618" compoundref="CSSParser_8h" startline="65">Warning</references>
+        <referencedby refid="classCSSParser_1a5c8c8beaaeb41710ba7816d81ad75f4d" compoundref="CSSParser_8cpp" startline="871" endline="951">parse_css</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSSParser::parseInValue</definition>
+        <argsstring>(std::string &amp;css_input, int &amp;i, parse_status &amp;astatus, parse_status &amp;afrom, bool &amp;invalid_at, char &amp;str_char, bool &amp;pn, int str_size)</argsstring>
+        <name>parseInValue</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>css_input</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref> &amp;</type>
+          <declname>astatus</declname>
+        </param>
+        <param>
+          <type><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref> &amp;</type>
+          <declname>afrom</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>invalid_at</declname>
+        </param>
+        <param>
+          <type>char &amp;</type>
+          <declname>str_char</declname>
+        </param>
+        <param>
+          <type>bool &amp;</type>
+          <declname>pn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>str_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="134" column="10" bodyfile="cssparser/CSSParser.cpp" bodystart="591" bodyend="791"/>
+        <references refid="classCSSParser_1ab89438a335ba393c40ba437294e2fe70" compoundref="CSSParser_8cpp" startline="177" endline="187">add_token</references>
+        <references refid="classCSSParser_1ab24ab4abb79e529bd79d4ae87a11e22f" compoundref="CSSParser_8h" startline="170">at_rules</references>
+        <references refid="classCSSUtils_1a579a7bd712be8ebf0b2f8a6e89025366" compoundref="CSSUtils_8cpp" startline="269" endline="287">CSSUtils::build_value</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a6e0d52d6990870c3e4650b2e0ab8b522" compoundref="CSSParser_8h" startline="70">CHARSET</references>
+        <references refid="classCSSParser_1a2fb30f11f2f821867b41dc7d5755c464" compoundref="CSSParser_8h" startline="182">charset</references>
+        <references refid="classCSSProperties_1a905dc3027e91931425d3eeb24008754f" compoundref="CSSProperties_8cpp" startline="46" endline="49">CSSProperties::contains</references>
+        <references refid="classCSSParser_1a2370a4cac434d2f865dcec914ddc22bb" compoundref="CSSParser_8h" startline="172">css_level</references>
+        <references refid="classCSSUtils_1a99df2b7feffa035de4d3ebbd79d6b61d" compoundref="CSSUtils_8cpp" startline="326" endline="329">CSSUtils::ctype_space</references>
+        <references refid="classCSSParser_1a730a0fa864d3a286122f1e89a1d551d0" compoundref="CSSParser_8h" startline="187">cur_at</references>
+        <references refid="classCSSParser_1a757148fa4b4deff9e7e800ee18bf97ef" compoundref="CSSParser_8h" startline="189">cur_function</references>
+        <references refid="classCSSParser_1a3c669cb78cbe4b8ea156229b67d792a5" compoundref="CSSParser_8h" startline="195">cur_function_arr</references>
+        <references refid="classCSSParser_1a9ac97b354be1de2aa9c571bd1c474c60" compoundref="CSSParser_8h" startline="188">cur_property</references>
+        <references refid="classCSSParser_1aebd13ee0856baf9fddea298f916c6f7b" compoundref="CSSParser_8h" startline="186">cur_selector</references>
+        <references refid="classCSSParser_1ab6fdd687efa04b04833f92bea0105df7" compoundref="CSSParser_8h" startline="192">cur_string</references>
+        <references refid="classCSSParser_1a2a53fafd4117e09ead401d88cf9ba47c" compoundref="CSSParser_8h" startline="190">cur_sub_value</references>
+        <references refid="classCSSParser_1af476b51701a5488314b42195b8b171b8" compoundref="CSSParser_8h" startline="194">cur_sub_value_arr</references>
+        <references refid="classCSSParser_1a1aff13788b821e66c943d6ede0152652" compoundref="CSSParser_8h" startline="191">cur_value</references>
+        <references refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a251e53f6d530e058b9da3cbb2aff4e38" compoundref="CSSParser_8h" startline="65">Error</references>
+        <references refid="classCSSParser_1a1f21ad955ae8f583ce70ac83b32a12ae" compoundref="CSSParser_8cpp" startline="261" endline="264">explode_selectors</references>
+        <references refid="classCSSUtils_1a0daea43d1a253dc7cc7126325252fcfe" compoundref="CSSUtils_8cpp" startline="257" endline="266">CSSUtils::implode</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a95936c0445c1c495edf2df8a4cbc9686" compoundref="CSSParser_8h" startline="70">IMPORT</references>
+        <references refid="classCSSProperties_1a8e6e2d825551edbb5947cc48015e3836" compoundref="CSSProperties_8cpp" startline="37" endline="43">CSSProperties::instance</references>
+        <references refid="classCSSParser_1a4c35325486936778866837d890bd1889" compoundref="CSSParser_8cpp" startline="255" endline="258">is_token</references>
+        <references refid="classCSSProperties_1a28fd8f77b7163cf7ac94703cfca69aef" compoundref="CSSProperties_8cpp" startline="52" endline="58">CSSProperties::levels</references>
+        <references refid="classCSSParser_1a8d9d19c6725d7b1f2af84e383d6758fc" compoundref="CSSParser_8cpp" startline="190" endline="210">log</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a2be03d57b717ed4d107bc8c1eed0190b" compoundref="CSSParser_8h" startline="70">NAMESP</references>
+        <references refid="classCSSParser_1a5067698ca8c4cc4382fc549c0f088023" compoundref="CSSParser_8h" startline="183">namesp</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea5ec69f94f50f7204c276438cc5ca5ac0" compoundref="CSSParser_8h" startline="60">PIC</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0eaedde0e8c16418bba3f4540d11b3d8bc9" compoundref="CSSParser_8h" startline="60">PINSTR</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0eaf6561a84d0652a58f5a36c4e88b41ffa" compoundref="CSSParser_8h" startline="60">PIP</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea13dd277e0b73f51b4ed8d0be99aa634b" compoundref="CSSParser_8h" startline="60">PIS</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea9793bbe683fc0bee9b9d982c64e2f85a" compoundref="CSSParser_8h" startline="60">PIV</references>
+        <references refid="classCSSParser_1a99ea850f09dd79823e266af528abcc70" compoundref="CSSParser_8cpp" startline="954" endline="964">property_is_next</references>
+        <references refid="classCSSUtils_1afe0d23972cebed07a91dcf2c7baf3173" compoundref="CSSUtils_8cpp" startline="220" endline="230">CSSUtils::s_at</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a227b5019a3ff4da41206c63f31df28cd" compoundref="CSSParser_8h" startline="70">SEL_END</references>
+        <references refid="classCSSParser_1aa4a9672fc52fa0611f2d7a4fb4c66b04" compoundref="CSSParser_8h" startline="193">sel_separate</references>
+        <references refid="classCSSUtils_1ae29a6bee3adc1bdeda51228a45ed48a8" compoundref="CSSUtils_8cpp" startline="35" endline="43">CSSUtils::strtolower</references>
+        <references refid="classCSSUtils_1a15ad93bdc92705c92fc9c6c998d3f36a" compoundref="CSSUtils_8cpp" startline="81" endline="89">CSSUtils::strtoupper</references>
+        <references refid="classCSSUtils_1a94fe7f3212d281f585d2b16937f87674" compoundref="CSSUtils_8cpp" startline="355" endline="366">CSSUtils::trim</references>
+        <references refid="classCSSParser_1a3b3c43c82269a46bcbdc36fb2ba2bb68" compoundref="CSSParser_8cpp" startline="212" endline="252">unicode</references>
+        <references refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a2da99c7f47503ef2b3eac97fb918cd0b" compoundref="CSSParser_8h" startline="70">VALUE</references>
+        <references refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a111cfef49fd497ec9d8a9b1324127618" compoundref="CSSParser_8h" startline="65">Warning</references>
+        <referencedby refid="classCSSParser_1a5c8c8beaaeb41710ba7816d81ad75f4d" compoundref="CSSParser_8cpp" startline="871" endline="951">parse_css</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a2720c438abcb8e7a379f4cce8bfbe06c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSSParser::record_position</definition>
+        <argsstring>(parse_status old_status, parse_status new_status, std::string &amp;css_input, int i, bool force=false)</argsstring>
+        <name>record_position</name>
+        <param>
+          <type><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref></type>
+          <declname>old_status</declname>
+        </param>
+        <param>
+          <type><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref></type>
+          <declname>new_status</declname>
+        </param>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>css_input</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>force</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="159" column="10" bodyfile="cssparser/CSSParser.cpp" bodystart="1017" bodyend="1048"/>
+        <references refid="classCSSParser_1a06e30a29446979c31d31e5b766e172b4" compoundref="CSSParser_8h" startline="177">line</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea298c3d2ff2bf1c574b0fc48109aa9beb" compoundref="CSSParser_8h" startline="60">PAT</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea5ec69f94f50f7204c276438cc5ca5ac0" compoundref="CSSParser_8h" startline="60">PIC</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0eaf6561a84d0652a58f5a36c4e88b41ffa" compoundref="CSSParser_8h" startline="60">PIP</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea13dd277e0b73f51b4ed8d0be99aa634b" compoundref="CSSParser_8h" startline="60">PIS</references>
+        <references refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea9793bbe683fc0bee9b9d982c64e2f85a" compoundref="CSSParser_8h" startline="60">PIV</references>
+        <references refid="classCSSParser_1abaacbf6c0ce01b135043b6425b085364" compoundref="CSSParser_8h" startline="179">sline</references>
+        <references refid="classCSSParser_1a7d1ec2f2164e8088904e1cd6b0872282" compoundref="CSSParser_8h" startline="178">spos</references>
+        <referencedby refid="classCSSParser_1a5c8c8beaaeb41710ba7816d81ad75f4d" compoundref="CSSParser_8cpp" startline="871" endline="951">parse_css</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCSSParser_1a3b3c43c82269a46bcbdc36fb2ba2bb68" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string CSSParser::unicode</definition>
+        <argsstring>(std::string &amp;istring, int &amp;i)</argsstring>
+        <name>unicode</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>istring</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="148" column="17" bodyfile="cssparser/CSSParser.cpp" bodystart="212" bodyend="252"/>
+        <references refid="classCSSUtils_1a99df2b7feffa035de4d3ebbd79d6b61d" compoundref="CSSUtils_8cpp" startline="326" endline="329">CSSUtils::ctype_space</references>
+        <references refid="classCSSUtils_1aa20db64977769b804a47139652ac3d56" compoundref="CSSUtils_8cpp" startline="338" endline="342">CSSUtils::ctype_xdigit</references>
+        <references refid="classCSSUtils_1a9ba1a89ef38bd6008d1e463fb65c752c" compoundref="CSSUtils_8cpp" startline="127" endline="156">CSSUtils::hexdec</references>
+        <references refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a81dd43481fd6db4eceffee058e09079f" compoundref="CSSParser_8h" startline="65">Information</references>
+        <references refid="classCSSParser_1a8d9d19c6725d7b1f2af84e383d6758fc" compoundref="CSSParser_8cpp" startline="190" endline="210">log</references>
+        <references refid="classCSSUtils_1a5ad29bcb25d3721b08a70a94886d3baf" compoundref="CSSUtils_8cpp" startline="382" endline="386">CSSUtils::rtrim</references>
+        <references refid="classCSSUtils_1a94fe7f3212d281f585d2b16937f87674" compoundref="CSSUtils_8cpp" startline="355" endline="366">CSSUtils::trim</references>
+        <referencedby refid="classCSSParser_1a2e5de68469c6fd722d79366be8743123" compoundref="CSSParser_8cpp" startline="383" endline="426">parseInAtBlock</referencedby>
+        <referencedby refid="classCSSParser_1a32dc6fe98280dc01d92672b80989aa18" compoundref="CSSParser_8cpp" startline="524" endline="588">parseInProperty</referencedby>
+        <referencedby refid="classCSSParser_1aaf22cc5c0057d4da557a5aac0bcb1fb9" compoundref="CSSParser_8cpp" startline="429" endline="521">parseInSelector</referencedby>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classCSSParser_1a99ea850f09dd79823e266af528abcc70" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CSSParser::property_is_next</definition>
+        <argsstring>(std::string istring, int pos)</argsstring>
+        <name>property_is_next</name>
+        <param>
+          <type>std::string</type>
+          <declname>istring</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="166" column="17" bodyfile="cssparser/CSSParser.cpp" bodystart="954" bodyend="964"/>
+        <references refid="classCSSProperties_1a905dc3027e91931425d3eeb24008754f" compoundref="CSSProperties_8cpp" startline="46" endline="49">CSSProperties::contains</references>
+        <references refid="classCSSProperties_1a8e6e2d825551edbb5947cc48015e3836" compoundref="CSSProperties_8cpp" startline="37" endline="43">CSSProperties::instance</references>
+        <references refid="classCSSUtils_1ae29a6bee3adc1bdeda51228a45ed48a8" compoundref="CSSUtils_8cpp" startline="35" endline="43">CSSUtils::strtolower</references>
+        <references refid="classCSSUtils_1a94fe7f3212d281f585d2b16937f87674" compoundref="CSSUtils_8cpp" startline="355" endline="366">CSSUtils::trim</references>
+        <referencedby refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="CSSParser_8cpp" startline="591" endline="791">parseInValue</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="10">
+        <label>K</label>
+      </node>
+      <node id="7">
+        <label>T</label>
+      </node>
+      <node id="3">
+        <label>CSSParser::token</label>
+        <link refid="structCSSParser_1_1token"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>std::map&lt; K, T &gt;</label>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>CSSParser::message</label>
+        <link refid="structCSSParser_1_1message"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+m</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="8">
+        <label>std::map&lt; std::string, parse_status &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; std::string, parse_status &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>std::vector&lt; CSSParser::message &gt;</label>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; CSSParser::message &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>std::vector&lt; std::string &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; std::string &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>CSSParser</label>
+        <link refid="classCSSParser"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-csstokens</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-charset</edgelabel>
+          <edgelabel>-css_level</edgelabel>
+          <edgelabel>-cur_at</edgelabel>
+          <edgelabel>-cur_function</edgelabel>
+          <edgelabel>-cur_property</edgelabel>
+          <edgelabel>-cur_selector</edgelabel>
+          <edgelabel>-cur_string</edgelabel>
+          <edgelabel>-cur_sub_value</edgelabel>
+          <edgelabel>-cur_value</edgelabel>
+          <edgelabel>-namesp</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-at_rules</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-sel_separate</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-logs</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-csstemplate</edgelabel>
+          <edgelabel>-cur_function_arr</edgelabel>
+          <edgelabel>-cur_sub_value_arr</edgelabel>
+          <edgelabel>-import</edgelabel>
+          <edgelabel>-token_type_names</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; CSSParser::token &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; CSSParser::token &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>std::map&lt; int, std::vector&lt; CSSParser::message &gt; &gt;</label>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; int, std::vector&lt; CSSParser::message &gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>std::vector&lt; int &gt;</label>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::string</label>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cssparser/CSSParser.h" line="53" column="1" bodyfile="cssparser/CSSParser.h" bodystart="54" bodyend="198"/>
+    <listofallmembers>
+      <member refid="classCSSParser_1a9d1cb826d59f87901fdd138b8375d4e5" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>_seeknocomment</name></member>
+      <member refid="classCSSParser_1ab89438a335ba393c40ba437294e2fe70" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>add_token</name></member>
+      <member refid="classCSSParser_1a62207e4a900c67f3afa512a737431292abf54a3156de5adfe25684bd51d8b8e69" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>AT_END</name></member>
+      <member refid="classCSSParser_1ab24ab4abb79e529bd79d4ae87a11e22f" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>at_rules</name></member>
+      <member refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a571ea5c7d25671f768c098c23db0388b" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>AT_START</name></member>
+      <member refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a6e0d52d6990870c3e4650b2e0ab8b522" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>CHARSET</name></member>
+      <member refid="classCSSParser_1a2fb30f11f2f821867b41dc7d5755c464" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>charset</name></member>
+      <member refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a9f6936f485ff4b27b405988db6fa9c8e" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>COMMENT</name></member>
+      <member refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a498488da84aa1b5a012a1b40c5e28122" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>CSS_END</name></member>
+      <member refid="classCSSParser_1a2370a4cac434d2f865dcec914ddc22bb" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>css_level</name></member>
+      <member refid="classCSSParser_1af8a80a70c9641b04f45bd925fb9ffe82" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>CSSParser</name></member>
+      <member refid="classCSSParser_1a99b4e4b16309ddcc9923eeec7a053b71" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>csstemplate</name></member>
+      <member refid="classCSSParser_1a2c3a2d10c3727b650793ae0c9aca454b" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>csstokens</name></member>
+      <member refid="classCSSParser_1a730a0fa864d3a286122f1e89a1d551d0" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>cur_at</name></member>
+      <member refid="classCSSParser_1a757148fa4b4deff9e7e800ee18bf97ef" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>cur_function</name></member>
+      <member refid="classCSSParser_1a3c669cb78cbe4b8ea156229b67d792a5" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>cur_function_arr</name></member>
+      <member refid="classCSSParser_1a9ac97b354be1de2aa9c571bd1c474c60" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>cur_property</name></member>
+      <member refid="classCSSParser_1aebd13ee0856baf9fddea298f916c6f7b" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>cur_selector</name></member>
+      <member refid="classCSSParser_1ab6fdd687efa04b04833f92bea0105df7" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>cur_string</name></member>
+      <member refid="classCSSParser_1a2a53fafd4117e09ead401d88cf9ba47c" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>cur_sub_value</name></member>
+      <member refid="classCSSParser_1af476b51701a5488314b42195b8b171b8" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>cur_sub_value_arr</name></member>
+      <member refid="classCSSParser_1a1aff13788b821e66c943d6ede0152652" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>cur_value</name></member>
+      <member refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a251e53f6d530e058b9da3cbb2aff4e38" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>Error</name></member>
+      <member refid="classCSSParser_1a1f21ad955ae8f583ce70ac83b32a12ae" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>explode_selectors</name></member>
+      <member refid="classCSSParser_1a16b69275eb31cfb6792e52239babef27" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>get_charset</name></member>
+      <member refid="classCSSParser_1a832bab641f5b6551f6727d8546aa600a" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>get_import</name></member>
+      <member refid="classCSSParser_1a31d8fed09686ee717f4e6eb054110849" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>get_logs</name></member>
+      <member refid="classCSSParser_1a0e2f279a94fc27a5e3635a30de596632" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>get_namespace</name></member>
+      <member refid="classCSSParser_1a0c16e8bf920190f71c89108a8fbbeea0" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>get_next_token</name></member>
+      <member refid="classCSSParser_1ad91af1ca54c79dd13f07ecb14fdb7e8d" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>get_parse_errors</name></member>
+      <member refid="classCSSParser_1a8435cd5b6446fc5e55e00d58ce7f8126" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>get_parse_info</name></member>
+      <member refid="classCSSParser_1aa1927cc5ca43b7b0464d1da6f07d1421" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>get_parse_warnings</name></member>
+      <member refid="classCSSParser_1a20e0ef77c8b14c050af2cb13468d9122" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>get_type_name</name></member>
+      <member refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a95936c0445c1c495edf2df8a4cbc9686" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>IMPORT</name></member>
+      <member refid="classCSSParser_1a48294fa85202ac03a2f8407b8b2ab211" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>import</name></member>
+      <member refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a81dd43481fd6db4eceffee058e09079f" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>Information</name></member>
+      <member refid="classCSSParser_1a4c35325486936778866837d890bd1889" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>is_token</name></member>
+      <member refid="classCSSParser_1a06e30a29446979c31d31e5b766e172b4" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>line</name></member>
+      <member refid="classCSSParser_1a8d9d19c6725d7b1f2af84e383d6758fc" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>log</name></member>
+      <member refid="classCSSParser_1a9cf464959d34fb7be7f2ceb466f0ade2" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>logs</name></member>
+      <member refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>message_type</name></member>
+      <member refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a2be03d57b717ed4d107bc8c1eed0190b" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>NAMESP</name></member>
+      <member refid="classCSSParser_1a5067698ca8c4cc4382fc549c0f088023" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>namesp</name></member>
+      <member refid="classCSSParser_1a5c8c8beaaeb41710ba7816d81ad75f4d" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>parse_css</name></member>
+      <member refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>parse_status</name></member>
+      <member refid="classCSSParser_1a2e5de68469c6fd722d79366be8743123" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>parseInAtBlock</name></member>
+      <member refid="classCSSParser_1aedbe86f8b56e4c2d1cb9fd918e389de0" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>parseInComment</name></member>
+      <member refid="classCSSParser_1a32dc6fe98280dc01d92672b80989aa18" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>parseInProperty</name></member>
+      <member refid="classCSSParser_1aaf22cc5c0057d4da557a5aac0bcb1fb9" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>parseInSelector</name></member>
+      <member refid="classCSSParser_1a6a3a8f75a3b06ab1c70cfc1c918f473e" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>parseInString</name></member>
+      <member refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>parseInValue</name></member>
+      <member refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea298c3d2ff2bf1c574b0fc48109aa9beb" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>PAT</name></member>
+      <member refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea5ec69f94f50f7204c276438cc5ca5ac0" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>PIC</name></member>
+      <member refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0eaedde0e8c16418bba3f4540d11b3d8bc9" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>PINSTR</name></member>
+      <member refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0eaf6561a84d0652a58f5a36c4e88b41ffa" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>PIP</name></member>
+      <member refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea13dd277e0b73f51b4ed8d0be99aa634b" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>PIS</name></member>
+      <member refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea9793bbe683fc0bee9b9d982c64e2f85a" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>PIV</name></member>
+      <member refid="classCSSParser_1a62207e4a900c67f3afa512a737431292ac6e1270b339aace30f588bc888df7a7d" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>PROPERTY</name></member>
+      <member refid="classCSSParser_1a99ea850f09dd79823e266af528abcc70" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>property_is_next</name></member>
+      <member refid="classCSSParser_1a2720c438abcb8e7a379f4cce8bfbe06c" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>record_position</name></member>
+      <member refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>reset_parser</name></member>
+      <member refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a227b5019a3ff4da41206c63f31df28cd" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>SEL_END</name></member>
+      <member refid="classCSSParser_1aa4a9672fc52fa0611f2d7a4fb4c66b04" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>sel_separate</name></member>
+      <member refid="classCSSParser_1a62207e4a900c67f3afa512a737431292af5c13254f1d8409a30294eea12fde9bb" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>SEL_START</name></member>
+      <member refid="classCSSParser_1ae1da730d7da7f3d8c26d0d6842d1e5cd" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>selector_nest_level</name></member>
+      <member refid="classCSSParser_1abf3218756a160dfe0cf0f0d5eddbb4f8" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>serialize_css</name></member>
+      <member refid="classCSSParser_1a6db3d71f91bdc451a160d2f29f6f2031" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>set_csstokens</name></member>
+      <member refid="classCSSParser_1a5c5f1403cde53dd4ca994ce655fa165b" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>set_level</name></member>
+      <member refid="classCSSParser_1abaacbf6c0ce01b135043b6425b085364" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>sline</name></member>
+      <member refid="classCSSParser_1a7d1ec2f2164e8088904e1cd6b0872282" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>spos</name></member>
+      <member refid="classCSSParser_1a08f8dd1a61ce0df2c207fd53c5d877ec" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>token_ptr</name></member>
+      <member refid="classCSSParser_1a62207e4a900c67f3afa512a737431292" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>token_type</name></member>
+      <member refid="classCSSParser_1a9f9820bd856e9b04da196e5c352bd031" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>token_type_names</name></member>
+      <member refid="classCSSParser_1adb1e1d80034533d887f6c61b78e9bbdd" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>tokens</name></member>
+      <member refid="classCSSParser_1a3b3c43c82269a46bcbdc36fb2ba2bb68" prot="private" virt="non-virtual"><scope>CSSParser</scope><name>unicode</name></member>
+      <member refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a2da99c7f47503ef2b3eac97fb918cd0b" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>VALUE</name></member>
+      <member refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a111cfef49fd497ec9d8a9b1324127618" prot="public" virt="non-virtual"><scope>CSSParser</scope><name>Warning</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

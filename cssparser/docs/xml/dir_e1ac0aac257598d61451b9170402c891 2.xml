@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_e1ac0aac257598d61451b9170402c891" kind="dir">
+    <compoundname>cssparser</compoundname>
+    <innerfile refid="df/df6/CSSParser_8cpp">CSSParser.cpp</innerfile>
+    <innerfile refid="d2/d2d/CSSParser_8h">CSSParser.h</innerfile>
+    <innerfile refid="d0/d31/CSSProperties_8cpp">CSSProperties.cpp</innerfile>
+    <innerfile refid="d5/db2/CSSProperties_8h">CSSProperties.h</innerfile>
+    <innerfile refid="de/df5/CSSUtils_8cpp">CSSUtils.cpp</innerfile>
+    <innerfile refid="d0/d29/CSSUtils_8h">CSSUtils.h</innerfile>
+    <innerfile refid="df/d0a/main_8cpp">main.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="cssparser/"/>
+  </compounddef>
+</doxygen>

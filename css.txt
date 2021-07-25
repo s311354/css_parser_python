@@ -1,21 +1,35 @@
 Start Posistion: 0, Start Line: 1
 Current Posistion: 0
 Needle: b
+Last Posistion: -1
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 1
 Needle: o
+Last Posistion: 0
+Needle: b
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 2
 Needle: d
+Last Posistion: 1
+Needle: o
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 3
 Needle: y
+Last Posistion: 2
+Needle: d
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 4
 Needle:  
+Last Posistion: 3
+Needle: y
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 5
 Needle: {
+PIS Is Token
+String: body 
+Last: 4
+First position: 0, Last position: 3, Trim String: body
+Line: 1 Token: {'SEL_START': {'Posistion': 0, 'Line': 1, 'Type': 'SEL_START', 'Data': 'body'}}
 Pre Status: PIS, Current Status: PIP
 Current Posistion: 6
 Start Posistion: 9, Start Line: 2
@@ -79,56 +93,91 @@ Pre Status: PIP, Current Status: PIP
 Current Posistion: 25
 Needle: :
 PIP : Is Token
+String: background-color
+Last: -1
+First position: 0, Last position: 16, Trim String: background-color
+Line: 2 Token: {'PROPERTY': {'Posistion': 9, 'Line': 2, 'Type': 'PROPERTY', 'Data': 'background-color'}}
 Pre Status: PIP, Current Status: PIV
 Current Posistion: 26
 Start Posistion: 27, Start Line: 2
-Posistion:   Pin: False
+CSS InPut:   Pin: False
 Needle:  
+Sub Value:  
+String:  
+Last: 0
+First position: 1, Last position: 1, Trim String: 
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 27
-Posistion: p Pin: False
+CSS InPut: p Pin: False
 Needle: p
+Sub Value: p
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 28
-Posistion: o Pin: False
+CSS InPut: o Pin: False
 Needle: o
+Sub Value: o
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 29
-Posistion: w Pin: False
+CSS InPut: w Pin: False
 Needle: w
+Sub Value: w
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 30
-Posistion: d Pin: False
+CSS InPut: d Pin: False
 Needle: d
+Sub Value: d
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 31
-Posistion: e Pin: False
+CSS InPut: e Pin: False
 Needle: e
+Sub Value: e
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 32
-Posistion: r Pin: False
+CSS InPut: r Pin: False
 Needle: r
+Sub Value: r
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 33
-Posistion: b Pin: False
+CSS InPut: b Pin: False
 Needle: b
+Sub Value: b
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 34
-Posistion: l Pin: False
+CSS InPut: l Pin: False
 Needle: l
+Sub Value: l
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 35
-Posistion: u Pin: False
+CSS InPut: u Pin: False
 Needle: u
+Sub Value: u
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 36
-Posistion: e Pin: False
+CSS InPut: e Pin: False
 Needle: e
+Sub Value: e
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 37
-Posistion: ; Pin: False
+CSS InPut: ; Pin: False
 Needle: ;
 PIV ; Is Token
+Selector: body 
+String: standard
+Last: -1
+First position: 0, Last position: 8, Trim String: standard
+String: body 
+Last: 4
+First position: 0, Last position: 3, Trim String: body
+String: background-color
+Last: -1
+First position: 0, Last position: 16, Trim String: background-color
+String: powderblue
+Last: -1
+First position: 0, Last position: 10, Trim String: powderblue
+String: powderblue
+Last: -1
+First position: 0, Last position: 10, Trim String: powderblue
+Line: 2 Token: {'PROPERTY': {'Posistion': 9, 'Line': 2, 'Type': 'PROPERTY', 'Data': 'background-color'}, 'VALUE': {'Posistion': 27, 'Line': 2, 'Type': 'VALUE', 'Data': 'powderblue'}}
 Pre Status: PIV, Current Status: PIP
 Current Posistion: 38
 Start Posistion: 39, Start Line: 3
@@ -138,29 +187,39 @@ Pre Status: PIP, Current Status: PIP
 Current Posistion: 39
 Needle: }
 PIP } Is Token
+String: body
+Last: -1
+First position: 0, Last position: 4, Trim String: body
+Line: 3 Token: {'SEL_END': {'Posistion': 39, 'Line': 3, 'Type': 'SEL_END', 'Data': 'body'}}
 Pre Status: PIP, Current Status: PIS
 Current Posistion: 40
 Start Posistion: 41, Start Line: 4
 Needle: 
 
+Last Posistion: -1
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 41
 Needle: h
-Needle: 
-
+Last Posistion: 0
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 42
 Needle: 1
-Needle: 
-
+Last Posistion: 1
+Needle: h
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 43
 Needle:  
-Needle: 
-
+Last Posistion: 2
+Needle: 1
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 44
 Needle: {
+PIS Is Token
+String: 
+h1 
+Last: 3
+First position: 1, Last position: 2, Trim String: h1
+Line: 4 Token: {'SEL_START': {'Posistion': 41, 'Line': 4, 'Type': 'SEL_START', 'Data': 'h1'}}
 Pre Status: PIS, Current Status: PIP
 Current Posistion: 45
 Start Posistion: 48, Start Line: 5
@@ -191,32 +250,63 @@ Pre Status: PIP, Current Status: PIP
 Current Posistion: 53
 Needle: :
 PIP : Is Token
+String: color
+Last: -1
+First position: 0, Last position: 5, Trim String: color
+Line: 5 Token: {'PROPERTY': {'Posistion': 48, 'Line': 5, 'Type': 'PROPERTY', 'Data': 'color'}}
 Pre Status: PIP, Current Status: PIV
 Current Posistion: 54
 Start Posistion: 55, Start Line: 5
-Posistion:   Pin: False
+CSS InPut:   Pin: False
 Needle:  
+Sub Value:  
+String:  
+Last: 0
+First position: 1, Last position: 1, Trim String: 
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 55
-Posistion: b Pin: False
+CSS InPut: b Pin: False
 Needle: b
+Sub Value: b
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 56
-Posistion: l Pin: False
+CSS InPut: l Pin: False
 Needle: l
+Sub Value: l
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 57
-Posistion: u Pin: False
+CSS InPut: u Pin: False
 Needle: u
+Sub Value: u
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 58
-Posistion: e Pin: False
+CSS InPut: e Pin: False
 Needle: e
+Sub Value: e
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 59
-Posistion: ; Pin: False
+CSS InPut: ; Pin: False
 Needle: ;
 PIV ; Is Token
+Selector: 
+h1 
+String: standard
+Last: -1
+First position: 0, Last position: 8, Trim String: standard
+String: 
+h1 
+Last: 3
+First position: 1, Last position: 2, Trim String: h1
+String: color
+Last: -1
+First position: 0, Last position: 5, Trim String: color
+String: blue
+Last: -1
+First position: 0, Last position: 4, Trim String: blue
+String: blue
+Last: -1
+First position: 0, Last position: 4, Trim String: blue
+Line: 5 Token: {'PROPERTY': {'Posistion': 48, 'Line': 5, 'Type': 'PROPERTY', 'Data': 'color'}, 'VALUE': {'Posistion': 55, 'Line': 5, 'Type': 'VALUE', 'Data': 'blue'}}
 Pre Status: PIV, Current Status: PIP
 Current Posistion: 60
 Start Posistion: 61, Start Line: 6
@@ -226,24 +316,34 @@ Pre Status: PIP, Current Status: PIP
 Current Posistion: 61
 Needle: }
 PIP } Is Token
+String: h1
+Last: -1
+First position: 0, Last position: 2, Trim String: h1
+Line: 6 Token: {'SEL_END': {'Posistion': 61, 'Line': 6, 'Type': 'SEL_END', 'Data': 'h1'}}
 Pre Status: PIP, Current Status: PIS
 Current Posistion: 62
 Start Posistion: 63, Start Line: 7
 Needle: 
 
+Last Posistion: -1
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 63
 Needle: p
-Needle: 
-
+Last Posistion: 0
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 64
 Needle:  
-Needle: 
-
+Last Posistion: 1
+Needle: p
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 65
 Needle: {
+PIS Is Token
+String: 
+p 
+Last: 2
+First position: 1, Last position: 1, Trim String: p
+Line: 7 Token: {'SEL_START': {'Posistion': 63, 'Line': 7, 'Type': 'SEL_START', 'Data': 'p'}}
 Pre Status: PIS, Current Status: PIP
 Current Posistion: 66
 Start Posistion: 69, Start Line: 8
@@ -274,28 +374,58 @@ Pre Status: PIP, Current Status: PIP
 Current Posistion: 74
 Needle: :
 PIP : Is Token
+String: color
+Last: -1
+First position: 0, Last position: 5, Trim String: color
+Line: 8 Token: {'PROPERTY': {'Posistion': 69, 'Line': 8, 'Type': 'PROPERTY', 'Data': 'color'}}
 Pre Status: PIP, Current Status: PIV
 Current Posistion: 75
 Start Posistion: 76, Start Line: 8
-Posistion:   Pin: False
+CSS InPut:   Pin: False
 Needle:  
+Sub Value:  
+String:  
+Last: 0
+First position: 1, Last position: 1, Trim String: 
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 76
-Posistion: r Pin: False
+CSS InPut: r Pin: False
 Needle: r
+Sub Value: r
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 77
-Posistion: e Pin: False
+CSS InPut: e Pin: False
 Needle: e
+Sub Value: e
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 78
-Posistion: d Pin: False
+CSS InPut: d Pin: False
 Needle: d
+Sub Value: d
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 79
-Posistion: ; Pin: False
+CSS InPut: ; Pin: False
 Needle: ;
 PIV ; Is Token
+Selector: 
+p 
+String: standard
+Last: -1
+First position: 0, Last position: 8, Trim String: standard
+String: 
+p 
+Last: 2
+First position: 1, Last position: 1, Trim String: p
+String: color
+Last: -1
+First position: 0, Last position: 5, Trim String: color
+String: red
+Last: -1
+First position: 0, Last position: 3, Trim String: red
+String: red
+Last: -1
+First position: 0, Last position: 3, Trim String: red
+Line: 8 Token: {'PROPERTY': {'Posistion': 69, 'Line': 8, 'Type': 'PROPERTY', 'Data': 'color'}, 'VALUE': {'Posistion': 76, 'Line': 8, 'Type': 'VALUE', 'Data': 'red'}}
 Pre Status: PIV, Current Status: PIP
 Current Posistion: 80
 Start Posistion: 81, Start Line: 9
@@ -305,34 +435,44 @@ Pre Status: PIP, Current Status: PIP
 Current Posistion: 81
 Needle: }
 PIP } Is Token
+String: p
+Last: -1
+First position: 0, Last position: 1, Trim String: p
+Line: 9 Token: {'SEL_END': {'Posistion': 81, 'Line': 9, 'Type': 'SEL_END', 'Data': 'p'}}
 Pre Status: PIP, Current Status: PIS
 Current Posistion: 82
 Start Posistion: 83, Start Line: 10
 Needle: 
 
+Last Posistion: -1
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 83
 Needle: d
-Needle: 
-
+Last Posistion: 0
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 84
 Needle: i
-Needle: 
-
+Last Posistion: 1
+Needle: d
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 85
 Needle: v
-Needle: 
-
+Last Posistion: 2
+Needle: i
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 86
 Needle:  
-Needle: 
-
+Last Posistion: 3
+Needle: v
 Pre Status: PIS, Current Status: PIS
 Current Posistion: 87
 Needle: {
+PIS Is Token
+String: 
+div 
+Last: 4
+First position: 1, Last position: 3, Trim String: div
+Line: 10 Token: {'SEL_START': {'Posistion': 83, 'Line': 10, 'Type': 'SEL_START', 'Data': 'div'}}
 Pre Status: PIS, Current Status: PIP
 Current Posistion: 88
 Start Posistion: 91, Start Line: 11
@@ -363,36 +503,68 @@ Pre Status: PIP, Current Status: PIP
 Current Posistion: 96
 Needle: :
 PIP : Is Token
+String: width
+Last: -1
+First position: 0, Last position: 5, Trim String: width
+Line: 11 Token: {'PROPERTY': {'Posistion': 91, 'Line': 11, 'Type': 'PROPERTY', 'Data': 'width'}}
 Pre Status: PIP, Current Status: PIV
 Current Posistion: 97
 Start Posistion: 98, Start Line: 11
-Posistion:   Pin: False
+CSS InPut:   Pin: False
 Needle:  
+Sub Value:  
+String:  
+Last: 0
+First position: 1, Last position: 1, Trim String: 
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 98
-Posistion: 1 Pin: False
+CSS InPut: 1 Pin: False
 Needle: 1
+Sub Value: 1
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 99
-Posistion: 0 Pin: False
+CSS InPut: 0 Pin: False
 Needle: 0
+Sub Value: 0
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 100
-Posistion: 0 Pin: False
+CSS InPut: 0 Pin: False
 Needle: 0
+Sub Value: 0
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 101
-Posistion: p Pin: False
+CSS InPut: p Pin: False
 Needle: p
+Sub Value: p
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 102
-Posistion: x Pin: False
+CSS InPut: x Pin: False
 Needle: x
+Sub Value: x
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 103
-Posistion: ; Pin: False
+CSS InPut: ; Pin: False
 Needle: ;
 PIV ; Is Token
+Selector: 
+div 
+String: standard
+Last: -1
+First position: 0, Last position: 8, Trim String: standard
+String: 
+div 
+Last: 4
+First position: 1, Last position: 3, Trim String: div
+String: width
+Last: -1
+First position: 0, Last position: 5, Trim String: width
+String: 100px
+Last: -1
+First position: 0, Last position: 5, Trim String: 100px
+String: 100px
+Last: -1
+First position: 0, Last position: 5, Trim String: 100px
+Line: 11 Token: {'PROPERTY': {'Posistion': 91, 'Line': 11, 'Type': 'PROPERTY', 'Data': 'width'}, 'VALUE': {'Posistion': 98, 'Line': 11, 'Type': 'VALUE', 'Data': '100px'}}
 Pre Status: PIV, Current Status: PIP
 Current Posistion: 104
 Start Posistion: 107, Start Line: 12
@@ -426,36 +598,66 @@ Pre Status: PIP, Current Status: PIP
 Current Posistion: 113
 Needle: :
 PIP : Is Token
+String: height
+Last: -1
+First position: 0, Last position: 6, Trim String: height
+Line: 12 Token: {'PROPERTY': {'Posistion': 107, 'Line': 12, 'Type': 'PROPERTY', 'Data': 'height'}}
 Pre Status: PIP, Current Status: PIV
 Current Posistion: 114
 Start Posistion: 115, Start Line: 12
-Posistion:   Pin: False
+CSS InPut:   Pin: False
 Needle:  
+Sub Value:  
+String:  
+Last: 0
+First position: 1, Last position: 1, Trim String: 
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 115
-Posistion: 1 Pin: False
+CSS InPut: 1 Pin: False
 Needle: 1
+Sub Value: 1
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 116
-Posistion: 0 Pin: False
+CSS InPut: 0 Pin: False
 Needle: 0
+Sub Value: 0
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 117
-Posistion: 0 Pin: False
+CSS InPut: 0 Pin: False
 Needle: 0
+Sub Value: 0
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 118
-Posistion: p Pin: False
+CSS InPut: p Pin: False
 Needle: p
+Sub Value: p
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 119
-Posistion: x Pin: False
+CSS InPut: x Pin: False
 Needle: x
+Sub Value: x
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 120
-Posistion: ; Pin: False
+CSS InPut: ; Pin: False
 Needle: ;
 PIV ; Is Token
+Selector: div
+String: standard
+Last: -1
+First position: 0, Last position: 8, Trim String: standard
+String: div
+Last: -1
+First position: 0, Last position: 3, Trim String: div
+String: height
+Last: -1
+First position: 0, Last position: 6, Trim String: height
+String: 100px
+Last: -1
+First position: 0, Last position: 5, Trim String: 100px
+String: 100px
+Last: -1
+First position: 0, Last position: 5, Trim String: 100px
+Line: 12 Token: {'PROPERTY': {'Posistion': 107, 'Line': 12, 'Type': 'PROPERTY', 'Data': 'height'}, 'VALUE': {'Posistion': 115, 'Line': 12, 'Type': 'VALUE', 'Data': '100px'}}
 Pre Status: PIV, Current Status: PIP
 Current Posistion: 121
 Start Posistion: 124, Start Line: 13
@@ -519,292 +721,295 @@ Pre Status: PIP, Current Status: PIP
 Current Posistion: 140
 Needle: :
 PIP : Is Token
+String: background-color
+Last: -1
+First position: 0, Last position: 16, Trim String: background-color
+Line: 13 Token: {'PROPERTY': {'Posistion': 124, 'Line': 13, 'Type': 'PROPERTY', 'Data': 'background-color'}}
 Pre Status: PIP, Current Status: PIV
 Current Posistion: 141
 Start Posistion: 142, Start Line: 13
-Posistion:   Pin: False
+CSS InPut:   Pin: False
 Needle:  
+Sub Value:  
+String:  
+Last: 0
+First position: 1, Last position: 1, Trim String: 
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 142
-Posistion: l Pin: False
+CSS InPut: l Pin: False
 Needle: l
+Sub Value: l
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 143
-Posistion: i Pin: False
+CSS InPut: i Pin: False
 Needle: i
+Sub Value: i
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 144
-Posistion: g Pin: False
+CSS InPut: g Pin: False
 Needle: g
+Sub Value: g
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 145
-Posistion: h Pin: False
+CSS InPut: h Pin: False
 Needle: h
+Sub Value: h
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 146
-Posistion: t Pin: False
+CSS InPut: t Pin: False
 Needle: t
+Sub Value: t
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 147
-Posistion: b Pin: False
+CSS InPut: b Pin: False
 Needle: b
+Sub Value: b
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 148
-Posistion: l Pin: False
+CSS InPut: l Pin: False
 Needle: l
+Sub Value: l
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 149
-Posistion: u Pin: False
+CSS InPut: u Pin: False
 Needle: u
+Sub Value: u
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 150
-Posistion: e Pin: False
+CSS InPut: e Pin: False
 Needle: e
+Sub Value: e
 Pre Status: PIV, Current Status: PIV
 Current Posistion: 151
-Posistion: ; Pin: False
+CSS InPut: ; Pin: False
 Needle: ;
 PIV ; Is Token
+Selector: div
+String: standard
+Last: -1
+First position: 0, Last position: 8, Trim String: standard
+String: div
+Last: -1
+First position: 0, Last position: 3, Trim String: div
+String: background-color
+Last: -1
+First position: 0, Last position: 16, Trim String: background-color
+String: lightblue
+Last: -1
+First position: 0, Last position: 9, Trim String: lightblue
+String: lightblue
+Last: -1
+First position: 0, Last position: 9, Trim String: lightblue
+Line: 13 Token: {'PROPERTY': {'Posistion': 124, 'Line': 13, 'Type': 'PROPERTY', 'Data': 'background-color'}, 'VALUE': {'Posistion': 142, 'Line': 13, 'Type': 'VALUE', 'Data': 'lightblue'}}
 Pre Status: PIV, Current Status: PIP
 Current Posistion: 152
-Start Posistion: 155, Start Line: 14
+Start Posistion: 153, Start Line: 14
 Needle: 
 
 Pre Status: PIP, Current Status: PIP
 Current Posistion: 153
-Needle:  
-Pre Status: PIP, Current Status: PIP
-Current Posistion: 154
-Needle:  
-Pre Status: PIP, Current Status: PIP
-Current Posistion: 155
-Needle: b
-Pre Status: PIP, Current Status: PIP
-Current Posistion: 156
-Needle: o
-Pre Status: PIP, Current Status: PIP
-Current Posistion: 157
-Needle: r
-Pre Status: PIP, Current Status: PIP
-Current Posistion: 158
-Needle: d
-Pre Status: PIP, Current Status: PIP
-Current Posistion: 159
-Needle: e
-Pre Status: PIP, Current Status: PIP
-Current Posistion: 160
-Needle: r
-Pre Status: PIP, Current Status: PIP
-Current Posistion: 161
-Needle: :
-PIP : Is Token
-Pre Status: PIP, Current Status: PIV
-Current Posistion: 162
-Start Posistion: 163, Start Line: 14
-Posistion:   Pin: False
-Needle:  
-Pre Status: PIV, Current Status: PIV
-Current Posistion: 163
-Posistion: 1 Pin: False
-Needle: 1
-Pre Status: PIV, Current Status: PIV
-Current Posistion: 164
-Posistion: p Pin: False
-Needle: p
-Pre Status: PIV, Current Status: PIV
-Current Posistion: 165
-Posistion: x Pin: False
-Needle: x
-Pre Status: PIV, Current Status: PIV
-Current Posistion: 166
-Posistion:   Pin: False
-Needle:  
-Pre Status: PIV, Current Status: PIV
-Current Posistion: 167
-Posistion: s Pin: False
-Needle: s
-Pre Status: PIV, Current Status: PIV
-Current Posistion: 168
-Posistion: o Pin: False
-Needle: o
-Pre Status: PIV, Current Status: PIV
-Current Posistion: 169
-Posistion: l Pin: False
-Needle: l
-Pre Status: PIV, Current Status: PIV
-Current Posistion: 170
-Posistion: i Pin: False
-Needle: i
-Pre Status: PIV, Current Status: PIV
-Current Posistion: 171
-Posistion: d Pin: False
-Needle: d
-Pre Status: PIV, Current Status: PIV
-Current Posistion: 172
-Posistion:   Pin: False
-Needle:  
-Pre Status: PIV, Current Status: PIV
-Current Posistion: 173
-Posistion: b Pin: False
-Needle: b
-Pre Status: PIV, Current Status: PIV
-Current Posistion: 174
-Posistion: l Pin: False
-Needle: l
-Pre Status: PIV, Current Status: PIV
-Current Posistion: 175
-Posistion: a Pin: False
-Needle: a
-Pre Status: PIV, Current Status: PIV
-Current Posistion: 176
-Posistion: c Pin: False
-Needle: c
-Pre Status: PIV, Current Status: PIV
-Current Posistion: 177
-Posistion: k Pin: False
-Needle: k
-Pre Status: PIV, Current Status: PIV
-Current Posistion: 178
-Posistion: ; Pin: False
-Needle: ;
-PIV ; Is Token
-Pre Status: PIV, Current Status: PIP
-Current Posistion: 179
-Start Posistion: 180, Start Line: 15
-Needle: 
-
-Pre Status: PIP, Current Status: PIP
-Current Posistion: 180
 Needle: }
 PIP } Is Token
+String: div
+Last: -1
+First position: 0, Last position: 3, Trim String: div
+Line: 14 Token: {'SEL_END': {'Posistion': 153, 'Line': 14, 'Type': 'SEL_END', 'Data': 'div'}}
 Pre Status: PIP, Current Status: PIS
-Current Posistion: 181
-Start Posistion: 182, Start Line: 16
+Current Posistion: 154
+Start Posistion: 155, Start Line: 15
 Needle: 
 
+Last Posistion: -1
 Pre Status: PIS, Current Status: PIS
-Current Posistion: 182
+Current Posistion: 155
 Needle: d
-Needle: 
-
+Last Posistion: 0
 Pre Status: PIS, Current Status: PIS
-Current Posistion: 183
+Current Posistion: 156
 Needle: i
-Needle: 
-
+Last Posistion: 1
+Needle: d
 Pre Status: PIS, Current Status: PIS
-Current Posistion: 184
+Current Posistion: 157
 Needle: v
-Needle: 
-
+Last Posistion: 2
+Needle: i
 Pre Status: PIS, Current Status: PIS
-Current Posistion: 185
+Current Posistion: 158
+Needle: :
+PIS Is Token
+Pre Status: PIS, Current Status: PIS
+Current Posistion: 159
+Needle: h
+Last Posistion: 4
 Needle: :
 Pre Status: PIS, Current Status: PIS
-Current Posistion: 186
-Needle: h
-Needle: 
-
-Pre Status: PIS, Current Status: PIS
-Current Posistion: 187
+Current Posistion: 160
 Needle: o
-Needle: 
-
+Last Posistion: 5
+Needle: h
 Pre Status: PIS, Current Status: PIS
-Current Posistion: 188
+Current Posistion: 161
 Needle: v
-Needle: 
-
+Last Posistion: 6
+Needle: o
 Pre Status: PIS, Current Status: PIS
-Current Posistion: 189
+Current Posistion: 162
 Needle: e
-Needle: 
-
+Last Posistion: 7
+Needle: v
 Pre Status: PIS, Current Status: PIS
-Current Posistion: 190
+Current Posistion: 163
 Needle: r
-Needle: 
-
+Last Posistion: 8
+Needle: e
 Pre Status: PIS, Current Status: PIS
-Current Posistion: 191
+Current Posistion: 164
 Needle:  
-Needle: 
-
+Last Posistion: 9
+Needle: r
 Pre Status: PIS, Current Status: PIS
-Current Posistion: 192
+Current Posistion: 165
 Needle: {
+PIS Is Token
+String: 
+div:hover 
+Last: 10
+First position: 1, Last position: 9, Trim String: div:hover
+Line: 15 Token: {'SEL_START': {'Posistion': 155, 'Line': 15, 'Type': 'SEL_START', 'Data': 'div:hover'}}
 Pre Status: PIS, Current Status: PIP
-Current Posistion: 193
-Start Posistion: 196, Start Line: 17
+Current Posistion: 166
+Start Posistion: 169, Start Line: 16
 Needle: 
 
 Pre Status: PIP, Current Status: PIP
-Current Posistion: 194
+Current Posistion: 167
 Needle:  
 Pre Status: PIP, Current Status: PIP
-Current Posistion: 195
+Current Posistion: 168
 Needle:  
 Pre Status: PIP, Current Status: PIP
-Current Posistion: 196
+Current Posistion: 169
 Needle: w
 Pre Status: PIP, Current Status: PIP
-Current Posistion: 197
+Current Posistion: 170
 Needle: i
 Pre Status: PIP, Current Status: PIP
-Current Posistion: 198
+Current Posistion: 171
 Needle: d
 Pre Status: PIP, Current Status: PIP
-Current Posistion: 199
+Current Posistion: 172
 Needle: t
 Pre Status: PIP, Current Status: PIP
-Current Posistion: 200
+Current Posistion: 173
 Needle: h
 Pre Status: PIP, Current Status: PIP
-Current Posistion: 201
+Current Posistion: 174
 Needle: :
 PIP : Is Token
+String: width
+Last: -1
+First position: 0, Last position: 5, Trim String: width
+Line: 16 Token: {'PROPERTY': {'Posistion': 169, 'Line': 16, 'Type': 'PROPERTY', 'Data': 'width'}}
 Pre Status: PIP, Current Status: PIV
-Current Posistion: 202
-Start Posistion: 203, Start Line: 17
-Posistion:   Pin: False
+Current Posistion: 175
+Start Posistion: 176, Start Line: 16
+CSS InPut:   Pin: False
 Needle:  
+Sub Value:  
+String:  
+Last: 0
+First position: 1, Last position: 1, Trim String: 
 Pre Status: PIV, Current Status: PIV
-Current Posistion: 203
-Posistion: 3 Pin: False
+Current Posistion: 176
+CSS InPut: 3 Pin: False
 Needle: 3
+Sub Value: 3
 Pre Status: PIV, Current Status: PIV
-Current Posistion: 204
-Posistion: 0 Pin: False
+Current Posistion: 177
+CSS InPut: 0 Pin: False
 Needle: 0
+Sub Value: 0
 Pre Status: PIV, Current Status: PIV
-Current Posistion: 205
-Posistion: 0 Pin: False
+Current Posistion: 178
+CSS InPut: 0 Pin: False
 Needle: 0
+Sub Value: 0
 Pre Status: PIV, Current Status: PIV
-Current Posistion: 206
-Posistion: p Pin: False
+Current Posistion: 179
+CSS InPut: p Pin: False
 Needle: p
+Sub Value: p
 Pre Status: PIV, Current Status: PIV
-Current Posistion: 207
-Posistion: x Pin: False
+Current Posistion: 180
+CSS InPut: x Pin: False
 Needle: x
+Sub Value: x
 Pre Status: PIV, Current Status: PIV
-Current Posistion: 208
-Posistion: ; Pin: False
+Current Posistion: 181
+CSS InPut: ; Pin: False
 Needle: ;
 PIV ; Is Token
+Selector: 
+div:hover 
+String: standard
+Last: -1
+First position: 0, Last position: 8, Trim String: standard
+String: 
+div:hover 
+Last: 10
+First position: 1, Last position: 9, Trim String: div:hover
+String: width
+Last: -1
+First position: 0, Last position: 5, Trim String: width
+String: 300px
+Last: -1
+First position: 0, Last position: 5, Trim String: 300px
+String: 300px
+Last: -1
+First position: 0, Last position: 5, Trim String: 300px
+Line: 16 Token: {'PROPERTY': {'Posistion': 169, 'Line': 16, 'Type': 'PROPERTY', 'Data': 'width'}, 'VALUE': {'Posistion': 176, 'Line': 16, 'Type': 'VALUE', 'Data': '300px'}}
 Pre Status: PIV, Current Status: PIP
-Current Posistion: 209
-Start Posistion: 210, Start Line: 18
+Current Posistion: 182
+Start Posistion: 183, Start Line: 17
 Needle: 
 
 Pre Status: PIP, Current Status: PIP
-Current Posistion: 210
+Current Posistion: 183
 Needle: }
 PIP } Is Token
+String: div:hover
+Last: -1
+First position: 0, Last position: 9, Trim String: div:hover
+Line: 17 Token: {'SEL_END': {'Posistion': 183, 'Line': 17, 'Type': 'SEL_END', 'Data': 'div:hover'}}
 Pre Status: PIP, Current Status: PIS
-Current Posistion: 211
-Start Posistion: -1, Start Line: 19
+Current Posistion: 184
+Start Posistion: -1, Start Line: 18
 Needle: 
 
+Last Posistion: -1
 Pre Status: PIS, Current Status: PIS
+Pos: 0 Line: 1 Type: SEL_START Data: body
+Pos: 9 Line: 2 Type: PROPERTY Data: background-color
+Pos: 27 Line: 2 Type: VALUE Data: powderblue
+Pos: 39 Line: 3 Type: SEL_END Data: body
+Pos: 41 Line: 4 Type: SEL_START Data: h1
+Pos: 48 Line: 5 Type: PROPERTY Data: color
+Pos: 55 Line: 5 Type: VALUE Data: blue
+Pos: 61 Line: 6 Type: SEL_END Data: h1
+Pos: 63 Line: 7 Type: SEL_START Data: p
+Pos: 69 Line: 8 Type: PROPERTY Data: color
+Pos: 76 Line: 8 Type: VALUE Data: red
+Pos: 81 Line: 9 Type: SEL_END Data: p
+Pos: 83 Line: 10 Type: SEL_START Data: div
+Pos: 91 Line: 11 Type: PROPERTY Data: width
+Pos: 98 Line: 11 Type: VALUE Data: 100px
+Pos: 107 Line: 12 Type: PROPERTY Data: height
+Pos: 115 Line: 12 Type: VALUE Data: 100px
+Pos: 124 Line: 13 Type: PROPERTY Data: background-color
+Pos: 142 Line: 13 Type: VALUE Data: lightblue
+Pos: 153 Line: 14 Type: SEL_END Data: div
+Pos: 155 Line: 15 Type: SEL_START Data: div:hover
+Pos: 169 Line: 16 Type: PROPERTY Data: width
+Pos: 176 Line: 16 Type: VALUE Data: 300px
+Pos: 183 Line: 17 Type: SEL_END Data: div:hover

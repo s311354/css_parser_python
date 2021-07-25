@@ -1,0 +1,358 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="CSSParser_8h" kind="file" language="C++">
+    <compoundname>CSSParser.h</compoundname>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">string</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">math.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">map</includes>
+    <includes local="no">algorithm</includes>
+    <includes refid="CSSProperties_8h" local="yes">CSSProperties.h</includes>
+    <includes refid="CSSUtils_8h" local="yes">CSSUtils.h</includes>
+    <includedby refid="CSSParser_8cpp" local="yes">cssparser/CSSParser.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">cssparser/main.cpp</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>assert.h</label>
+      </node>
+      <node id="5">
+        <label>iterator</label>
+      </node>
+      <node id="16">
+        <label>CSSUtils.h</label>
+        <link refid="CSSUtils_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="13">
+        <label>map</label>
+      </node>
+      <node id="12">
+        <label>fstream</label>
+      </node>
+      <node id="1">
+        <label>cssparser/CSSParser.h</label>
+        <link refid="CSSParser_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+      <node id="15">
+        <label>CSSProperties.h</label>
+        <link refid="CSSProperties_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>utility</label>
+      </node>
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="9">
+        <label>time.h</label>
+      </node>
+      <node id="8">
+        <label>math.h</label>
+      </node>
+      <node id="2">
+        <label>cstdlib</label>
+      </node>
+      <node id="11">
+        <label>iostream</label>
+      </node>
+      <node id="14">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>cssparser/CSSParser.cpp</label>
+        <link refid="CSSParser_8cpp"/>
+      </node>
+      <node id="1">
+        <label>cssparser/CSSParser.h</label>
+        <link refid="CSSParser_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cssparser/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structCSSParser_1_1message" prot="public">CSSParser::message</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>**<sp/><sp/>CSSParser</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>**<sp/><sp/>A<sp/>Simple<sp/>C++<sp/>CSS<sp/>Parser</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>**<sp/><sp/>Copyright<sp/>(C)<sp/>2021<sp/><sp/>Kevin<sp/>B.<sp/>Hendricks,<sp/>Stratford,<sp/>Ontario,<sp/>Canada</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>**<sp/><sp/>License:<sp/>LGPL<sp/>v2.1<sp/>or<sp/>later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>**<sp/><sp/>Extracted<sp/>and<sp/>modified<sp/>from:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>**<sp/><sp/>CSSTidy<sp/>(https://github.com/csstidy-c/csstidy)</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>**<sp/><sp/>CSSTidy<sp/>Portions<sp/>Copyright:</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Florian<sp/>Schmitz<sp/>&lt;floele@gmail.com&gt;</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Thierry<sp/>Charbonnel</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Will<sp/>Mitchell<sp/>&lt;aethon@gmail.com&gt;</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Brett<sp/>Zamir<sp/>&lt;brettz9@yahoo.com&gt;</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>sined_<sp/>&lt;sined_@users.sourceforge.net&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Dmitry<sp/>Leskov<sp/>&lt;git@dmitryleskov.com&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Kevin<sp/>Coyner<sp/>&lt;kcoyner@debian.org&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Tuukka<sp/>Pasanen<sp/>&lt;pasanen.tuukka@gmail.com&gt;</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Frank<sp/>W.<sp/>Bergmann<sp/>&lt;csstidy-c@tuxad.com&gt;</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>Frank<sp/>Dana<sp/>&lt;ferdnyc@gmail.com&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>**<sp/><sp/><sp/><sp/><sp/>CSSTidy<sp/>itself<sp/>is<sp/>Available<sp/>under<sp/>the<sp/>LGPL<sp/>2.1</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>**<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>2.1</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>**<sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>**</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>HEADER_CSSPARSER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HEADER_CSSPARSER<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="CSSProperties_8h" kindref="compound">CSSProperties.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="CSSUtils_8h" kindref="compound">CSSUtils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classCSSParser" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCSSParser" kindref="compound">CSSParser</ref><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60" refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea5ec69f94f50f7204c276438cc5ca5ac0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea13dd277e0b73f51b4ed8d0be99aa634b" kindref="member">PIS</ref>,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0eaf6561a84d0652a58f5a36c4e88b41ffa" kindref="member">PIP</ref>,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea9793bbe683fc0bee9b9d982c64e2f85a" kindref="member">PIV</ref>,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0eaedde0e8c16418bba3f4540d11b3d8bc9" kindref="member">PINSTR</ref>,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea5ec69f94f50f7204c276438cc5ca5ac0" kindref="member">PIC</ref>,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea298c3d2ff2bf1c574b0fc48109aa9beb" kindref="member">PAT</ref></highlight></codeline>
+<codeline lineno="61" refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0ea298c3d2ff2bf1c574b0fc48109aa9beb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3" kindref="member">message_type</ref></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65" refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a81dd43481fd6db4eceffee058e09079f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a81dd43481fd6db4eceffee058e09079f" kindref="member">Information</ref>,<ref refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a111cfef49fd497ec9d8a9b1324127618" kindref="member">Warning</ref>,<ref refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a251e53f6d530e058b9da3cbb2aff4e38" kindref="member">Error</ref></highlight></codeline>
+<codeline lineno="66" refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3a251e53f6d530e058b9da3cbb2aff4e38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classCSSParser_1a62207e4a900c67f3afa512a737431292" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292" kindref="member">token_type</ref></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70" refid="classCSSParser_1a62207e4a900c67f3afa512a737431292abf54a3156de5adfe25684bd51d8b8e69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a6e0d52d6990870c3e4650b2e0ab8b522" kindref="member">CHARSET</ref>,<sp/><ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a95936c0445c1c495edf2df8a4cbc9686" kindref="member">IMPORT</ref>,<sp/><ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a2be03d57b717ed4d107bc8c1eed0190b" kindref="member">NAMESP</ref>,<sp/><ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a571ea5c7d25671f768c098c23db0388b" kindref="member">AT_START</ref>,<sp/><ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292abf54a3156de5adfe25684bd51d8b8e69" kindref="member">AT_END</ref>,<sp/><ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292af5c13254f1d8409a30294eea12fde9bb" kindref="member">SEL_START</ref>,<sp/><ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a227b5019a3ff4da41206c63f31df28cd" kindref="member">SEL_END</ref>,<sp/><ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292ac6e1270b339aace30f588bc888df7a7d" kindref="member">PROPERTY</ref>,<sp/><ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a2da99c7f47503ef2b3eac97fb918cd0b" kindref="member">VALUE</ref>,<sp/><ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a9f6936f485ff4b27b405988db6fa9c8e" kindref="member">COMMENT</ref>,<sp/><ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a498488da84aa1b5a012a1b40c5e28122" kindref="member">CSS_END</ref></highlight></codeline>
+<codeline lineno="71" refid="classCSSParser_1a62207e4a900c67f3afa512a737431292a498488da84aa1b5a012a1b40c5e28122" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="structCSSParser_1_1token" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structCSSParser_1_1token" kindref="compound">token</ref></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75" refid="structCSSParser_1_1token_1a66b878873d0b22972a3ed67450e3c8bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292" kindref="member">token_type</ref><sp/><ref refid="structCSSParser_1_1token_1a66b878873d0b22972a3ed67450e3c8bd" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="76" refid="structCSSParser_1_1token_1a932545ccf948ec92549df416ab1c6008" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structCSSParser_1_1token_1a932545ccf948ec92549df416ab1c6008" kindref="member">pos</ref>;</highlight></codeline>
+<codeline lineno="77" refid="structCSSParser_1_1token_1acd9883db288c695f5a780422ca83eafe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structCSSParser_1_1token_1acd9883db288c695f5a780422ca83eafe" kindref="member">line</ref>;</highlight></codeline>
+<codeline lineno="78" refid="structCSSParser_1_1token_1afec17112de7a92a4cee71669bd8144aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structCSSParser_1_1token_1afec17112de7a92a4cee71669bd8144aa" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="structCSSParser_1_1message" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structCSSParser_1_1message" kindref="compound">message</ref></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83" refid="structCSSParser_1_1message_1a6a054bbe9e11feaed1986aba4cbab3ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structCSSParser_1_1message_1a6a054bbe9e11feaed1986aba4cbab3ad" kindref="member">m</ref>;</highlight></codeline>
+<codeline lineno="84" refid="structCSSParser_1_1message_1a7e4ab5fc51793310774c4c90c22b48ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3" kindref="member">message_type</ref><sp/><ref refid="structCSSParser_1_1message_1a7e4ab5fc51793310774c4c90c22b48ad" kindref="member">t</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classCSSParser_1af8a80a70c9641b04f45bd925fb9ffe82" kindref="member">CSSParser</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>valid<sp/>levels<sp/>are<sp/>&quot;CSS1.0&quot;,<sp/>&quot;CSS2.0&quot;,<sp/>&quot;CSS2.1&quot;,<sp/>&quot;CSS3.0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1a5c5f1403cde53dd4ca994ce655fa165b" kindref="member">set_level</ref>(std::string<sp/>level<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;CSS3.0&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1a5c8c8beaaeb41710ba7816d81ad75f4d" kindref="member">parse_css</ref>(std::string<sp/>css_input);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1ac63c0fc4f74f852dbb4e31c14743e1bb" kindref="member">reset_parser</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>serialize<sp/>the<sp/>current<sp/>list<sp/>of<sp/>csstokens<sp/>back<sp/>to<sp/>css</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSParser_1abf3218756a160dfe0cf0f0d5eddbb4f8" kindref="member">serialize_css</ref>(std::string<sp/>filename<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>tostdout<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>access<sp/>charset,<sp/>namespace<sp/>and<sp/>imports<sp/>without<sp/>having<sp/>to<sp/>walk<sp/>csstokens</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSParser_1a16b69275eb31cfb6792e52239babef27" kindref="member">get_charset</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classCSSParser_1a832bab641f5b6551f6727d8546aa600a" kindref="member">get_import</ref>();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSParser_1a0e2f279a94fc27a5e3635a30de596632" kindref="member">get_namespace</ref>();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>walk<sp/>the<sp/>csstokens<sp/>list,<sp/>token<sp/>by<sp/>token</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>start_ptr<sp/>to<sp/>the<sp/>position<sp/>you<sp/>woud<sp/>like<sp/>to<sp/>start<sp/>at<sp/>in<sp/>the<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>leaving<sp/>it<sp/>as<sp/>-1<sp/>will<sp/>simply<sp/>start<sp/>at<sp/>0<sp/>and<sp/>increment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>last<sp/>token<sp/>is<sp/>a<sp/>dummy<sp/>token<sp/>with<sp/>type<sp/>set<sp/>to<sp/>CSS_END<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structCSSParser_1_1token" kindref="compound">token</ref><sp/><ref refid="classCSSParser_1a0c16e8bf920190f71c89108a8fbbeea0" kindref="member">get_next_token</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start_ptr<sp/>=<sp/>-1);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>covert<sp/>token<sp/>type<sp/>enum<sp/>value<sp/>to<sp/>a<sp/>descriptive<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSParser_1a20e0ef77c8b14c050af2cb13468d9122" kindref="member">get_type_name</ref>(<ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292" kindref="member">token_type</ref><sp/>t);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>routine<sp/>allows<sp/>external<sp/>modifications<sp/>to<sp/>the<sp/>csstokens</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>be<sp/>brought<sp/>back<sp/>into<sp/>CSSParser<sp/>in<sp/>order<sp/>to<sp/>serialize<sp/>them</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>with<sp/>serialize_css</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1a6db3d71f91bdc451a160d2f29f6f2031" kindref="member">set_csstokens</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;token&gt;<sp/>&amp;ntokens);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>errors,<sp/>warnings,<sp/>and<sp/>information</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classCSSParser_1ad91af1ca54c79dd13f07ecb14fdb7e8d" kindref="member">get_parse_errors</ref>();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classCSSParser_1aa1927cc5ca43b7b0464d1da6f07d1421" kindref="member">get_parse_warnings</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classCSSParser_1a8435cd5b6446fc5e55e00d58ce7f8126" kindref="member">get_parse_info</ref>();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1a2e5de68469c6fd722d79366be8743123" kindref="member">parseInAtBlock</ref>(std::string&amp;<sp/>css_input,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>i,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref>&amp;<sp/>astatus,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref>&amp;<sp/>afrom);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1aaf22cc5c0057d4da557a5aac0bcb1fb9" kindref="member">parseInSelector</ref>(std::string&amp;<sp/>css_input,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>i,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref>&amp;<sp/>astatus,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref>&amp;<sp/>afrom,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;<sp/>invalid_at,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">&amp;<sp/>str_char,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>str_size);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1a32dc6fe98280dc01d92672b80989aa18" kindref="member">parseInProperty</ref>(std::string&amp;<sp/>css_input,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>i,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref>&amp;<sp/>astatus,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref>&amp;<sp/>afrom,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;<sp/>invalid_at);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" kindref="member">parseInValue</ref>(std::string&amp;<sp/>css_input,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>i,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref>&amp;<sp/>astatus,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref>&amp;<sp/>afrom,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;<sp/>invalid_at,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">&amp;<sp/>str_char,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;<sp/>pn,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>str_size<sp/>);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1aedbe86f8b56e4c2d1cb9fd918e389de0" kindref="member">parseInComment</ref>(std::string&amp;<sp/>css_input,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>i,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref>&amp;<sp/>astatus,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref>&amp;<sp/>afrom,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string&amp;<sp/>cur_comment);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1a6a3a8f75a3b06ab1c70cfc1c918f473e" kindref="member">parseInString</ref>(std::string&amp;<sp/>css_input,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>i,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref>&amp;<sp/>astatus,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref>&amp;<sp/>afrom,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">&amp;<sp/><sp/>str_char,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;<sp/>str_in_str);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>filter<sp/>the<sp/>logs<sp/>by<sp/>message<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classCSSParser_1a31d8fed09686ee717f4e6eb054110849" kindref="member">get_logs</ref>(<ref refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3" kindref="member">message_type</ref><sp/>t);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pparses<sp/>unicode<sp/>notations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSParser_1a3b3c43c82269a46bcbdc36fb2ba2bb68" kindref="member">unicode</ref>(std::string&amp;<sp/>istring,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>i);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>checks<sp/>if<sp/>the<sp/>chat<sp/>in<sp/>istring<sp/>at<sp/>i<sp/>is<sp/>a<sp/>token</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1a4c35325486936778866837d890bd1889" kindref="member">is_token</ref>(std::string&amp;<sp/>istring,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1ab89438a335ba393c40ba437294e2fe70" kindref="member">add_token</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1a62207e4a900c67f3afa512a737431292" kindref="member">token_type</ref><sp/>ttype,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>data,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>a<sp/>message<sp/>to<sp/>the<sp/>message<sp/>log</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1a8d9d19c6725d7b1f2af84e383d6758fc" kindref="member">log</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>msg,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3" kindref="member">message_type</ref><sp/>type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iline<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>records<sp/>token<sp/>position<sp/>information</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1a2720c438abcb8e7a379f4cce8bfbe06c" kindref="member">record_position</ref>(<ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref><sp/>old_status,<sp/><ref refid="classCSSParser_1aa94ea01454344d4793ebdd7b2d919a0e" kindref="member">parse_status</ref><sp/>new_status,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>&amp;css_input,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force=</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1a9d1cb826d59f87901fdd138b8375d4e5" kindref="member">_seeknocomment</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>move);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1a1f21ad955ae8f583ce70ac83b32a12ae" kindref="member">explode_selectors</ref>();</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1a99ea850f09dd79823e266af528abcc70" kindref="member">property_is_next</ref>(std::string<sp/>istring,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>private<sp/>member<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="classCSSParser_1a9f9820bd856e9b04da196e5c352bd031" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classCSSParser_1a9f9820bd856e9b04da196e5c352bd031" kindref="member">token_type_names</ref>;</highlight></codeline>
+<codeline lineno="170" refid="classCSSParser_1ab24ab4abb79e529bd79d4ae87a11e22f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>parse_status&gt;<sp/><sp/><ref refid="classCSSParser_1ab24ab4abb79e529bd79d4ae87a11e22f" kindref="member">at_rules</ref>;</highlight></codeline>
+<codeline lineno="171" refid="classCSSParser_1a99b4e4b16309ddcc9923eeec7a053b71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classCSSParser_1a99b4e4b16309ddcc9923eeec7a053b71" kindref="member">csstemplate</ref>;</highlight></codeline>
+<codeline lineno="172" refid="classCSSParser_1a2370a4cac434d2f865dcec914ddc22bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSParser_1a2370a4cac434d2f865dcec914ddc22bb" kindref="member">css_level</ref>;</highlight></codeline>
+<codeline lineno="173" refid="classCSSParser_1adb1e1d80034533d887f6c61b78e9bbdd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSParser_1adb1e1d80034533d887f6c61b78e9bbdd" kindref="member">tokens</ref>;</highlight></codeline>
+<codeline lineno="174" refid="classCSSParser_1a08f8dd1a61ce0df2c207fd53c5d877ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1a08f8dd1a61ce0df2c207fd53c5d877ec" kindref="member">token_ptr</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="classCSSParser_1a9cf464959d34fb7be7f2ceb466f0ade2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;int,<sp/>std::vector&lt;message&gt;<sp/>&gt;<sp/><ref refid="classCSSParser_1a9cf464959d34fb7be7f2ceb466f0ade2" kindref="member">logs</ref>;</highlight></codeline>
+<codeline lineno="177" refid="classCSSParser_1a06e30a29446979c31d31e5b766e172b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="classCSSParser_1a06e30a29446979c31d31e5b766e172b4" kindref="member">line</ref>;</highlight></codeline>
+<codeline lineno="178" refid="classCSSParser_1a7d1ec2f2164e8088904e1cd6b0872282" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="classCSSParser_1a7d1ec2f2164e8088904e1cd6b0872282" kindref="member">spos</ref>;</highlight></codeline>
+<codeline lineno="179" refid="classCSSParser_1abaacbf6c0ce01b135043b6425b085364" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="classCSSParser_1abaacbf6c0ce01b135043b6425b085364" kindref="member">sline</ref>;</highlight></codeline>
+<codeline lineno="180" refid="classCSSParser_1ae1da730d7da7f3d8c26d0d6842d1e5cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCSSParser_1ae1da730d7da7f3d8c26d0d6842d1e5cd" kindref="member">selector_nest_level</ref>;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="classCSSParser_1a2fb30f11f2f821867b41dc7d5755c464" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSParser_1a2fb30f11f2f821867b41dc7d5755c464" kindref="member">charset</ref>;</highlight></codeline>
+<codeline lineno="183" refid="classCSSParser_1a5067698ca8c4cc4382fc549c0f088023" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSParser_1a5067698ca8c4cc4382fc549c0f088023" kindref="member">namesp</ref>;</highlight></codeline>
+<codeline lineno="184" refid="classCSSParser_1a48294fa85202ac03a2f8407b8b2ab211" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="185" refid="classCSSParser_1a2c3a2d10c3727b650793ae0c9aca454b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;token&gt;<sp/><ref refid="classCSSParser_1a2c3a2d10c3727b650793ae0c9aca454b" kindref="member">csstokens</ref>;</highlight></codeline>
+<codeline lineno="186" refid="classCSSParser_1aebd13ee0856baf9fddea298f916c6f7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSParser_1aebd13ee0856baf9fddea298f916c6f7b" kindref="member">cur_selector</ref>;</highlight></codeline>
+<codeline lineno="187" refid="classCSSParser_1a730a0fa864d3a286122f1e89a1d551d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSParser_1a730a0fa864d3a286122f1e89a1d551d0" kindref="member">cur_at</ref>;</highlight></codeline>
+<codeline lineno="188" refid="classCSSParser_1a9ac97b354be1de2aa9c571bd1c474c60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSParser_1a9ac97b354be1de2aa9c571bd1c474c60" kindref="member">cur_property</ref>;</highlight></codeline>
+<codeline lineno="189" refid="classCSSParser_1a757148fa4b4deff9e7e800ee18bf97ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSParser_1a757148fa4b4deff9e7e800ee18bf97ef" kindref="member">cur_function</ref>;</highlight></codeline>
+<codeline lineno="190" refid="classCSSParser_1a2a53fafd4117e09ead401d88cf9ba47c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSParser_1a2a53fafd4117e09ead401d88cf9ba47c" kindref="member">cur_sub_value</ref>;</highlight></codeline>
+<codeline lineno="191" refid="classCSSParser_1a1aff13788b821e66c943d6ede0152652" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSParser_1a1aff13788b821e66c943d6ede0152652" kindref="member">cur_value</ref>;<sp/></highlight></codeline>
+<codeline lineno="192" refid="classCSSParser_1ab6fdd687efa04b04833f92bea0105df7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classCSSParser_1ab6fdd687efa04b04833f92bea0105df7" kindref="member">cur_string</ref>;</highlight></codeline>
+<codeline lineno="193" refid="classCSSParser_1aa4a9672fc52fa0611f2d7a4fb4c66b04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int&gt;<sp/><sp/><sp/><ref refid="classCSSParser_1aa4a9672fc52fa0611f2d7a4fb4c66b04" kindref="member">sel_separate</ref>;</highlight></codeline>
+<codeline lineno="194" refid="classCSSParser_1af476b51701a5488314b42195b8b171b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classCSSParser_1af476b51701a5488314b42195b8b171b8" kindref="member">cur_sub_value_arr</ref>;</highlight></codeline>
+<codeline lineno="195" refid="classCSSParser_1a3c669cb78cbe4b8ea156229b67d792a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classCSSParser_1a3c669cb78cbe4b8ea156229b67d792a5" kindref="member">cur_function_arr</ref>;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>HEADER_CSSPARSER</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="cssparser/CSSParser.h"/>
+  </compounddef>
+</doxygen>

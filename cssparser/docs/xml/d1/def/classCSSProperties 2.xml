@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="d1/def/classCSSProperties" kind="class" language="C++" prot="public">
+    <compoundname>CSSProperties</compoundname>
+    <includes refid="d5/db2/CSSProperties_8h" local="no">CSSProperties.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d1/def/classCSSProperties_1acf1b19e7658da0ef1697a2f473350cca" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; CSSProperties::m_all_properties</definition>
+        <argsstring></argsstring>
+        <name>m_all_properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSProperties.h" line="62" column="14" bodyfile="cssparser/CSSProperties.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="d1/def/classCSSProperties_1a905dc3027e91931425d3eeb24008754f" compoundref="d0/d31/CSSProperties_8cpp" startline="46" endline="49">contains</referencedby>
+        <referencedby refid="d1/def/classCSSProperties_1a85d2f6febc365bc43eb897f592bbfbf5" compoundref="d0/d31/CSSProperties_8cpp" startline="61" endline="347">CSSProperties</referencedby>
+        <referencedby refid="d1/def/classCSSProperties_1a28fd8f77b7163cf7ac94703cfca69aef" compoundref="d0/d31/CSSProperties_8cpp" startline="52" endline="58">levels</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d1/def/classCSSProperties_1a1b1d41c3ec71e10552d6d44a136cab12" prot="private" static="yes" mutable="no">
+        <type><ref refid="d1/def/classCSSProperties" kindref="compound">CSSProperties</ref> *</type>
+        <definition>CSSProperties * CSSProperties::m_instance</definition>
+        <argsstring></argsstring>
+        <name>m_instance</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSProperties.h" line="63" column="26" bodyfile="cssparser/CSSProperties.h" bodystart="63" bodyend="-1"/>
+        <referencedby refid="d1/def/classCSSProperties_1a8e6e2d825551edbb5947cc48015e3836" compoundref="d0/d31/CSSProperties_8cpp" startline="37" endline="43">instance</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d1/def/classCSSProperties_1a8e6e2d825551edbb5947cc48015e3836" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d1/def/classCSSProperties" kindref="compound">CSSProperties</ref> *</type>
+        <definition>CSSProperties * CSSProperties::instance</definition>
+        <argsstring>()</argsstring>
+        <name>instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSProperties.h" line="52" column="26" bodyfile="cssparser/CSSProperties.cpp" bodystart="37" bodyend="43"/>
+        <references refid="d1/def/classCSSProperties_1a85d2f6febc365bc43eb897f592bbfbf5" compoundref="d0/d31/CSSProperties_8cpp" startline="61" endline="347">CSSProperties</references>
+        <references refid="d1/def/classCSSProperties_1a1b1d41c3ec71e10552d6d44a136cab12" compoundref="d5/db2/CSSProperties_8h" startline="63">m_instance</references>
+        <referencedby refid="d4/db8/classCSSParser_1a32dc6fe98280dc01d92672b80989aa18" compoundref="df/df6/CSSParser_8cpp" startline="524" endline="587">CSSParser::parseInProperty</referencedby>
+        <referencedby refid="d4/db8/classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="df/df6/CSSParser_8cpp" startline="590" endline="790">CSSParser::parseInValue</referencedby>
+        <referencedby refid="d4/db8/classCSSParser_1a99ea850f09dd79823e266af528abcc70" compoundref="df/df6/CSSParser_8cpp" startline="952" endline="964">CSSParser::property_is_next</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d1/def/classCSSProperties_1a905dc3027e91931425d3eeb24008754f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CSSProperties::contains</definition>
+        <argsstring>(std::string pname)</argsstring>
+        <name>contains</name>
+        <param>
+          <type>std::string</type>
+          <declname>pname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSProperties.h" line="54" column="10" bodyfile="cssparser/CSSProperties.cpp" bodystart="46" bodyend="49"/>
+        <references refid="d1/def/classCSSProperties_1acf1b19e7658da0ef1697a2f473350cca" compoundref="d5/db2/CSSProperties_8h" startline="62">m_all_properties</references>
+        <referencedby refid="d1/def/classCSSProperties_1a28fd8f77b7163cf7ac94703cfca69aef" compoundref="d0/d31/CSSProperties_8cpp" startline="52" endline="58">levels</referencedby>
+        <referencedby refid="d4/db8/classCSSParser_1a32dc6fe98280dc01d92672b80989aa18" compoundref="df/df6/CSSParser_8cpp" startline="524" endline="587">CSSParser::parseInProperty</referencedby>
+        <referencedby refid="d4/db8/classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="df/df6/CSSParser_8cpp" startline="590" endline="790">CSSParser::parseInValue</referencedby>
+        <referencedby refid="d4/db8/classCSSParser_1a99ea850f09dd79823e266af528abcc70" compoundref="df/df6/CSSParser_8cpp" startline="952" endline="964">CSSParser::property_is_next</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d1/def/classCSSProperties_1a28fd8f77b7163cf7ac94703cfca69aef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string CSSProperties::levels</definition>
+        <argsstring>(std::string pname)</argsstring>
+        <name>levels</name>
+        <param>
+          <type>std::string</type>
+          <declname>pname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSProperties.h" line="56" column="17" bodyfile="cssparser/CSSProperties.cpp" bodystart="52" bodyend="58"/>
+        <references refid="d1/def/classCSSProperties_1a905dc3027e91931425d3eeb24008754f" compoundref="d0/d31/CSSProperties_8cpp" startline="46" endline="49">contains</references>
+        <references refid="d1/def/classCSSProperties_1acf1b19e7658da0ef1697a2f473350cca" compoundref="d5/db2/CSSProperties_8h" startline="62">m_all_properties</references>
+        <referencedby refid="d4/db8/classCSSParser_1a32dc6fe98280dc01d92672b80989aa18" compoundref="df/df6/CSSParser_8cpp" startline="524" endline="587">CSSParser::parseInProperty</referencedby>
+        <referencedby refid="d4/db8/classCSSParser_1aaa383d4fe9d49e02c81863beb0f8fc73" compoundref="df/df6/CSSParser_8cpp" startline="590" endline="790">CSSParser::parseInValue</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d1/def/classCSSProperties_1a85d2f6febc365bc43eb897f592bbfbf5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CSSProperties::CSSProperties</definition>
+        <argsstring>()</argsstring>
+        <name>CSSProperties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSProperties.h" line="60" column="5" bodyfile="cssparser/CSSProperties.cpp" bodystart="61" bodyend="347"/>
+        <references refid="d1/def/classCSSProperties_1acf1b19e7658da0ef1697a2f473350cca" compoundref="d5/db2/CSSProperties_8h" startline="62">m_all_properties</references>
+        <referencedby refid="d1/def/classCSSProperties_1a8e6e2d825551edbb5947cc48015e3836" compoundref="d0/d31/CSSProperties_8cpp" startline="37" endline="43">instance</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Singleton.</para>
+<para><ref refid="d1/def/classCSSProperties" kindref="compound">CSSProperties</ref> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6">
+        <label>K</label>
+      </node>
+      <node id="7">
+        <label>T</label>
+      </node>
+      <node id="5">
+        <label>std::map&lt; K, T &gt;</label>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>CSSProperties</label>
+        <link refid="d1/def/classCSSProperties"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>-m_instance</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-m_all_properties</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::map&lt; std::string, std::string &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+elements</edgelabel>
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; std::string, std::string &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::string</label>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cssparser/CSSProperties.h" line="47" column="1" bodyfile="cssparser/CSSProperties.h" bodystart="48" bodyend="64"/>
+    <listofallmembers>
+      <member refid="d1/def/classCSSProperties_1a905dc3027e91931425d3eeb24008754f" prot="public" virt="non-virtual"><scope>CSSProperties</scope><name>contains</name></member>
+      <member refid="d1/def/classCSSProperties_1a85d2f6febc365bc43eb897f592bbfbf5" prot="private" virt="non-virtual"><scope>CSSProperties</scope><name>CSSProperties</name></member>
+      <member refid="d1/def/classCSSProperties_1a8e6e2d825551edbb5947cc48015e3836" prot="public" virt="non-virtual"><scope>CSSProperties</scope><name>instance</name></member>
+      <member refid="d1/def/classCSSProperties_1a28fd8f77b7163cf7ac94703cfca69aef" prot="public" virt="non-virtual"><scope>CSSProperties</scope><name>levels</name></member>
+      <member refid="d1/def/classCSSProperties_1acf1b19e7658da0ef1697a2f473350cca" prot="private" virt="non-virtual"><scope>CSSProperties</scope><name>m_all_properties</name></member>
+      <member refid="d1/def/classCSSProperties_1a1b1d41c3ec71e10552d6d44a136cab12" prot="private" virt="non-virtual"><scope>CSSProperties</scope><name>m_instance</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

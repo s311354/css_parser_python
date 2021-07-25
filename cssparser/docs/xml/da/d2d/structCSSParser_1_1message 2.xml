@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="da/d2d/structCSSParser_1_1message" kind="struct" language="C++" prot="public">
+    <compoundname>CSSParser::message</compoundname>
+    <includes refid="d2/d2d/CSSParser_8h" local="no">CSSParser.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="da/d2d/structCSSParser_1_1message_1a6a054bbe9e11feaed1986aba4cbab3ad" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CSSParser::message::m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="83" column="21" bodyfile="cssparser/CSSParser.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="d4/db8/classCSSParser_1a8d9d19c6725d7b1f2af84e383d6758fc" compoundref="df/df6/CSSParser_8cpp" startline="190" endline="210">CSSParser::log</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/d2d/structCSSParser_1_1message_1a7e4ab5fc51793310774c4c90c22b48ad" prot="public" static="no" mutable="no">
+        <type><ref refid="d4/db8/classCSSParser_1ab990a8f06ef816816ebd9b055f19e7d3" kindref="member">message_type</ref></type>
+        <definition>message_type CSSParser::message::t</definition>
+        <argsstring></argsstring>
+        <name>t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="84" column="22" bodyfile="cssparser/CSSParser.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="d4/db8/classCSSParser_1a8d9d19c6725d7b1f2af84e383d6758fc" compoundref="df/df6/CSSParser_8cpp" startline="190" endline="210">CSSParser::log</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>CSSParser::message</label>
+        <link refid="da/d2d/structCSSParser_1_1message"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+m</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cssparser/CSSParser.h" line="81" column="5" bodyfile="cssparser/CSSParser.h" bodystart="82" bodyend="85"/>
+    <listofallmembers>
+      <member refid="da/d2d/structCSSParser_1_1message_1a6a054bbe9e11feaed1986aba4cbab3ad" prot="public" virt="non-virtual"><scope>CSSParser::message</scope><name>m</name></member>
+      <member refid="da/d2d/structCSSParser_1_1message_1a7e4ab5fc51793310774c4c90c22b48ad" prot="public" virt="non-virtual"><scope>CSSParser::message</scope><name>t</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

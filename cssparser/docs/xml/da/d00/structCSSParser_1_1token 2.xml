@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="da/d00/structCSSParser_1_1token" kind="struct" language="C++" prot="public">
+    <compoundname>CSSParser::token</compoundname>
+    <includes refid="d2/d2d/CSSParser_8h" local="no">CSSParser.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="da/d00/structCSSParser_1_1token_1afec17112de7a92a4cee71669bd8144aa" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CSSParser::token::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="78" column="21" bodyfile="cssparser/CSSParser.h" bodystart="78" bodyend="-1"/>
+        <referencedby refid="d4/db8/classCSSParser_1ab89438a335ba393c40ba437294e2fe70" compoundref="df/df6/CSSParser_8cpp" startline="177" endline="187">CSSParser::add_token</referencedby>
+        <referencedby refid="d4/db8/classCSSParser_1a0c16e8bf920190f71c89108a8fbbeea0" compoundref="df/df6/CSSParser_8cpp" startline="151" endline="168">CSSParser::get_next_token</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/d00/structCSSParser_1_1token_1acd9883db288c695f5a780422ca83eafe" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CSSParser::token::line</definition>
+        <argsstring></argsstring>
+        <name>line</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="77" column="13" bodyfile="cssparser/CSSParser.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="d4/db8/classCSSParser_1ab89438a335ba393c40ba437294e2fe70" compoundref="df/df6/CSSParser_8cpp" startline="177" endline="187">CSSParser::add_token</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/d00/structCSSParser_1_1token_1a932545ccf948ec92549df416ab1c6008" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CSSParser::token::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="76" column="13" bodyfile="cssparser/CSSParser.h" bodystart="76" bodyend="-1"/>
+        <referencedby refid="d4/db8/classCSSParser_1ab89438a335ba393c40ba437294e2fe70" compoundref="df/df6/CSSParser_8cpp" startline="177" endline="187">CSSParser::add_token</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="da/d00/structCSSParser_1_1token_1a66b878873d0b22972a3ed67450e3c8bd" prot="public" static="no" mutable="no">
+        <type><ref refid="d4/db8/classCSSParser_1a62207e4a900c67f3afa512a737431292" kindref="member">token_type</ref></type>
+        <definition>token_type CSSParser::token::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cssparser/CSSParser.h" line="75" column="20" bodyfile="cssparser/CSSParser.h" bodystart="75" bodyend="-1"/>
+        <referencedby refid="d4/db8/classCSSParser_1ab89438a335ba393c40ba437294e2fe70" compoundref="df/df6/CSSParser_8cpp" startline="177" endline="187">CSSParser::add_token</referencedby>
+        <referencedby refid="d4/db8/classCSSParser_1a0c16e8bf920190f71c89108a8fbbeea0" compoundref="df/df6/CSSParser_8cpp" startline="151" endline="168">CSSParser::get_next_token</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>CSSParser::token</label>
+        <link refid="da/d00/structCSSParser_1_1token"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+data</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="2">
+        <label>std::string</label>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cssparser/CSSParser.h" line="73" column="5" bodyfile="cssparser/CSSParser.h" bodystart="74" bodyend="79"/>
+    <listofallmembers>
+      <member refid="da/d00/structCSSParser_1_1token_1afec17112de7a92a4cee71669bd8144aa" prot="public" virt="non-virtual"><scope>CSSParser::token</scope><name>data</name></member>
+      <member refid="da/d00/structCSSParser_1_1token_1acd9883db288c695f5a780422ca83eafe" prot="public" virt="non-virtual"><scope>CSSParser::token</scope><name>line</name></member>
+      <member refid="da/d00/structCSSParser_1_1token_1a932545ccf948ec92549df416ab1c6008" prot="public" virt="non-virtual"><scope>CSSParser::token</scope><name>pos</name></member>
+      <member refid="da/d00/structCSSParser_1_1token_1a66b878873d0b22972a3ed67450e3c8bd" prot="public" virt="non-virtual"><scope>CSSParser::token</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
