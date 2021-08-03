@@ -23,7 +23,19 @@ class CssParser:
         self.cur_sub_value_arr = []
         self.csstokens = {}
 
+    def reset_passer(self):
+        self.token_ptr = 0
+        self.selector_nest_level = 0
+        self.line = 1
+        self.cur_selector = ""
+        self.cur_property = ""
+        self.cur_string = ""
+        self.cur_value = ""
+        self.cur_sub_value = ""
+        self.csstokens = {}
+
     def parse_css(self, css_input):
+        self.reset_passer()
         astatus = "PIS"
         old_status = "PIS"
         pos = 0
@@ -57,6 +69,10 @@ class CssParser:
 
             pos += 1
 #             print("Pre Status: {}, Current Status: {}".format(old_status, astatus))
+
+
+        if not self.selector_nest_level == 0:
+            print("Unbalanced selector braces in style sheet, Line {}".format(self.line))
 
 
 

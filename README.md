@@ -1,4 +1,13 @@
 
+## Description
+
+CSSParser - A simple python CSS parser. This repo is a free, open source simple python based Css Parser. 
+This was initially extracted from CSSTidy and [A Simple C++ CSS Parser][simplecssparser] and then reworked.
+
+## Interface ##
+
+The best way to understand the parser interface is to examine main.py.
+
 ## Anatomy of a CSS ruleset
 
 The whole structure is called a ruleset. (The term ruleset is often referred to as just rule.) Note the names of the individual parts:
@@ -26,3 +35,6 @@ There are many different types of selectors. The examples above use element sele
 ## Reference ##
 [1] [CSS basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
 
+[A Simple C++ CSS Parser][simplecssparser]
+
+[simplecssparser]:https://github.com/s311354/cssparser "https://github.com/s311354/cssparser"
