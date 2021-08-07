@@ -1,3 +1,4 @@
+#!/usr/bin/env python2.7.16
 import re
 from cssutils import CssUtils
 from cssparser import CssParser

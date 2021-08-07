@@ -1,4 +1,5 @@
 import re
+import warnings
 from cssutils import CssUtils
 
 class CssParser:
@@ -72,8 +73,7 @@ class CssParser:
 
 
         if not self.selector_nest_level == 0:
-            print("Unbalanced selector braces in style sheet, Line {}".format(self.line))
-
+            warnings.warn("Unbalanced selector braces in style sheet, Line {}".format(self.line), ResourceWarning, stacklevel=2)
 
 
     def record_position(self, old_status, new_status, css_input, pos, str_size, force = False):
@@ -112,7 +112,7 @@ class CssParser:
 
     def parse_in_selector(self, css_input, pos, astatus, afrom, str_char, str_size):
         if(self.is_token(css_input, pos)):
-            print("PIS {} Is Token".format(css_input[pos]))
+#             print("PIS {} Is Token".format(css_input[pos]))
 
             if css_input[pos] == '/' and CssUtils().s_at(css_input, pos + 1) == '*':
                 astatus = "PIC"
@@ -137,7 +137,7 @@ class CssParser:
 
     def parse_in_property(self, css_input, pos, astatus, afrom):
         if self.is_token(css_input, pos):
-            print("PIP {} Is Token".format(css_input[pos]))
+#             print("PIP {} Is Token".format(css_input[pos]))
             if css_input[pos] == ':' or (css_input[pos] == '=' and not self.cur_property == ""):
                 astatus = "PIV"
                 self.add_token("PROPERTY", self.cur_property)
@@ -154,7 +154,7 @@ class CssParser:
                 self.cur_property = ""
 
             else:
-                print("Unexpected character '{}'in property name".format(css_input[pos]))
+                warnings.warn("Unexpected character '{}'in property name".format(css_input[pos]), ResourceWarning, stacklevel=2)
 
         elif not CssUtils().ctype_space(css_input[pos]):
             self.cur_property += css_input[pos]
@@ -164,12 +164,13 @@ class CssParser:
     def parse_in_value(self, css_input, pos, astatus, afrom, str_char, str_size):
         pn = (((css_input[pos] == '\n' or css_input[pos] == '\r') and self.property_is_next(css_input, pos + 1)) or pos == str_size - 1)
 
-#         if pn:
-#             print("Added semicolon to the end of declaration")
+        if pn:
+            warnings.warn("Added semicolon to the end of declaration", Warning, stacklevel=1)
+
         if self.is_token(css_input, pos) or pn:
-            print("PIV {} Is Token".format(css_input[pos]))
+#             print("PIV {} Is Token".format(css_input[pos]))
             if css_input[pos] == '{':
-                print("Unexpected character '{}' in {}".format(css_input[pos], self.cur_selector))
+                warnings.warn("Unexpected character '{}' in {}".format(css_input[pos], self.cur_selector), Warning, stacklevel=1)
 
             if css_input[pos] == '/' and CssUtils().s_at(css_input, pos+1) == '*':
                 astatus = "PIC"
@@ -200,7 +201,6 @@ class CssParser:
                 self.cur_property = ""
                 self.cur_sub_value_arr = []
                 self.cur_value = ""
-
 
         elif not pn:
             self.cur_sub_value += css_input[pos]
@@ -252,7 +252,6 @@ class CssParser:
             self.selector_nest_level -= 1
 
     def get_next_token(self):
-
         atoken = dict()
 
         while self.token_ptr <= self.start_line:
