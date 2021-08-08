@@ -1,6 +1,7 @@
 import re
+from xml.etree.ElementTree import ElementTree, Element, Comment, SubElement, tostring
 
-class CssUtils:
+class CssUtils(object):
 
     def file_get_contents(self, filename):
         file_input = open(filename, 'r')
@@ -27,7 +28,6 @@ class CssUtils:
         first = re.search("(?! |\n|\t|\r)", istring).start() if re.search("(?! |\n|\t|\r)", istring) else len(istring)
 
         last = max(istring.rfind(i) for i in " \n\t\r")
-#         print("Last: {}".format(last))
         last = last - 1 if last > 0 else len(istring)
 
 #         print "First position: {}, Last position: {}, Trim String: {}".format(first, last, istring[first:last + 1])
@@ -45,3 +45,45 @@ class CssUtils:
 
     def ctype_space(self, c):
         return c == ' ' or c == '\t' or c == '\n' or c == 11
+
+    def build_xml(self, tokens, filename, method=None):
+
+        root = Element("html", attrib ={})
+
+        print(tokens)
+        child = self.tokens2file(tokens)
+        root.append(child)
+
+        print(tostring(root))
+        # Writes the element tree to a file, as XML
+        tree = ElementTree(root)
+        if method == "xml":
+            tree.write(filename, method = method)
+        elif method == "text":
+            tree.write(filename, method = method)
+
+        print("BUILD XML")
+
+    def tokens2file(self, dictdata, parent_node=None, parent_name=''):
+        def node_for_value(name, value, parent_node, parent_name):
+            node = SubElement(parent_node, 'div2')
+            child = SubElement(node, name)
+            child.set('id', value)
+            child.set('color', value)
+            child.text = name
+            return node
+
+        # create an <head> element to hold all child elements
+        if parent_node is None:
+            node = Element('body')
+        else:
+            node = SubElement(parent_node, 'div1')
+
+        for cssselector, cssdeclaration in dictdata.iteritems():
+            child = SubElement(node, cssselector)
+            for cssproperty, cssvalue in cssdeclaration.iteritems():
+                child.set(cssproperty, cssvalue)
+                child.text = ' '
+
+        print(tostring(child))
+        return node

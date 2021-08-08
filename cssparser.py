@@ -2,14 +2,15 @@ import re
 import warnings
 from cssutils import CssUtils
 
-class CssParser:
-
-    # PAT: parsing at-block, such as @charset, @namespace, and @import 
+class CssParser(object):
     parse_status = ["PIS", "PIP", "PIV", "PIC"]
     token_type = ["SEL_START", "SEL_END", "PROPERTY", "VALUE", "COMMENT", "CSS_END"]
+    file_form = ["xml", "text"]
+
+    # the optional method is imported at the end of the module
 
     """Docstring for CssParser. """
-    def __init__(self):
+    def __init__(self, filepath):
         self.tokens = "{};:()@='\"/,\\!$%&*+.<>?[]^`|~"
         self.token_ptr = 1
         self.line = 1
@@ -23,19 +24,11 @@ class CssParser:
         self.cur_sub_value = ""
         self.cur_sub_value_arr = []
         self.csstokens = {}
+        self.cssruleset = dict()
 
-    def reset_passer(self):
-        self.token_ptr = 0
-        self.selector_nest_level = 0
-        self.line = 1
-        self.cur_selector = ""
-        self.cur_property = ""
-        self.cur_string = ""
-        self.cur_value = ""
-        self.cur_sub_value = ""
-        self.csstokens = {}
+        cssutils = CssUtils()
+        css_input = cssutils.file_get_contents(filepath)
 
-    def parse_css(self, css_input):
         self.reset_passer()
         astatus = "PIS"
         old_status = "PIS"
@@ -46,7 +39,6 @@ class CssParser:
         str_size = len(css_input)
         self.record_position("PIS", "PIS", css_input, 0, str_size, True)
 
-#         for pos, string in enumerate(css_input):
         while pos < str_size:
             if css_input[pos] == '\n' or css_input[pos] == '\r':
                 self.line += 1
@@ -73,8 +65,18 @@ class CssParser:
 
 
         if not self.selector_nest_level == 0:
-            warnings.warn("Unbalanced selector braces in style sheet, Line {}".format(self.line), ResourceWarning, stacklevel=2)
+            warnings.warn("Unbalanced selector braces in style sheet, Line {}".format(self.line), Warning, stacklevel=2)
 
+    def reset_passer(self):
+        self.token_ptr = 0
+        self.selector_nest_level = 0
+        self.line = 1
+        self.cur_selector = ""
+        self.cur_property = ""
+        self.cur_string = ""
+        self.cur_value = ""
+        self.cur_sub_value = ""
+        self.csstokens = {}
 
     def record_position(self, old_status, new_status, css_input, pos, str_size, force = False):
         record = False
@@ -154,7 +156,7 @@ class CssParser:
                 self.cur_property = ""
 
             else:
-                warnings.warn("Unexpected character '{}'in property name".format(css_input[pos]), ResourceWarning, stacklevel=2)
+                warnings.warn("Unexpected character '{}'in property name".format(css_input[pos]), Warning, stacklevel=2)
 
         elif not CssUtils().ctype_space(css_input[pos]):
             self.cur_property += css_input[pos]
@@ -239,32 +241,42 @@ class CssParser:
 
         tempdata = data if tokentype == "COMMENT" else CssUtils().trim(data)
 
-        temp = {'Type': tokentype, 'Posistion': self.start_pos, 'Line': self.start_line, 'Data': tempdata}
+        temp = {'Posistion': self.start_pos, 'Data': tempdata}
 
         # multidimensional dictionary
         self.csstokens.setdefault(self.start_line, {})[tokentype] = temp
 
 #         print("Start Line: {} Token: {}".format(self.start_line, self.csstokens[self.start_line]))
-
         if tokentype == "SEL_START":
             self.selector_nest_level += 1
         if tokentype == "SEL_END":
             self.selector_nest_level -= 1
 
-    def get_next_token(self):
-        atoken = dict()
-
+    def iterate_token(self):
         while self.token_ptr <= self.start_line:
             if self.token_ptr in self.csstokens:
                 for tokentype in self.csstokens[self.token_ptr]:
                     atoken = self.csstokens[self.token_ptr][tokentype]
-                    print("Pos: {} Line: {} Type: {} Data: {}".format(atoken["Posistion"], atoken["Line"], atoken["Type"], atoken["Data"]))
+#                     print("Line: {} Pos: {} Type: {} Data: {}".format(self.token_ptr, atoken["Posistion"], tokentype, atoken["Data"]))
+
+                    if tokentype == "SEL_START":
+                        selector = atoken["Data"]
+                        self.cssruleset[selector] = dict()
+
+                    if tokentype == "PROPERTY":
+                        elem = atoken["Data"]
+                        self.cssruleset[selector][elem] = dict()
+                    if tokentype == "VALUE":
+                        self.cssruleset[selector][elem] = atoken["Data"]
 
             self.token_ptr += 1
 
-        atoken = {'Type': "CSS_END", 'Data': ""}
+    def write(self, filename, method=None):
 
-        return atoken
+        if not method:
+            method = "xml"
+        elif method not in self.file_form:
+            warnings.warn("Unknown method %r" % method, ResourceWarning, stacklevel=2)
 
-    def get_type_name(self, ttype):
-        return self.token_type_names[ttype]
+        print(filename)
+        CssUtils().build_xml(self.cssruleset, filename, method)

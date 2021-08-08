@@ -3,14 +3,12 @@ import re
 from cssutils import CssUtils
 from cssparser import CssParser
 
+from xml.etree.ElementTree import ElementTree, Element, Comment
+
 if __name__ == "__main__":
     filepath = './simple.css'
 
-    cssutils = CssUtils()
+    parser = CssParser(filepath)
+    parser.iterate_token()
 
-    file_contents = cssutils.file_get_contents(filepath)
-
-    parser = CssParser()
-    parser.parse_css(file_contents)
-
-    parser.get_next_token()
+#     parser.write("test.xml", "xml")
