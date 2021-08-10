@@ -2,7 +2,6 @@ import re
 from xml.etree.ElementTree import ElementTree, Element, Comment, SubElement, tostring
 
 class CssUtils(object):
-
     def file_get_contents(self, filename):
         file_input = open(filename, 'r')
         file_contents = file_input.read()
@@ -50,8 +49,13 @@ class CssUtils(object):
 
         root = Element("html", attrib ={})
 
-        print(tokens)
-        child = self.tokens2file(tokens)
+        csstoken = dict()
+        csstoken['warp'] = tokens
+        csstoken['container'] = tokens
+
+        print(csstoken)
+        child = self.tokens2file(csstoken)
+#         print(tostring(child))
         root.append(child)
 
         print(tostring(root))
@@ -62,28 +66,27 @@ class CssUtils(object):
         elif method == "text":
             tree.write(filename, method = method)
 
-        print("BUILD XML")
-
-    def tokens2file(self, dictdata, parent_node=None, parent_name=''):
+    def tokens2file(self, dictdata, parent_node=None, parent_name = ''):
         def node_for_value(name, value, parent_node, parent_name):
-            node = SubElement(parent_node, 'div2')
-            child = SubElement(node, name)
-            child.set('id', value)
-            child.set('color', value)
-            child.text = name
+            #create the <li><input>...</input></li>
+            node = SubElement(parent_node, parent_name, attrib = {name: value})
+            node.text = ' '
+            node.tail = '\n'
             return node
 
-        # create an <head> element to hold all child elements
+        # create an <body> element to hold all child elements
         if parent_node is None:
             node = Element('body')
+            node.text = '\n'
+            node.tail = '\n'
         else:
-            node = SubElement(parent_node, 'div1')
+            node = SubElement(parent_node, 'div')
+            node.text = '\n'
+            node.tail = '\n'
 
-        for cssselector, cssdeclaration in dictdata.iteritems():
-            child = SubElement(node, cssselector)
-            for cssproperty, cssvalue in cssdeclaration.iteritems():
-                child.set(cssproperty, cssvalue)
-                child.text = ' '
-
-        print(tostring(child))
+        for key, value in dictdata.iteritems():
+            if isinstance(value, dict):
+                self.tokens2file(value, node, key)
+            else:
+                node_for_value(key, value, node, parent_name)
         return node

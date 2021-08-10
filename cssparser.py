@@ -272,11 +272,9 @@ class CssParser(object):
             self.token_ptr += 1
 
     def write(self, filename, method=None):
-
         if not method:
             method = "xml"
         elif method not in self.file_form:
             warnings.warn("Unknown method %r" % method, ResourceWarning, stacklevel=2)
 
-        print(filename)
         CssUtils().build_xml(self.cssruleset, filename, method)

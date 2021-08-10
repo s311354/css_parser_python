@@ -11,4 +11,4 @@ if __name__ == "__main__":
     parser = CssParser(filepath)
     parser.iterate_token()
 
-#     parser.write("test.xml", "xml")
+    parser.write("test.xml", "xml")
