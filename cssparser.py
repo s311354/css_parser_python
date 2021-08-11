@@ -63,6 +63,7 @@ class CssParser(object):
             pos += 1
 #             print("Pre Status: {}, Current Status: {}".format(old_status, astatus))
 
+        self.iterate_token()
 
         if not self.selector_nest_level == 0:
             warnings.warn("Unbalanced selector braces in style sheet, Line {}".format(self.line), Warning, stacklevel=2)

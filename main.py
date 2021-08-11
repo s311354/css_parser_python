@@ -9,6 +9,5 @@ if __name__ == "__main__":
     filepath = './simple.css'
 
     parser = CssParser(filepath)
-    parser.iterate_token()
 
     parser.write("test.xml", "xml")

@@ -48,17 +48,15 @@ class CssUtils(object):
     def build_xml(self, tokens, filename, method=None):
 
         root = Element("html", attrib ={})
+        root.text = '\n\t'
 
         csstoken = dict()
         csstoken['warp'] = tokens
         csstoken['container'] = tokens
+        child = self.build_content(csstoken)
 
-        print(csstoken)
-        child = self.tokens2file(csstoken)
-#         print(tostring(child))
         root.append(child)
 
-        print(tostring(root))
         # Writes the element tree to a file, as XML
         tree = ElementTree(root)
         if method == "xml":
@@ -66,27 +64,26 @@ class CssUtils(object):
         elif method == "text":
             tree.write(filename, method = method)
 
-    def tokens2file(self, dictdata, parent_node=None, parent_name = ''):
+    def build_content(self, dictdata, parent_node=None, parent_name = ''):
         def node_for_value(name, value, parent_node, parent_name):
-            #create the <li><input>...</input></li>
             node = SubElement(parent_node, parent_name, attrib = {name: value})
-            node.text = ' '
-            node.tail = '\n'
+            node.text = 'Contents'
+            node.tail = '\n\t\t'
             return node
 
         # create an <body> element to hold all child elements
         if parent_node is None:
             node = Element('body')
-            node.text = '\n'
+            node.text = '\n\t\t'
             node.tail = '\n'
         else:
             node = SubElement(parent_node, 'div')
-            node.text = '\n'
-            node.tail = '\n'
+            node.text = '\n\t\t'
+            node.tail = '\n\t\t'
 
         for key, value in dictdata.iteritems():
             if isinstance(value, dict):
-                self.tokens2file(value, node, key)
+                self.build_content(value, node, key)
             else:
                 node_for_value(key, value, node, parent_name)
         return node
