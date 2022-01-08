@@ -50,13 +50,19 @@ class CssParser(object):
 
             old_status = astatus
 
+            """ Case in-selector """
             if astatus == "PIS":
                (astatus, pos, afrom) = self.parse_in_selector(css_input, pos, astatus, afrom, str_char, str_size)
 
+            """ Case in-property """
             elif astatus == "PIP":
                 (astatus, pos, afrom) = self.parse_in_property(css_input, pos, astatus, afrom)
+
+            """ Case in-value """
             elif astatus == "PIV":
                 (astatus, pos, afrom, pn) = self.parse_in_value(css_input, pos, astatus, afrom, str_char, str_size)
+
+            """ Case in-comment """
             elif astatus == "PIC":
                 (astatus, pos, afrom, cur_comment) = self.parse_in_comment(css_input, pos, astatus, afrom, cur_comment)
 
