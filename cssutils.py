@@ -45,7 +45,7 @@ class CssUtils(object):
     def ctype_space(self, c):
         return c == ' ' or c == '\t' or c == '\n' or c == 11
 
-    def build_xml(self, tokens, filename, method=None):
+    def build_html(self, tokens, filename, method=None):
 
         root = Element("html", attrib ={})
         root.text = '\n\t'
@@ -59,7 +59,7 @@ class CssUtils(object):
 
         # Writes the element tree to a file, as XML
         tree = ElementTree(root)
-        if method == "xml":
+        if method == "html":
             tree.write(filename, method = method)
         elif method == "text":
             tree.write(filename, method = method)
@@ -81,7 +81,7 @@ class CssUtils(object):
             node.text = '\n\t\t'
             node.tail = '\n\t\t'
 
-        for key, value in dictdata.iteritems():
+        for key, value in dictdata.items():
             if isinstance(value, dict):
                 self.build_content(value, node, key)
             else:

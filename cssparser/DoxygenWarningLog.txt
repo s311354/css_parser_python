@@ -1,2 +1,0 @@
-error: Problems running htags. Check your installation
-error: USE_HTAGS is YES but htags(1) failed. 

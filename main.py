@@ -6,8 +6,8 @@ from cssparser import CssParser
 from xml.etree.ElementTree import ElementTree, Element, Comment
 
 if __name__ == "__main__":
-    filepath = './simple.css'
+    filepath = './testcases/simple.css'
 
     parser = CssParser(filepath)
 
-    parser.write("test.xml", "xml")
+    parser.write("test.html", "html")

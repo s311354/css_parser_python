@@ -5,7 +5,7 @@ from cssutils import CssUtils
 class CssParser(object):
     parse_status = ["PIS", "PIP", "PIV", "PIC"]
     token_type = ["SEL_START", "SEL_END", "PROPERTY", "VALUE", "COMMENT", "CSS_END"]
-    file_form = ["xml", "text"]
+    file_form = ["html", "text"]
 
     # the optional method is imported at the end of the module
 
@@ -50,21 +50,18 @@ class CssParser(object):
 
             old_status = astatus
 
-            """ Case in-selector """
             if astatus == "PIS":
-               (astatus, pos, afrom) = self.parse_in_selector(css_input, pos, astatus, afrom, str_char, str_size)
-
-            """ Case in-property """
+                (astatus, pos, afrom) = self.parse_in_selector(css_input, pos, astatus, afrom, str_char, str_size)
+                pass
             elif astatus == "PIP":
                 (astatus, pos, afrom) = self.parse_in_property(css_input, pos, astatus, afrom)
-
-            """ Case in-value """
+                pass
             elif astatus == "PIV":
                 (astatus, pos, afrom, pn) = self.parse_in_value(css_input, pos, astatus, afrom, str_char, str_size)
-
-            """ Case in-comment """
+                pass
             elif astatus == "PIC":
                 (astatus, pos, afrom, cur_comment) = self.parse_in_comment(css_input, pos, astatus, afrom, cur_comment)
+                pass
 
             pos += 1
 #             print("Pre Status: {}, Current Status: {}".format(old_status, astatus))
@@ -280,8 +277,8 @@ class CssParser(object):
 
     def write(self, filename, method=None):
         if not method:
-            method = "xml"
+            method = "html"
         elif method not in self.file_form:
             warnings.warn("Unknown method %r" % method, ResourceWarning, stacklevel=2)
 
-        CssUtils().build_xml(self.cssruleset, filename, method)
+        CssUtils().build_html(self.cssruleset, filename, method)
